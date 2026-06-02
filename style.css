@@ -1900,3 +1900,236 @@ a {
     cursor: pointer;
 }
 
+/* =============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================= */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+    .hero-title {
+        font-size: 2rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+    .hero-ctas {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-ctas .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links {
+        display: none;
+    }
+    .map-content {
+        flex-direction: column !important;
+    }
+    .map-sidebar {
+        width: 100% !important;
+    }
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+    .container {
+        padding: 0 12px;
+    }
+
+    /* Hero */
+    .hero-section {
+        min-height: 60vh;
+        padding: 80px 0 40px;
+    }
+    .hero-title {
+        font-size: 1.6rem !important;
+        line-height: 1.3;
+    }
+    .hero-subtitle {
+        font-size: 0.9rem !important;
+        padding: 0 10px;
+    }
+    .hero-content .badge {
+        font-size: 0.75rem;
+    }
+    .hero-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .hero-meta span {
+        font-size: 0.8rem;
+    }
+
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px;
+    }
+    .stat-card {
+        padding: 16px 12px;
+    }
+    .stat-value {
+        font-size: 1.1rem;
+    }
+    .stat-label {
+        font-size: 0.7rem;
+    }
+
+    /* Tabs */
+    .itinerary-tabs {
+        gap: 8px;
+        padding-bottom: 8px;
+    }
+    .tab-btn {
+        flex: 0 0 130px !important;
+        padding: 10px 12px;
+        border-radius: var(--radius-sm);
+    }
+    .tab-day {
+        font-size: 0.75rem;
+    }
+    .tab-title {
+        font-size: 0.65rem;
+    }
+    .tab-date {
+        font-size: 0.65rem;
+    }
+
+    /* Day Panel */
+    .panel-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .day-number-badge {
+        font-size: 0.85rem;
+    }
+    .panel-meta h2 {
+        font-size: 1.2rem;
+    }
+    .route-line {
+        font-size: 0.8rem;
+        word-break: break-word;
+    }
+
+    /* Info Cards */
+    .info-card-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .info-tag {
+        font-size: 0.78rem;
+        padding: 6px 10px;
+    }
+
+    /* Timeline */
+    .timeline-list li {
+        padding-left: 20px;
+    }
+    .timeline-time {
+        font-size: 0.78rem;
+        min-width: 50px;
+    }
+    .timeline-list li h4 {
+        font-size: 0.9rem;
+    }
+    .timeline-list li p,
+    .timeline-list li .timeline-desc {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    /* Visual Panel */
+    .card-visual-image {
+        min-height: 160px !important;
+        border-radius: var(--radius-sm) !important;
+    }
+    .tip-box {
+        padding: 14px;
+    }
+    .tip-box h4 {
+        font-size: 0.85rem;
+    }
+    .tip-box p {
+        font-size: 0.8rem;
+    }
+
+    /* Meals & Accommodation */
+    .meals-section h3,
+    .accommodation-section h3,
+    .parking-section h3 {
+        font-size: 0.9rem;
+    }
+    .meal-item {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+    .accommodation-card {
+        padding: 10px 12px;
+    }
+    .accommodation-card p {
+        font-size: 0.8rem;
+    }
+
+    /* Parking */
+    .parking-spot-item {
+        padding: 6px 10px;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    .parking-spot-name {
+        font-size: 0.78rem;
+    }
+    .parking-spot-code {
+        font-size: 0.75rem;
+        padding: 2px 8px;
+    }
+
+    /* Flights */
+    .flight-card {
+        padding: 16px;
+    }
+
+    /* Map */
+    .map-container svg {
+        max-height: 250px;
+    }
+    .route-list li {
+        font-size: 0.8rem;
+        padding: 6px 0;
+    }
+    .route-num {
+        width: 20px;
+        height: 20px;
+        font-size: 0.7rem;
+    }
+
+    /* Section spacing */
+    section {
+        padding: 40px 0;
+    }
+    .section-header {
+        margin-bottom: 24px;
+    }
+    .section-header h2 {
+        font-size: 1.3rem;
+    }
+    .section-header p {
+        font-size: 0.85rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 0;
+    }
+    footer p {
+        font-size: 0.75rem;
+    }
+}
