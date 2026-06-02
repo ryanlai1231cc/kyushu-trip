@@ -5,35 +5,32 @@
 // --- 1. Dynamic Itinerary Data ---
 const itineraryData = {
     1: {
-        title: "抵達鹿兒島 ‧ 指宿砂浴 ‧ 櫻島環島巡禮",
-        route: "鹿兒島機場 (KOJ) 取車 ➔ 指宿砂浴 ➔ 鹿兒島港渡輪 ➔ 櫻島環島 ➔ 鹿兒島市區",
+        title: "抵達鹿兒島 ‧ 櫻島環島巡禮",
+        route: "鹿兒島機場 (KOJ) 取車 ➔ 鹿兒島港渡輪 ➔ 櫻島環島 ➔ 鹿兒島市區",
         mileage: "約 120 km",
         time: "約 2.5 hrs (自駕)",
         toll: "渡輪費 約 1,100 円/車 + KEP 高速券",
         image: "images/day1.png",
         imageAlt: "櫻島火山與鹿兒島灣景",
-        tip: "今天行程充實但精彩！取車後先南下指宿體驗砂浴，午後回鹿兒島港搭渡輪去櫻島。渡輪甲板「やぶ金」烏龍麵只有 15 分鐘可吃，動作要快！",
+        tip: "今天行程輕鬆愉快！取車後直奔鹿兒島港搭渡輪去櫻島。渡輪甲板「やぶ金」烏龍麵只有 15 分鐘可吃，動作要快！",
         meals: {
             breakfast: "飛機餐 / 桃園機場出發前自行解決",
-            lunch: "指宿 ‧ 砂浴結束後享用唐船峽流水麵（そうめん流し）或當地海鮮定食 🍜",
+            lunch: "鹿兒島市區 ‧ 拉麵或定食 🍜",
             dinner: "天文館通 ‧ <a href='https://www.google.com/maps/search/?api=1&query=黒かつ亭+天文館店' target='_blank'>黒かつ亭 / 黒べぇ 天文館店 📍</a> 🍖（薩摩黑豬炸排名店），飯後來一碗元祖<a href='https://www.google.com/maps/search/?api=1&query=天文館むじゃき+本店' target='_blank'>「白熊冰（むじゃき）」📍</a>"
         },
         accommodation: "鹿兒島市區 ‧ <a href='https://www.agoda.com/zh-tw/fav-lux-kagoshima-tenmonkan/hotel/kagoshima-jp.html?countryId=3&finalPriceView=2&isShowMobileAppPrice=false&cid=1844104&adults=4&checkIn=2027-01-28&currencyCode=TWD&los=1' target='_blank'>FAV LUX 鹿兒島天文館 🔗</a>",
         parkingSpots: [
             { name: "鹿兒島機場 (KOJ)", mapcode: "42 776 606*12" },
-            { name: "砂むし会館砂楽", mapcode: "285 228 135*25" },
             { name: "桜島フェリー (鹿児島港)", mapcode: "42 037 144*21" },
             { name: "湯之平展望所", mapcode: "42 015 506*35" },
         ],
         timeline: [
             { time: "11:20", title: "抵達鹿兒島國際機場 (KOJ) ✈️", desc: "飛機降落至<a href='https://www.google.com/maps/search/?api=1&query=鹿児島空港' target='_blank'>鹿兒島國際機場 📍</a>！依序辦理入境手續、衛生申報與行李提領，完成後等待租車行的免費接駁巴士。" },
             { time: "12:00", title: "取車 ‧ 驗車 ‧ 加購 KEP 優惠券 🚗", desc: "搭接駁車至機場外租車營業所。攜帶護照、台灣駕照正本與日文譯本辦理手續，仔細確認車輛外觀（拍照存證），啟用 ETC 卡，同時詢問加購「KEP（九州高速公路周遊券）」。辦完後在附近便利商店買點小點心車上墊胃。" },
-            { time: "13:00", title: "出發南下！直奔指宿 🚗", desc: "走九州自動車道轉指宿高速道路，沿著錦江灣海岸線南下前往指宿，車程約 50 分鐘。日本靠左行駛，慢慢適應，不要緊張！途中可遠眺開聞岳。" },
-            { time: "13:50", title: "指宿砂蒸溫泉「砂樂」♨️", desc: "在<a href='https://www.google.com/maps/search/?api=1&query=砂むし会館+砂楽' target='_blank'>指宿砂蒸溫泉「砂樂」 📍</a>體驗世界罕見的「天然砂蒸溫泉」！穿著浴衣躺在海灘上，工作人員用鏟子將 70℃ 的熱砂蓋上全身，促進血液循環的奇妙體驗（約 10-15 分鐘），之後可至室內溫泉沖洗。" },
-            { time: "15:00", title: "指宿午餐 ‧ 北上返回鹿兒島", desc: "砂浴結束後在指宿市區享用流水素麵或海鮮定食，吃飽後驅車北上返回鹿兒島市區方向（約 50 分鐘），直奔鹿兒島港渡輪航廈。" },
-            { time: "16:00", title: "鹿兒島港渡輪 ‧ 衝上甲板吃烏龍麵 🍜", desc: "購買<a href='https://www.google.com/maps/search/?api=1&query=桜島フェリーターミナル' target='_blank'>鹿兒島港渡輪 📍</a>車輛渡輪票（含司機約 1,100 円），停好車立刻衝上甲板！找到「<a href='https://www.google.com/maps/search/?api=1&query=やぶ金+桜島フェリー' target='_blank'>やぶ金 📍</a>」點一碗「薩摩揚げうどん（薩摩炸魚餅烏龍麵）」，正面欣賞噴煙的壯觀櫻島——船程只有 15 分鐘，快吃！" },
-            { time: "16:15", title: "登陸櫻島 ‧ 精華環島 🌋", desc: "渡輪靠岸，沿環島公路巡禮：❶ <a href='https://www.google.com/maps/search/?api=1&query=湯之平展望所' target='_blank'>湯之平展望所 📍</a>（一般遊客可達最高點，俯瞰鹿兒島灣，視線絕佳！）➔ ❷ <a href='https://www.google.com/maps/search/?api=1&query=溶岩なぎさ公園+足湯' target='_blank'>熔岩渚公園足湯 📍</a>（免費天然溫泉足湯，面海看火山 ♨️），在這裡欣賞夕陽！" },
-            { time: "17:30", title: "搭渡輪返回鹿兒島市區 ‧ 入住飯店", desc: "驅車返回渡輪碼頭上船，約 15 分鐘後抵達鹿兒島港。前往飯店辦理 Check-in，放下行李梳洗換裝。" },
+            { time: "13:00", title: "出發前往鹿兒島港 🚗", desc: "從機場出發前往鹿兒島港渡輪航廈，車程約 40 分鐘。日本靠左行駛，慢慢適應，不要緊張！" },
+            { time: "13:40", title: "鹿兒島港渡輪 ‧ 衝上甲板吃烏龍麵 🍜", desc: "購買<a href='https://www.google.com/maps/search/?api=1&query=桜島フェリーターミナル' target='_blank'>鹿兒島港渡輪 📍</a>車輛渡輪票（含司機約 1,100 円），停好車立刻衝上甲板！找到「<a href='https://www.google.com/maps/search/?api=1&query=やぶ金+桜島フェリー' target='_blank'>やぶ金 📍</a>」點一碗「薩摩揚げうどん（薩摩炸魚餅烏龍麵）」，正面欣賞噴煙的壯觀櫻島——船程只有 15 分鐘，快吃！" },
+            { time: "14:00", title: "登陸櫻島 ‧ 精華環島 🌋", desc: "渡輪靠岸，沿環島公路巡禮：❶ <a href='https://www.google.com/maps/search/?api=1&query=湯之平展望所' target='_blank'>湯之平展望所 📍</a>（一般遊客可達最高點，俯瞰鹿兒島灣，視線絕佳！）➔ ❷ <a href='https://www.google.com/maps/search/?api=1&query=溶岩なぎさ公園+足湯' target='_blank'>熔岩渚公園足湯 📍</a>（免費天然溫泉足湯，面海看火山 ♨️），在這裡欣賞夕陽！" },
+            { time: "16:00", title: "搭渡輪返回鹿兒島市區 ‧ 入住飯店", desc: "驅車返回渡輪碼頭上船，約 15 分鐘後抵達鹿兒島港。前往飯店辦理 Check-in，放下行李梳洗換裝。" },
             { time: "18:30", title: "天文館通晚餐 🍖", desc: "步行至天文館通，前往<a href='https://www.google.com/maps/search/?api=1&query=黒かつ亭+天文館店' target='_blank'>「黒かつ亭」或「黒べぇ 天文館店」📍</a>——鹿兒島著名薩摩黑豬炸排老店，外皮酥脆、豬肉鮮甜多汁。飯後散步到<a href='https://www.google.com/maps/search/?api=1&query=天文館むじゃき+本店' target='_blank'>「むじゃき」📍</a>嚐一碗元祖「白熊冰（しろくま）」，完美句點！" }
         ]
     },
