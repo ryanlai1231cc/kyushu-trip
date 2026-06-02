@@ -1922,8 +1922,20 @@ a {
         width: 100%;
         text-align: center;
     }
-    .nav-links {
+    .nav-menu {
         display: none;
+    }
+    .mobile-menu-btn {
+        display: flex;
+    }
+    .logo {
+        font-size: 1.2rem;
+    }
+    .logo-icon {
+        font-size: 1.4rem;
+    }
+    .main-header {
+        padding: 12px 0;
     }
     .map-content {
         flex-direction: column !important;
