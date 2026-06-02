@@ -1,4 +1,4 @@
-/* Design System & Variables */
+/* Theme Variables */
 :root {
     /* Fonts */
     --font-heading: 'Outfit', 'Noto Sans TC', sans-serif;
@@ -14,35 +14,8 @@
     --radius-md: 16px;
     --radius-lg: 24px;
     --radius-xl: 32px;
-}
 
-/* Dark Theme Variables (Default) */
-[data-theme="dark"] {
-    --color-bg: hsl(222, 24%, 7%);
-    --color-bg-alt: hsl(222, 20%, 10%);
-    --color-text: hsl(210, 20%, 90%);
-    --color-text-muted: hsl(210, 10%, 65%);
-    --color-primary: hsl(342, 95%, 65%); /* Cherry Blossom Rose */
-    --color-primary-hover: hsl(342, 90%, 55%);
-    --color-secondary: hsl(200, 95%, 60%); /* Kyūshū Sea Blue */
-    --color-secondary-hover: hsl(200, 90%, 50%);
-    --color-accent: hsl(36, 100%, 60%); /* Volcanic Amber */
-    --color-success: hsl(145, 80%, 45%);
-    
-    --card-bg: hsla(222, 20%, 12%, 0.65);
-    --card-hover-bg: hsla(222, 20%, 15%, 0.85);
-    --border-color: hsla(210, 20%, 90%, 0.08);
-    --border-focus: hsla(342, 95%, 65%, 0.4);
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
-    --glass-blur: blur(16px);
-    
-    --hero-overlay-color: linear-gradient(180deg, rgba(10, 12, 18, 0.6) 0%, rgba(7, 8, 12, 0.95) 90%);
-}
-
-/* Light Theme Variables */
-[data-theme="light"] {
+    /* Colors */
     --color-bg: hsl(210, 20%, 98%);
     --color-bg-alt: hsl(210, 20%, 95%);
     --color-text: hsl(222, 25%, 15%);
@@ -79,15 +52,10 @@ html {
 }
 
 body {
-    background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
-    transition: background-color var(--transition-normal), color var(--transition-normal);
-}
-
-[data-theme="light"] body {
     background: 
         linear-gradient(
             135deg,
@@ -170,7 +138,7 @@ a {
     transition: opacity var(--transition-slow);
 }
 
-[data-theme="light"] .glow-spot {
+.glow-spot {
     opacity: 0.05;
 }
 
@@ -394,8 +362,7 @@ a {
 }
 
 /* Hide opposite theme icons */
-[data-theme="dark"] .theme-icon-light { display: none; }
-[data-theme="light"] .theme-icon-dark { display: none; }
+
 
 .mobile-menu-btn {
     display: none;
@@ -457,7 +424,7 @@ a {
     margin-bottom: 24px;
 }
 
-[data-theme="light"] .hero-content .badge {
+.hero-content .badge {
     background-color: rgba(0, 0, 0, 0.05);
     border-color: rgba(0, 0, 0, 0.1);
     color: var(--color-text);
@@ -476,7 +443,7 @@ a {
     filter: drop-shadow(0 2px 10px rgba(0,0,0,0.1));
 }
 
-[data-theme="light"] .hero-title {
+.hero-title {
     background: linear-gradient(135deg, var(--color-text) 30%, #444 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -491,7 +458,7 @@ a {
     line-height: 1.6;
 }
 
-[data-theme="light"] .hero-subtitle {
+.hero-subtitle {
     color: var(--color-text-muted);
 }
 
@@ -673,7 +640,7 @@ a {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-[data-theme="light"] .map-sidebar {
+.map-sidebar {
     background-color: rgba(0, 0, 0, 0.02);
 }
 
