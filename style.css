@@ -624,7 +624,7 @@ a {
     box-shadow: var(--shadow-md);
     display: grid;
     grid-template-columns: 350px 1fr;
-    overflow: hidden;
+    overflow: visible;
     backdrop-filter: var(--glass-blur);
 }
 
@@ -2095,7 +2095,7 @@ a {
 
     /* Map */
     .map-container svg {
-        max-height: 250px;
+        max-height: none;
     }
     .route-list li {
         font-size: 0.8rem;
