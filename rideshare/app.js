@@ -5,73 +5,66 @@
 // --- 1. Dynamic Itinerary Data ---
 const itineraryData = {
     1: {
-        title: "抵達鹿兒島 ‧ 櫻島環島巡禮",
-        route: "鹿兒島機場 (KOJ) 取車 ➔ 鹿兒島港渡輪 ➔ 櫻島環島 ➔ 鹿兒島市區",
-        mileage: "約 120 km",
-        time: "約 2.5 hrs (自駕)",
-        toll: "渡輪費 約 1,100 円/車 + KEP 高速券",
+        title: "抵達鹿兒島 ‧ 櫻島渡輪巡禮",
+        route: "KOJ 機場巴士 ➔ 鹿兒島市區 ➔ 渡輪櫻島 ➔ 鹿兒島市區",
+        mileage: "無（公共交通）",
+        time: "機場巴士 40 min + 渡輪 15 min",
+        toll: "機場巴士 \u00a51,400 + 渡輪 \u00a5200/人",
         image: "images/day1.png",
         imageAlt: "櫻島火山與鹿兒島灣景",
-        tip: "今天行程輕鬆愉快！取車後直奔鹿兒島港搭渡輪去櫻島。渡輪甲板「やぶ金」烏龍麵只有 15 分鐘可吃，動作要快！",
+        tip: "今天不需要租車！搭機場巴士進市區，放好行李後搭渡輪去櫻島。渡輪甲板「やぶ金」烏龍麵只有 15 分鐘可吃，動作要快！櫻島上可搭觀光巴士環島。",
         meals: {
             breakfast: "飛機餐 / 桃園機場出發前自行解決",
             lunch: "鹿兒島市區 ‧ 拉麵或定食 🍜",
             dinner: "天文館通 ‧ <a href='https://www.google.com/maps/search/?api=1&query=黒かつ亭+天文館店' target='_blank'>黒かつ亭 / 黒べぇ 天文館店 📍</a> 🍖（薩摩黑豬炸排名店），飯後來一碗元祖<a href='https://www.google.com/maps/search/?api=1&query=天文館むじゃき+本店' target='_blank'>「白熊冰（むじゃき）」📍</a>"
         },
         accommodation: "鹿兒島市區 ‧ <a href='https://www.agoda.com/zh-tw/fav-lux-kagoshima-tenmonkan/hotel/kagoshima-jp.html?countryId=3&finalPriceView=2&isShowMobileAppPrice=false&cid=1844104&adults=4&checkIn=2027-01-28&currencyCode=TWD&los=1' target='_blank'>FAV LUX 鹿兒島天文館 🔗</a>",
-        parkingSpots: [
-            { name: "鹿兒島機場 (KOJ)", mapcode: "42 776 606*12" },
-            { name: "桜島フェリー (鹿児島港)", mapcode: "42 037 144*21" },
-            { name: "湯之平展望所", mapcode: "42 015 506*35" },
-        ],
+        parkingSpots: [],
         timeline: [
-            { time: "11:20", title: "抵達鹿兒島國際機場 (KOJ) ✈️", desc: "飛機降落至<a href='https://www.google.com/maps/search/?api=1&query=鹿児島空港' target='_blank'>鹿兒島國際機場 📍</a>！依序辦理入境手續、衛生申報與行李提領，完成後等待租車行的免費接駁巴士。" },
-            { time: "12:00", title: "取車 ‧ 驗車 ‧ 加購 KEP 優惠券 🚗", desc: "搭接駁車至機場外租車營業所。攜帶護照、台灣駕照正本與日文譯本辦理手續，仔細確認車輛外觀（拍照存證），啟用 ETC 卡，同時詢問加購「KEP（九州高速公路周遊券）」。辦完後在附近便利商店買點小點心車上墊胃。" },
-            { time: "13:00", title: "出發前往鹿兒島港 🚗", desc: "從機場出發前往鹿兒島港渡輪航廈，車程約 40 分鐘。日本靠左行駛，慢慢適應，不要緊張！" },
-            { time: "13:40", title: "鹿兒島港渡輪 ‧ 衝上甲板吃烏龍麵 🍜", desc: "購買<a href='https://www.google.com/maps/search/?api=1&query=桜島フェリーターミナル' target='_blank'>鹿兒島港渡輪 📍</a>車輛渡輪票（含司機約 1,100 円），停好車立刻衝上甲板！找到「<a href='https://www.google.com/maps/search/?api=1&query=やぶ金+桜島フェリー' target='_blank'>やぶ金 📍</a>」點一碗「薩摩揚げうどん（薩摩炸魚餅烏龍麵）」，正面欣賞噴煙的壯觀櫻島——船程只有 15 分鐘，快吃！" },
-            { time: "14:00", title: "登陸櫻島 ‧ 精華環島 🌋", desc: "渡輪靠岸，沿環島公路巡禮：❶ <a href='https://www.google.com/maps/search/?api=1&query=湯之平展望所' target='_blank'>湯之平展望所 📍</a>（一般遊客可達最高點，俯瞰鹿兒島灣，視線絕佳！）➔ ❷ <a href='https://www.google.com/maps/search/?api=1&query=溶岩なぎさ公園+足湯' target='_blank'>熔岩渚公園足湯 📍</a>（免費天然溫泉足湯，面海看火山 ♨️），在這裡欣賞夕陽！" },
-            { time: "16:00", title: "搭渡輪返回鹿兒島市區 ‧ 入住飯店", desc: "驅車返回渡輪碼頭上船，約 15 分鐘後抵達鹿兒島港。前往飯店辦理 Check-in，放下行李梳洗換裝。" },
-            { time: "18:30", title: "天文館通晚餐 🍖", desc: "步行至天文館通，前往<a href='https://www.google.com/maps/search/?api=1&query=黒かつ亭+天文館店' target='_blank'>「黒かつ亭」或「黒べぇ 天文館店」📍</a>——鹿兒島著名薩摩黑豬炸排老店，外皮酥脆、豬肉鮮甜多汁。飯後散步到<a href='https://www.google.com/maps/search/?api=1&query=天文館むじゃき+本店' target='_blank'>「むじゃき」📍</a>嚐一碗元祖「白熊冰（しろくま）」，完美句點！" }
+            { time: "11:20", title: "抵達鹿兒島國際機場 (KOJ) ✈️", desc: "飛機降落至<a href='https://www.google.com/maps/search/?api=1&query=鹿児島空港' target='_blank'>鹿兒島國際機場 📍</a>！依序辦理入境手續、衛生申報與行李提領。" },
+            { time: "12:00", title: "搭機場巴士前往市區 🚌", desc: "在機場外搭乘機場巴士（約 40 分鐘，\u00a51,400/人）前往鹿兒島中央站或天文館通。" },
+            { time: "12:40", title: "抵達市區 ‧ 午餐 🍜", desc: "在鹿兒島中央站或天文館通附近享用午餐，可選擇在地拉麵或定食。飯後步行至飯店 Check-in 放行李。" },
+            { time: "14:00", title: "搭渡輪前往櫻島 ⛴️", desc: "步行或搭市電前往<a href='https://www.google.com/maps/search/?api=1&query=桜島フェリーターミナル' target='_blank'>鹿兒島港渡輪碼頭 📍</a>，購買徒步旅客船票（\u00a5200/人）。上船後衝上甲板找「<a href='https://www.google.com/maps/search/?api=1&query=やぶ金+桜島フェリー' target='_blank'>やぶ金 📍</a>」吃烏龍麵——船程只有 15 分鐘，快吃！" },
+            { time: "14:20", title: "櫻島觀光巴士環島 🌋", desc: "抵達櫻島後搭乘觀光巴士「サクラジマアイランドビュー」（\u00a5500/人，約 60 分鐘一圈），停靠：❶ <a href='https://www.google.com/maps/search/?api=1&query=湯之平展望所' target='_blank'>湯之平展望所 📍</a>（一般遊客可達最高點）➔ ❷ <a href='https://www.google.com/maps/search/?api=1&query=溶岩なぎさ公園+足湯' target='_blank'>熔岩渚公園足湯 📍</a>（免費天然溫泉足湯 ♨️）" },
+            { time: "16:30", title: "搭渡輪返回鹿兒島市區", desc: "搭渡輪返回鹿兒島港（15 分鐘），再步行或搭市電回飯店休息換裝。" },
+            { time: "18:30", title: "天文館通晚餐 🍖", desc: "步行至天文館通，前往<a href='https://www.google.com/maps/search/?api=1&query=黒かつ亭+天文館店' target='_blank'>「黒かつ亭」或「黒べぇ 天文館店」📍</a>——鹿兒島著名薩摩黑豬炸排老店。飯後散步到<a href='https://www.google.com/maps/search/?api=1&query=天文館むじゃき+本店' target='_blank'>「むじゃき」📍</a>嚐元祖「白熊冰」！" }
         ]
     },
     2: {
         title: "鹿兒島一日遊 ‧ 仙巖園世界遺產",
         route: "鹿兒島市區 ➔ 仙巖園 ➔ 城山展望台 ➔ 天文館通",
-        mileage: "市區移動",
-        time: "自駕 / 市電",
-        toll: "無",
+        mileage: "無（市電 / 巴士）",
+        time: "市電 ‧ 巴士",
+        toll: "市電一日券 \u00a5600",
         image: "images/day2.png",
         imageAlt: "仙巌園日式庭園與櫻島借景",
-        tip: "今天不趕路！完整一天留給鹿兒島，上午參觀世界遺產仙巖園，下午到城山展望台俯瞰鹿兒島市區與櫻島全景，晚上逛天文館通商圈。",
+        tip: "今天不趕路！搭市電和巴士悠閒暢遊鹿兒島。建議購買市電一日券（\u00a5600），上午參觀世界遺產仙巖園，下午到城山展望台俯瞰櫻島全景。",
         meals: {
-            breakfast: "飯店附近<a href='https://www.google.com/maps/place/%E8%B6%85%E5%B8%82+%E3%82%BF%E3%82%A4%E3%83%A8%E3%83%BC/@31.5876284,130.5548498,18z/data=!4m10!1m2!2m1!1z6LaF5biC!3m6!1s0x353e60abb5668a0f:0x3c3344307fdefcb3!8m2!3d31.5877406!4d130.5571706!15sCgbotoXluIJaCCIG6LaF5biCkgELc3VwZXJtYXJrZXSaASRDaGREU1VoTk1HOW5TMFZQTFcxNVptMVpjMkl5V25kM1JSQULgAQD6AQQIABAW!16s%2Fg%2F1tff0t27?entry=ttu' target='_blank'>超市タイヨー 📍</a> 隨買 ‧ 輕食上路",
+            breakfast: "飯店附近早餐 或 便利商店",
             lunch: "仙巖園內「<a href='https://www.google.com/maps/search/?api=1&query=桜華亭+仙巌園' target='_blank'>櫻華亭 📍</a>」‧ 薩摩鄉土料理定食 🍱",
             dinner: "天文館通 ‧ 鹿兒島黑豬涮涮鍋 或 居酒屋 🍖"
         },
         accommodation: "鹿兒島市區 ‧ <a href='https://www.agoda.com/zh-tw/fav-lux-kagoshima-tenmonkan/hotel/kagoshima-jp.html?countryId=3&finalPriceView=2&isShowMobileAppPrice=false&cid=1844104&adults=4&checkIn=2027-01-29&currencyCode=TWD&los=1' target='_blank'>FAV LUX 鹿兒島天文館 🔗</a>",
-        parkingSpots: [
-            { name: "仙巌園", mapcode: "42 099 746*44" },
-            { name: "城山展望台", mapcode: "42 035 766*30" },
-        ],
+        parkingSpots: [],
         timeline: [
-            { time: "09:00", title: "出發前往仙巖園", desc: "驅車前往「<a href='https://www.google.com/maps/search/?api=1&query=仙巌園' target='_blank'>仙巖園 📍</a>（磯庭園）」，從市區出發僅需 15 分鐘。" },
-            { time: "09:30", title: "仙巖園參觀 ‧ 世界文化遺產 🏛️", desc: "<a href='https://www.google.com/maps/search/?api=1&query=仙巌園' target='_blank'>仙巖園 📍</a>——薩摩藩主島津家的別邸庭園，以櫻島為借景、錦江灣為池塘的壯闊設計堪稱日本庭園最高傑作。園內包含世界文化遺產「舊集成館」——日本近代工業化的起點。漫步竹林小徑，欣賞御殿建築與日式庭園之美。" },
-            { time: "11:30", title: "仙巖園午餐 ‧ 櫻華亭", desc: "在園內「<a href='https://www.google.com/maps/search/?api=1&query=桜華亭+仙巌園' target='_blank'>櫻華亭 📍</a>」享用薩摩鄉土料理定食，以櫻島為背景的絕景餐廳，邊用餐邊欣賞錦江灣全景。" },
-            { time: "13:00", title: "城山展望台 🏔️", desc: "驅車前往<a href='https://www.google.com/maps/search/?api=1&query=城山展望台+鹿児島' target='_blank'>城山展望台 📍</a>——鹿兒島市區的制高點，可以 180 度俯瞰鹿兒島市街、錦江灣與櫻島火山的壯麗全景。西鄉隆盛最後的戰場也在此地。" },
-            { time: "14:30", title: "鹿兒島水族館 🐠 (選配)", desc: "若帶小朋友可前往<a href='https://www.google.com/maps/search/?api=1&query=いおワールドかごしま水族館' target='_blank'>鹿兒島水族館 📍</a>，看鯨鯊和海豚表演！或在市區悠閒散步逛街。" },
-            { time: "16:00", title: "返回飯店休息", desc: "回飯店稍作休息，為明天的長途自駕養精蓄銳。" },
+            { time: "09:00", title: "搭巴士前往仙巖園 🚌", desc: "從市區搭乘城市觀光巴士或一般路線巴士前往「<a href='https://www.google.com/maps/search/?api=1&query=仙巌園' target='_blank'>仙巖園 📍</a>（磯庭園）」，約 20 分鐘。" },
+            { time: "09:30", title: "仙巖園參觀 ‧ 世界文化遺產 🏛️", desc: "<a href='https://www.google.com/maps/search/?api=1&query=仙巌園' target='_blank'>仙巖園 📍</a>——薩摩藩主島津家的別邸庭園，以櫻島為借景、錦江灣為池塘的壯闊設計堪稱日本庭園最高傑作。園內包含世界文化遺產「舊集成館」——日本近代工業化的起點。" },
+            { time: "11:30", title: "仙巖園午餐 ‧ 櫻華亭", desc: "在園內「<a href='https://www.google.com/maps/search/?api=1&query=桜華亭+仙巌園' target='_blank'>櫻華亭 📍</a>」享用薩摩鄉土料理定食，以櫻島為背景的絕景餐廳。" },
+            { time: "13:00", title: "城山展望台 🏔️", desc: "搭巴士前往<a href='https://www.google.com/maps/search/?api=1&query=城山展望台+鹿児島' target='_blank'>城山展望台 📍</a>——鹿兒島市區的制高點，180 度俯瞰鹿兒島市街、錦江灣與櫻島火山。" },
+            { time: "14:30", title: "鹿兒島水族館 🐠 (選配)", desc: "若帶小朋友可搭市電前往<a href='https://www.google.com/maps/search/?api=1&query=いおワールドかごしま水族館' target='_blank'>鹿兒島水族館 📍</a>，看鯨鯊和海豚表演！或在市區悠閒散步逛街。" },
+            { time: "16:00", title: "返回飯店休息", desc: "回飯店稍作休息，為明天的取車自駕養精蓄銳。" },
             { time: "18:00", title: "天文館通散策 ‧ 晚餐 🍖", desc: "步行至天文館通商圈逛街購物，享用鹿兒島黑豬涮涮鍋或在地居酒屋，體驗鹿兒島的夜生活！" }
         ]
     },
     3: {
-        title: "霧島神宮 ‧ 霧島溫泉鄉",
-        route: "鹿兒島市區 ➔ 霧島神宮 ➔ 丸尾瀑布 ➔ 霧島溫泉",
+        title: "AVIS 取車 ➔ 霧島神宮 ‧ 霧島溫泉鄉",
+        route: "鹿兒島市區 AVIS 取車 ➔ 霧島神宮 ➔ 丸尾瀑布 ➔ 霧島溫泉",
         mileage: "約 90 km",
         time: "約 1.5 hrs (自駕)",
         toll: "約 800 円 (KEP 高速券適用)",
         image: "images/day3.png",
         imageAlt: "霧島神宮朱紅色大社殿",
-        tip: "今天行程輕鬆！從鹿兒島北上霧島山區，參拜霧島神宮後入住溫泉旅館。傍晚泡露天溫泉洗去旅途疲憊，好好享受日式旅館的款待。",
+        tip: "今天正式開始自駕！早上在市區 AVIS 取車，攜帶護照、台灣駕照正本與日文譯本。取車後北上霧島山區，參拜霧島神宮後入住溫泉旅館。",
         meals: {
             breakfast: "飯店早餐 / 便利商店輕食",
             lunch: "霧島 ‧ 當地蕎麥麵或定食 🍜",
@@ -79,15 +72,17 @@ const itineraryData = {
         },
         accommodation: "霧島溫泉鄉 ‧ <a href='https://www.agoda.com/zh-tw/kirishima-onsen-ryokojin-sanso/hotel/kirishima-jp.html?countryId=3&finalPriceView=1&isShowMobileAppPrice=false&cid=1779080&numberOfBedrooms=&familyMode=false&adults=4&children=0&rooms=1&maxRooms=0&checkIn=2027-01-30&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=3&showReviewSubmissionEntry=false&currencyCode=TWD&isFreeOccSearch=false&los=1&searchrequestid=2f647880-493a-4fb9-8151-bd2bb724a617&ds=qgPLe6XWQl8X9rcw' target='_blank'>霧島溫泉 旅行人山莊 🔗</a>",
         parkingSpots: [
+            { name: "AVIS 鹿兒島", mapcode: "42 066 022*55" },
             { name: "霧島神宮", mapcode: "376 089 596*04" },
             { name: "丸尾滝", mapcode: "42 804 030*47" },
         ],
         timeline: [
-            { time: "09:00", title: "退房出發 ‧ 前往霧島 🚗", desc: "從鹿兒島市區出發，沿九州自動車道（KEP 適用）北上前往霧島山區（約 1 小時車程）。沿途風景從都市漸轉為山巒疊翠。" },
-            { time: "10:00", title: "霧島神宮參拜 ⛩️", desc: "<a href='https://www.google.com/maps/search/?api=1&query=霧島神宮' target='_blank'>霧島神宮 📍</a>——南九州規模最大的朱紅色神宮，祭祀天孫瓊瓊杵尊。也是坂本龍馬新婚旅行地。朱漆大社殿在蔥蘢杉木林間格外莊嚴，境內瀰漫著清淨神聖的氣息。" },
-            { time: "11:30", title: "霧島午餐", desc: "在霧島神宮附近享用當地蕎麥麵或鄉土料理定食。" },
-            { time: "13:00", title: "丸尾瀑布 (順路)", desc: "霧島溫泉區的<a href='https://www.google.com/maps/search/?api=1&query=丸尾滝' target='_blank'>丸尾瀑布 📍</a>是罕見的「溫泉瀑布」——溫泉水直接形成的瀑布，冬季時水蒸氣繚繞如仙境，就在入住溫泉旅館的路上，停車看幾分鐘即可。" },
-            { time: "14:00", title: "入住霧島溫泉鄉 ♨️", desc: "提早入住硫磺泉煙裊裊的霧島溫泉。換上浴衣悠閒散步，享受旅館設施。可以在溫泉街散步、探訪足湯，或在房間內休息放鬆。" },
+            { time: "08:30", title: "AVIS 取車 🚗", desc: "退房後步行或搭市電前往 <a href='https://www.google.com/maps/search/?api=1&query=AVIS+鹿児島県鹿児島市上之園町10-15' target='_blank'>AVIS 鹿兒島營業所 📍</a>（鹿児島市上之園町10-15）取車。攜帶護照、台灣駕照正本與日文譯本辦理手續，仔細確認車輛外觀（拍照存證），啟用 ETC 卡，同時詢問加購「KEP（九州高速公路周遊券）」。" },
+            { time: "09:30", title: "出發前往霧島 🚗", desc: "從鹿兒島市區出發，沿九州自動車道北上前往霧島山區（約 1 小時車程）。日本靠左行駛，慢慢適應！沿途風景從都市漸轉為山巒疊翠。" },
+            { time: "10:30", title: "霧島神宮參拜 ⛩️", desc: "<a href='https://www.google.com/maps/search/?api=1&query=霧島神宮' target='_blank'>霧島神宮 📍</a>——南九州規模最大的朱紅色神宮，祭祀天孫瓊瓊杵尊。也是坂本龍馬新婚旅行地。朱漆大社殿在蔥蘢杉木林間格外莊嚴，境內瀰漫著清淨神聖的氣息。" },
+            { time: "12:00", title: "霧島午餐 🍜", desc: "在霧島神宮附近享用當地蕎麥麵或鄉土料理定食。" },
+            { time: "13:30", title: "丸尾瀑布 (順路)", desc: "霧島溫泉區的<a href='https://www.google.com/maps/search/?api=1&query=丸尾滝' target='_blank'>丸尾瀑布 📍</a>是罕見的「溫泉瀑布」——冬季時水蒸氣繚繞如仙境，停車看幾分鐘即可。" },
+            { time: "14:00", title: "入住霧島溫泉鄉 ♨️", desc: "提早入住硫磺泉煙裊裊的霧島溫泉。換上浴衣悠閒散步，享受旅館設施。" },
             { time: "18:00", title: "溫泉旅館晚餐 🍽️", desc: "享用旅館的精緻會席料理（薩摩地雞、黑豬涮涮鍋、溫泉豆腐），飯後泡露天溫泉洗去一日疲憊，仰望星空入眠。" }
         ]
     },
