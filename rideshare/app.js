@@ -64,46 +64,65 @@ const itineraryData = {
         ]
     },
     3: {
-        title: "霧島神宮 ➔ 壯麗阿蘇 ➔ 熊本市",
-        route: "鹿兒島 ➔ 霧島神宮 ➔ 丸尾瀑布 ➔ 阿蘇中岳火山口 ➔ 草千里 ➔ 熊本市區",
-        mileage: "約 220 km",
-        time: "約 4 hrs (自駕)",
-        toll: "約 2,300 円 (KEP 高速券適用)",
+        title: "霧島神宮 ‧ 霧島溫泉鄉",
+        route: "鹿兒島市區 ➔ 霧島神宮 ➔ 丸尾瀑布 ➔ 霧島溫泉",
+        mileage: "約 90 km",
+        time: "約 1.5 hrs (自駕)",
+        toll: "約 800 円 (KEP 高速券適用)",
         image: "images/day3.png",
-        imageAlt: "阿蘇草千里翠綠大草原",
-        tip: "今天是自駕精華日！早起從鹿兒島出發，先參拜霧島神宮，再一路北上穿越阿蘇火山區。阿蘇火山口屬活火山，出發前務必查詢「阿蘇山火口立入規制情報」確認是否開放。",
+        imageAlt: "霧島神宮朱紅色大社殿",
+        tip: "今天行程輕鬆！從鹿兒島北上霧島山區，參拜霧島神宮後入住溫泉旅館。傍晚泡露天溫泉洗去旅途疲憊，好好享受日式旅館的款待。",
         meals: {
             breakfast: "飯店早餐 / 便利商店輕食",
-            lunch: "阿蘇 ‧ <a href='https://www.google.com/maps/place/%E9%89%84%E6%9D%BF%E7%84%BC%E9%98%BF%E8%98%87%E3%81%BE%E3%83%BC%E3%81%BC%E3%83%BC/data=!4m2!3m1!1s0x0:0x9bff0aa16ed651b3?sa=X&ved=1t:2428&ictx=111' target='_blank'>鉄板焼阿蘇まーぼー 📍</a> / <a href='https://www.google.com/maps/search/?api=1&query=あか牛丼専門店+ごとう屋+本店' target='_blank'>ごとう屋 本店 📍</a> 🥩",
-            dinner: "熊本市區 ‧ 馬肉刺身居酒屋 或 太平燕（春雨湯麵）🍜"
+            lunch: "霧島 ‧ 當地蕎麥麵或定食 🍜",
+            dinner: "霧島溫泉旅館 ‧ 隨附晚餐（會席料理）"
         },
-        accommodation: "熊本市區 ‧ <a href='https://www.agoda.com/zh-tw/fav-hotel-kumamoto/hotel/kumamoto-jp.html?countryId=3&finalPriceView=2&isShowMobileAppPrice=false&cid=1844104&adults=4&checkIn=2027-01-30&currencyCode=TWD&los=2' target='_blank'>FAV HOTEL 熊本 🔗</a>（住兩晚）",
+        accommodation: "霧島溫泉鄉 ‧ <a href='https://www.agoda.com/zh-tw/kirishima-onsen-ryokojin-sanso/hotel/kirishima-jp.html?countryId=3&finalPriceView=1&isShowMobileAppPrice=false&cid=1779080&numberOfBedrooms=&familyMode=false&adults=4&children=0&rooms=1&maxRooms=0&checkIn=2027-01-30&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=3&showReviewSubmissionEntry=false&currencyCode=TWD&isFreeOccSearch=false&los=1&searchrequestid=2f647880-493a-4fb9-8151-bd2bb724a617&ds=qgPLe6XWQl8X9rcw' target='_blank'>霧島溫泉 旅行人山莊 🔗</a>",
         parkingSpots: [
             { name: "霧島神宮", mapcode: "376 089 596*04" },
             { name: "丸尾滝", mapcode: "42 804 030*47" },
+        ],
+        timeline: [
+            { time: "09:00", title: "退房出發 ‧ 前往霧島 🚗", desc: "從鹿兒島市區出發，沿九州自動車道（KEP 適用）北上前往霧島山區（約 1 小時車程）。沿途風景從都市漸轉為山巒疊翠。" },
+            { time: "10:00", title: "霧島神宮參拜 ⛩️", desc: "<a href='https://www.google.com/maps/search/?api=1&query=霧島神宮' target='_blank'>霧島神宮 📍</a>——南九州規模最大的朱紅色神宮，祭祀天孫瓊瓊杵尊。也是坂本龍馬新婚旅行地。朱漆大社殿在蔥蘢杉木林間格外莊嚴，境內瀰漫著清淨神聖的氣息。" },
+            { time: "11:30", title: "霧島午餐", desc: "在霧島神宮附近享用當地蕎麥麵或鄉土料理定食。" },
+            { time: "13:00", title: "丸尾瀑布 (順路)", desc: "霧島溫泉區的<a href='https://www.google.com/maps/search/?api=1&query=丸尾滝' target='_blank'>丸尾瀑布 📍</a>是罕見的「溫泉瀑布」——溫泉水直接形成的瀑布，冬季時水蒸氣繚繞如仙境，就在入住溫泉旅館的路上，停車看幾分鐘即可。" },
+            { time: "14:00", title: "入住霧島溫泉鄉 ♨️", desc: "提早入住硫磺泉煙裊裊的霧島溫泉。換上浴衣悠閒散步，享受旅館設施。可以在溫泉街散步、探訪足湯，或在房間內休息放鬆。" },
+            { time: "18:00", title: "溫泉旅館晚餐 🍽️", desc: "享用旅館的精緻會席料理（薩摩地雞、黑豬涮涮鍋、溫泉豆腐），飯後泡露天溫泉洗去一日疲憊，仰望星空入眠。" }
+        ]
+    },
+    4: {
+        title: "壯麗阿蘇大景 ➔ 熊本市",
+        route: "霧島溫泉 ➔ 阿蘇中岳火山口 ➔ 草千里 ➔ 大觀峰 ➔ 熊本市區",
+        mileage: "約 180 km",
+        time: "約 3.5 hrs (自駕)",
+        toll: "約 1,800 円 (KEP 高速券適用)",
+        image: "images/day4.png",
+        imageAlt: "阿蘇草千里翠綠大草原",
+        tip: "今天專注享受阿蘇的壯闘火山景觀！阿蘇火山口屬活火山，出發前務必查詢「阿蘇山火口立入規制情報」確認是否開放。下午輕鬆開往熊本市區入住。",
+        meals: {
+            breakfast: "霧島溫泉旅館 ‧ 隨附早餐",
+            lunch: "阿蘇 ‧ <a href='https://www.google.com/maps/place/%E9%89%84%E6%9D%BF%E7%84%BC%E9%98%BF%E8%98%87%E3%81%BE%E3%83%BC%E3%81%BC%E3%83%BC/data=!4m2!3m1!1s0x0:0x9bff0aa16ed651b3?sa=X&ved=1t:2428&ictx=111' target='_blank'>鉄板焼阿蘇まーぼー 📍</a> / <a href='https://www.google.com/maps/search/?api=1&query=あか牛丼専門店+ごとう屋+本店' target='_blank'>ごとう屋 本店 📍</a> 🥩",
+            dinner: "熊本市區 ‧ 馬肉刺身居酒屋 或 太平燕（春雨湯麵）🍜"
+        },
+        accommodation: "熊本市區 ‧ <a href='https://www.agoda.com/zh-tw/fav-hotel-kumamoto/hotel/kumamoto-jp.html?countryId=3&finalPriceView=2&isShowMobileAppPrice=false&cid=1844104&adults=4&checkIn=2027-01-31&currencyCode=TWD&los=2' target='_blank'>FAV HOTEL 熊本 🔗</a>（住兩晚）",
+        parkingSpots: [
             { name: "阿蘇中岳火口", mapcode: "256 460 490*83" },
             { name: "草千里ヶ浜", mapcode: "256 456 741*50" },
             { name: "大観峰", mapcode: "256 878 130*04" },
         ],
         timeline: [
-            { time: "07:30", title: "早起出發 ‧ 前往霧島 🚗", desc: "從鹿兒島市區出發，沿九州自動車道（KEP 適用）前往霧島山區（約 1 小時車程）。" },
-            { time: "08:30", title: "霧島神宮參拜 ⛩️", desc: "<a href='https://www.google.com/maps/search/?api=1&query=霧島神宮' target='_blank'>霧島神宮 📍</a>——南九州規模最大的朱紅色神宮，祭祀天孫瓊瓊杵尊。也是坂本龍馬新婚旅行地。朱漆大社殿在蔥蘢杉木林間格外莊嚴。" },
-            { time: "09:30", title: "丸尾瀑布 (順路)", desc: "霧島溫泉區的<a href='https://www.google.com/maps/search/?api=1&query=丸尾滝' target='_blank'>丸尾瀑布 📍</a>是罕見的「溫泉瀑布」——冬季時水蒸氣繚繞如仙境，停車看幾分鐘即可。" },
-            { time: "10:00", title: "驅車北上前往阿蘇 🚗", desc: "從霧島經高速公路北上前往阿蘇火山區域，約 2 小時車程。沿途穿越破火山口地形，壯闊尺度讓人震撼。" },
-            { time: "12:00", title: "阿蘇中岳火山口觀景 🌋", desc: "若<a href='https://www.google.com/maps/search/?api=1&query=阿蘇中岳火口' target='_blank'>阿蘇中岳火山口 📍</a>開放，沿步道直達火口旁，俯瞰翻滾的火山煙霧與翠綠火山湖。" },
-            { time: "12:30", title: "阿蘇午餐 🥩", desc: "品嚐阿蘇名物赤牛料理！❶ <a href='https://www.google.com/maps/place/%E9%89%84%E6%9D%BF%E7%84%BC%E9%98%BF%E8%98%87%E3%81%BE%E3%83%BC%E3%81%BC%E3%83%BC/data=!4m2!3m1!1s0x0:0x9bff0aa16ed651b3?sa=X&ved=1t:2428&ictx=111' target='_blank'>鉄板焼阿蘇まーぼー 📍</a> ❷ <a href='https://www.google.com/maps/search/?api=1&query=あか牛丼専門店+ごとう屋+本店' target='_blank'>ごとう屋 本店 📍</a>（赤牛丼）" },
-            { time: "13:30", title: "草千里之濱 🐄", desc: "漫步在<a href='https://www.google.com/maps/search/?api=1&query=草千里ヶ浜' target='_blank'>草千里之濱 📍</a>——阿蘇山腰的廣大火山盆地草原。青草、藍天、火山——九州的象徵風景。" },
-            { time: "14:30", title: "大觀峰展望台 (選配)", desc: "若時間允許，繞至「<a href='https://www.google.com/maps/search/?api=1&query=大観峰' target='_blank'>大觀峰 📍</a>」展望台，360度俯瞰阿蘇五岳。" },
-            { time: "15:30", title: "驅車前往熊本市區 🚗", desc: "從阿蘇沿九州自動車道南下前往熊本市區（約 1 小時車程）。" },
-            { time: "16:30", title: "入住熊本市區飯店", desc: "抵達熊本市區飯店 Check-in，放下行李稍作休息。" },
-            { time: "18:00", title: "熊本市區晚餐 🍜", desc: "品嚐熊本在地名物：❶ 馬肉刺身 ❷ 太平燕（春雨湯麵）❸ 桂花拉麵（濃郁豚骨加炸蒜片）。" }
+            { time: "08:30", title: "退房出發 ‧ 前往阿蘇 🚗", desc: "離開霧島溫泉，經高速公路北上前往阿蘇火山區域（約 2 小時車程）。沿途穿越破火山口地形，壯闊尺度讓人震撼。" },
+            { time: "10:30", title: "阿蘇中岳火山口觀景 🌋", desc: "若<a href='https://www.google.com/maps/search/?api=1&query=阿蘇中岳火口' target='_blank'>阿蘇中岳火山口 📍</a>開放，沿步道直達火口旁，俯瞰翻滾的火山煙霧與翠綠火山湖。站在活火山口邊緣的震撼感無法言喻。" },
+            { time: "11:30", title: "阿蘇午餐 🥩", desc: "品嚐阿蘇名物赤牛料理！❶ <a href='https://www.google.com/maps/place/%E9%89%84%E6%9D%BF%E7%84%BC%E9%98%BF%E8%98%87%E3%81%BE%E3%83%BC%E3%81%BC%E3%83%BC/data=!4m2!3m1!1s0x0:0x9bff0aa16ed651b3?sa=X&ved=1t:2428&ictx=111' target='_blank'>鉄板焼阿蘇まーぼー 📍</a> ❷ <a href='https://www.google.com/maps/search/?api=1&query=あか牛丼専門店+ごとう屋+本店' target='_blank'>ごとう屋 本店 📍</a>（赤牛丼）" },
+            { time: "12:30", title: "草千里之濱 🐄", desc: "漫步在<a href='https://www.google.com/maps/search/?api=1&query=草千里ヶ浜' target='_blank'>草千里之濱 📍</a>——阿蘇山腰的廣大火山盆地草原。青草、藍天、火山——九州的象徵風景。" },
+            { time: "14:00", title: "大觀峰展望台 (選配)", desc: "若時間允許，繞至「<a href='https://www.google.com/maps/search/?api=1&query=大観峰' target='_blank'>大觀峰 📍</a>」展望台，360度俯瞰阿蘇五岳。" },
+            { time: "15:00", title: "驅車前往熊本市區 🚗", desc: "從阿蘇沿九州自動車道（KEP 適用）南下前往熊本市區（約 1 小時車程），輕鬆抵達。" },
+            { time: "16:00", title: "入住熊本市區飯店", desc: "抵達熊本市區飯店 Check-in，放下行李稍作休息。晚上可在市區散步探索。" },
+            { time: "18:00", title: "熊本市區晚餐 🍜", desc: "品嚐熊本在地名物：❶ 馬肉刺身 ❷ 太平燕（春雨湯麵）❸ 桂花拉麵（濃郁豚骨加炸蒜片）。在地感十足的一晚！" }
         ]
     },
-    4: {
-        title: "熊本城 ‧ 水前寺 ‧ 熊本一日遊",
-        route: "熊本城 ➔ 城彩苑 ➔ 水前寺成趣園 ➔ 上下通商店街 ➔ 市區",
-        mileage: "市區內移動",
-        time: "自駕 / 市電",
+    5: {
         toll: "無",
         image: "images/day5.png",
         imageAlt: "熊本城天守閣雄偉石垣",
@@ -128,7 +147,7 @@ const itineraryData = {
             { time: "18:30", title: "熊本晚餐 🍖", desc: "今晚可以嘗試居酒屋體驗——點一盤馬肉刺身、辛子蓮藕、一品燒酒，感受熊本的夜晚氣氛。或者來頓燒肉犒賞自己！" }
         ]
     },
-    5: {
+    6: {
         title: "熊本 ➔ 柳川 ➔ 太宰府 ➔ 福岡還車",
         route: "熊本 ➔ 吉次園 ➔ 柳川搖櫓遊船 ➔ 太宰府天滿宮 ➔ 福岡還車",
         mileage: "約 160 km (全程自駕)",
@@ -163,7 +182,7 @@ const itineraryData = {
             { time: "18:30", title: "福岡晚餐 🍜", desc: "推薦今晚去吃「<a href='https://www.google.com/maps/search/?api=1&query=一蘭+本社総本店' target='_blank'>一蘭拉麵總本店 📍</a>」（中洲川端）或「<a href='https://www.google.com/maps/search/?api=1&query=博多ShinShin+博多駅' target='_blank'>博多 ShinShin 拉麵 📍</a>」。結束自駕的夜晚，用一碗濃郁豚骨拉麵犒賞自己！" }
         ]
     },
-    6: {
+    7: {
         title: "大正浪漫門司港 ‧ 關門海峽 ‧ 小倉城",
         route: "博多 ➔ 門司港 ➔ 關門海峽隧道 ➔ 小倉城 ➔ 博多",
         mileage: "無 (大眾運輸)",
@@ -189,7 +208,7 @@ const itineraryData = {
             { time: "18:00", title: "前往中洲屋台 🍢", desc: "從 teamLab 步行 15 分鐘至<a href='https://www.google.com/maps/search/?api=1&query=唐人町駅' target='_blank'>唐人町駅 📍</a>，搭地鐵至中洲川端駅（約 8 分鐘），或直接叫計程車（約 15 分鐘、¥1,000~1,500）。抵達<a href='https://www.google.com/maps/search/?api=1&query=中洲屋台' target='_blank'>中洲屋台 📍</a>——博多最經典的露天攤販街！在河畔燈光下坐上板凳，來碗豚骨拉麵、烤雞串、關東煮，配一杯生啤酒，用最道地的博多夜晚為旅程乾杯！🍺" }
         ]
     },
-    7: {
+    8: {
         title: "博多老城散步 ➔ 滿載歸國",
         route: "櫛田神社 / 東長寺 ➔ 最後採購 ➔ 福岡機場 (FUK) 離境",
         mileage: "無 (大眾運輸)",
