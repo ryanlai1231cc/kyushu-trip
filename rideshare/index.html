@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>妤.浚.綸好好玩 ! 七日自駕遊 | 日本九州 2027</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="精心規劃的福岡八日自駕遊攻略。包含福岡、太宰府、柳川、熊本、阿蘇火山、高千穗、霧島及鹿兒島的完美自駕路線、日本自駕注意事項與互動式行前清單。">
+    <meta name="keywords" content="福岡自駕, 九州自駕, 福岡八日遊, 阿蘇火山自駕, 鹿兒島自駕, 日本自駕攻略">
+    <meta name="author" content="福岡自駕遊團隊">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="妤.浚.綸好好玩 ! 八日自駕遊 - 探索九州的極致旅程">
+    <meta property="og:description" content="踏上自由的日本九州旅程！包含完整八日行程規劃、景點行車時間、日本自駕安全指南與互動清單。">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icon (Modern Premium Icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+    <!-- Background glowing spots for modern UI feel -->
+    <div class="glow-bg">
+        <div class="glow-spot spot-1"></div>
+        <div class="glow-spot spot-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="#" class="logo" id="logo">
+                <i class="ri-steering-fill logo-icon"></i>
+                <span class="logo-text">Fukuoka<span class="highlight">Drive</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#overview" class="nav-link active"><i class="ri-compass-3-line"></i> 總覽</a></li>
+                    <li><a href="#itinerary" class="nav-link"><i class="ri-calendar-todo-line"></i> 八日行程</a></li>
+                    <li><a href="#guide" class="nav-link"><i class="ri-road-map-line"></i> 自駕指南</a></li>
+                    <li><a href="#checklist" class="nav-link"><i class="ri-checkbox-multiple-line"></i> 行前準備</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="開啟選單">
+                    <i class="ri-menu-4-line"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="badge fade-in">
+                <i class="ri-map-pin-line"></i> 日本九州 ‧ 鹿兒島進 福岡回
+            </div>
+            <h1 class="hero-title fade-in-delay-1">妤.浚.綸好好玩 ! 七日自駕遊</h1>
+            <p class="hero-subtitle fade-in-delay-2">以自由的步調，探索九州的火山、溫泉、古城與極致美食</p>
+            <div class="hero-ctas fade-in-delay-3">
+                <a href="#itinerary" class="btn btn-primary">開始探索行程 <i class="ri-arrow-right-line"></i></a>
+                <a href="#guide" class="btn btn-secondary">自駕注意事項</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="scroll-text">向下滾動</span>
+        </div>
+    </section>
+
+    <!-- Trip Overview Section -->
+    <section class="overview-section section-padding" id="overview">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Trip Statistics</span>
+                <h2>行程亮點與規劃概要</h2>
+                <p class="overview-text">七天六夜自駕縱貫之旅，前兩天深度暢遊鹿兒島，第三天由鹿兒島出發經霧島、阿蘇一路北上至熊本，第五天於福岡還車後，最後兩天使用地鐵暢遊福岡與門司港，最後自福岡機場離境返台。</p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="ri-pin-distance-line"></i></div>
+                    <div class="stat-value">~640 km</div>
+                    <div class="stat-label">預估自駕行駛里程</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="ri-time-line"></i></div>
+                    <div class="stat-value">~14 hrs</div>
+                    <div class="stat-label">預估自駕開車時間</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="ri-map-2-line"></i></div>
+                    <div class="stat-value">4 個縣</div>
+                    <div class="stat-label">福岡、熊本、大分、鹿兒島</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="ri-heart-pulse-line"></i></div>
+                    <div class="stat-value">二溫泉區</div>
+                    <div class="stat-label">霧島溫泉、櫻島火山</div>
+                </div>
+            </div>
+
+            <!-- Flight Information -->
+            <div class="flights-section">
+                <div class="flights-header">
+                    <h3><i class="ri-plane-fill"></i> 航班機票與出發資訊</h3>
+                    <p>桃園 (TPE) 出發，含去程與回程的 Google Flights 搜尋連結。</p>
+                </div>
+                <div class="flights-grid single-card">
+                    <div class="flight-card">
+                        <div class="flight-route-info">
+                            <div class="flight-leg">
+                                <div class="leg-header">
+                                    <span class="direction-tag">去程</span>
+                                    <span class="date">2027/01/28</span>
+                                </div>
+                                <div class="leg-route">
+                                    <span class="airport-code">TPE</span>
+                                    <i class="ri-arrow-right-line route-arrow"></i>
+                                    <span class="airport-code">KOJ</span>
+                                </div>
+                            </div>
+                            <div class="flight-divider"></div>
+                            <div class="flight-leg">
+                                <div class="leg-header">
+                                    <span class="direction-tag">回程</span>
+                                    <span class="date">2027/02/04</span>
+                                </div>
+                                <div class="flight-route">
+                                    <span class="airport-code">FUK</span>
+                                    <i class="ri-arrow-right-line route-arrow"></i>
+                                    <span class="airport-code">TPE</span>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap;">
+                                <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI3LTAxLTI4agcIARIDVFBFcgcIARIDS09KGh4SCjIwMjctMDItMDRqBwgBEgNGVUtyBwgBEgNUUEVAAUgBcAGCAQsI____________AZgBAw&hl=zh-TW&gl=TW&curr=TWD" target="_blank" class="btn btn-secondary btn-sm btn-flight" style="flex: 1; min-width: 140px;">
+                                    搜尋機票 <i class="ri-search-line"></i>
+                                </a>
+                                <a href="https://www.google.com/travel/flights/booking?tfs=CBwQAho_EgoyMDI3LTAxLTI4Ih8KA1RQRRIKMjAyNy0wMS0yOBoDS09KKgJDSTIDMTE4agcIARIDVFBFcgcIARIDS09KGj8SCjIwMjctMDItMDQiHwoDRlVLEgoyMDI3LTAyLTA0GgNUUEUqAkNJMgMxMTFqBwgBEgNGVUtyBwgBEgNUUEVAAUgBcAGCAQsI____________AZgBAw&tfu=CnBDalJJTTNSd0xVbERjRVp5ZUUxQlEwaGpVRkZDUnkwdExTMHRMUzB0ZEdKaWRtVXhNVUZCUVVGQlIyOWxaRFpaUzNobGFIRkJFZ2REU1RFeE1TTXhHZ3NJcm9rQkVBQWFBMVJYUkRnY2NPZTBBdz09EgIIACIDCgEw&hl=zh-TW&gl=TW&curr=TWD" target="_blank" class="btn btn-primary btn-sm btn-flight" style="flex: 1; min-width: 140px;">
+                                    華航預約 <i class="ri-plane-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Car Rental Information -->
+            <div class="accommodations-section" style="margin-top: 40px;">
+                <div class="flights-header">
+                    <h3><i class="ri-car-fill"></i> 租車選項 (鹿兒島機場取車)</h3>
+                    <p>前段自駕行程的租車選項，建議提早預約以確保有適合的車型與 ETC 卡。</p>
+                </div>
+                <div class="flights-grid single-card">
+                    <div class="flight-card">
+                        <div class="flight-group-title">
+                            <span class="badge" style="background: rgba(46, 204, 113, 0.15); color: #2ecc71; border: 1px solid rgba(46, 204, 113, 0.3);">推薦：Tabirai 租車網</span>
+                        </div>
+                        <div class="flight-route-info" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 0;">
+                            <i class="ri-car-washing-line" style="font-size: 2.5rem; color: #2ecc71; margin-bottom: 10px;"></i>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); text-align: center; margin-bottom: 15px; line-height: 1.5;">鹿兒島機場取車、支援中文導航<br>※ 預計福岡市區還車 (甲租乙還)</p>
+                            <a href="https://tc.tabirai.net/car/kagoshima/search/rentacar.aspx?SYF=20270128&SYT=20270202&SYFT=10%3A00&SYTT=10%3A00&SAFG=1&SATG=1&SAF=146201&SAT=140201&STP=7%2C6&CFT=&SSM=2&SPT=140&SPF=146&SSP=&PRV=0&SRT=0&PID=" target="_blank" class="btn btn-secondary btn-sm btn-flight" style="width: 100%; border-color: rgba(46, 204, 113, 0.3); color: #2ecc71;">
+                                前往 Tabirai 搜尋 <i class="ri-external-link-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Map Mockup -->
+            <div class="map-container" style="margin-top: 40px;">
+                <div class="map-sidebar">
+                    <h3>行經主要景點</h3>
+                    <ul class="route-list">
+                        <li><span class="route-num">1</span> <strong>KOJ 取車 / 櫻島環島</strong> <span class="route-tag">起點 (自駕)</span></li>
+                        <li><span class="route-num">2</span> <strong>鹿兒島 ‧ 仙巖園</strong></li>
+                        <li><span class="route-num">3</span> <strong>霧島 ➔ 阿蘇 ➔ 熊本</strong></li>
+                        <li><span class="route-num">4</span> <strong>熊本城 ‧ 熊本一日遊</strong></li>
+                        <li><span class="route-num">5</span> <strong>柳川 ‧ 太宰府 ➔ 福岡還車</strong> <span class="route-tag">結束自駕</span></li>
+                        <li><span class="route-num">6</span> <strong>門司港 ‧ 關門海峽</strong> <span class="route-tag">地鐵</span></li>
+                        <li><span class="route-num">7</span> <strong>博多 ➔ 福岡機場</strong> <span class="route-tag">終點 (地鐵)</span></li>
+                    </ul>
+                </div>
+                <div class="map-visualization" style="padding: 16px; display: flex; align-items: center; justify-content: center;">
+                    <img src="images/route_map.png" alt="九州八日自駕路線圖 - 鹿兒島到福岡" style="width: 100%; max-width: 500px; height: auto; border-radius: 12px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Itinerary Section -->
+    <section class="itinerary-section section-padding" id="itinerary">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">8 Days Itinerary</span>
+                <h2>自駕與鐵道行程詳細規劃</h2>
+                <p>每日交通方式、建議路線與重要停靠站，幫助您流暢規劃每一天。</p>
+            </div>
+
+            <div class="itinerary-wrapper">
+                <!-- Tabs Nav -->
+                <div class="itinerary-tabs" id="itineraryTabs">
+                    <button class="tab-btn active" data-day="1">
+                        <span class="tab-day">DAY 1 <span class="tab-date">(1/28)</span></span>
+                        <span class="tab-title">櫻島巡禮</span>
+                    </button>
+                    <button class="tab-btn" data-day="2">
+                        <span class="tab-day">DAY 2 <span class="tab-date">(1/29)</span></span>
+                        <span class="tab-title">鹿兒島 ‧ 仙巖園</span>
+                    </button>
+                    <button class="tab-btn" data-day="3">
+                        <span class="tab-day">DAY 3 <span class="tab-date">(1/30)</span></span>
+                        <span class="tab-title">霧島 ➔ 阿蘇 ➔ 熊本</span>
+                    </button>
+                    <button class="tab-btn" data-day="4">
+                        <span class="tab-day">DAY 4 <span class="tab-date">(1/31)</span></span>
+                        <span class="tab-title">熊本城 ‧ 熊本一日遊</span>
+                    </button>
+                    <button class="tab-btn" data-day="5">
+                        <span class="tab-day">DAY 5 <span class="tab-date">(2/1)</span></span>
+                        <span class="tab-title">柳川 ‧ 太宰府 ‧ 還車</span>
+                    </button>
+                    <button class="tab-btn" data-day="6">
+                        <span class="tab-day">DAY 6 <span class="tab-date">(2/2)</span></span>
+                        <span class="tab-title">門司港 ‧ 關門海峽</span>
+                    </button>
+                    <button class="tab-btn" data-day="7">
+                        <span class="tab-day">DAY 7 <span class="tab-date">(2/3)</span></span>
+                        <span class="tab-title">博多 ➔ 滿載歸國</span>
+                    </button>
+                </div>
+
+                <!-- Tabs Content Dynamic Area -->
+                <div class="itinerary-content" id="itineraryContent">
+                    <!-- Content will be injected dynamically via JS, but we put Day 1 statically for basic structure/SEO -->
+                    <div class="day-panel active" id="dayPanel1">
+                        <div class="panel-header">
+                            <div class="day-number-badge">Day 1</div>
+                            <div class="panel-meta">
+                                <h2>抵達鹿兒島 ‧ 櫻島環島巡禮</h2>
+                                <p class="route-line"><i class="ri-map-pin-line"></i> 路線：鹿兒島機場 (KOJ) 取車 ➔ 鹿兒島港渡輪 ➔ 櫻島環島 ➔ 鹿兒島市區</p>
+                            </div>
+                        </div>
+
+                        <div class="panel-grid">
+                            <div class="panel-info">
+                                <div class="info-card-row">
+                                    <div class="info-tag"><i class="ri-roadster-line"></i> 開車里程：約 120 km</div>
+                                    <div class="info-tag"><i class="ri-time-line"></i> 車程時間：約 2.5 hrs (自駕)</div>
+                                    <div class="info-tag"><i class="ri-copper-coin-line"></i> 過路費：渡輪費 約 1,100 円/車 + KEP 高速券</div>
+                                </div>
+
+                                <h3>本日行程排程</h3>
+                                <ul class="timeline-list">
+                                    <li>
+                                        <span class="time">11:20</span>
+                                        <div class="timeline-body">
+                                            <h4>抵達鹿兒島國際機場 (KOJ) ✈️</h4>
+                                            <p>飛機降落！依序辦理入境手續、衛生申報與行李提領，完成後等待租車行的免費接駁巴士。</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="time">12:00~12:45</span>
+                                        <div class="timeline-body">
+                                            <h4>取車 ‧ 驗車 ‧ 加購 KEP 優惠券 🚗</h4>
+                                            <p>搭接駁車至機場外租車營業所。攜帶護照、台灣駕照正本與日文譯本辦理手續，仔細確認車輛外觀（拍照存證），啟用 ETC 卡。</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="time">13:50</span>
+                                        <div class="timeline-body">
+                                            <h4>指宿砂蒸溫泉「砂樂」♨️</h4>
+                                            <p>體驗世界罕見的天然砂蒸溫泉！穿著浴衣躺在海灘上，享受 70℃ 熱砂覆蓋全身的奇妙體驗。</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="time">16:00</span>
+                                        <div class="timeline-body">
+                                            <h4>鹿兒島港渡輪 ‧ 衝上甲板吃烏龍麵 🍜</h4>
+                                            <p>渡輪甲板上「やぶ金」薩摩炸魚餅烏龍麵，正面欣賞噴煙櫻島——船程只有 15 分鐘！</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="time">18:30</span>
+                                        <div class="timeline-body">
+                                            <h4>天文館通晚餐 🍖</h4>
+                                            <p>薩摩黑豬炸排「黒かつ亭」+ 元祖白熊冰「むじゃき」，完美的鹿兒島之夜。</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="panel-visual">
+                                <div class="card-visual-image placeholder-img" style="background-image: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=600&auto=format&fit=crop'); background-size: cover; background-position: center; min-height: 220px; display: flex; align-items: flex-end; padding: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); border: none;">
+                                    <span style="color: #ffffff; font-weight: 700; font-size: 1rem;"><i class="ri-camera-lens-line" style="opacity: 1; display: inline; margin-right: 6px;"></i>夕陽前的櫻島火山</span>
+                                </div>
+                                <div class="tip-box">
+                                    <h4><i class="ri-information-line"></i> 本日出行提醒</h4>
+                                    <p>今天行程充實但精彩！取車後先南下指宿體驗砂浴，午後回鹿兒島港搭渡輪去櫻島。渡輪甲板「やぶ金」烏龍麵只有 15 分鐘可吃，動作要快！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Driving Guide Section -->
+    <section class="guide-section section-padding" id="guide">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Driving Guide</span>
+                <h2>日本自駕必讀指南</h2>
+                <p>日本自駕交通規則與台灣不同，在出發前熟悉規則能讓旅程更安心、順暢。</p>
+            </div>
+
+            <div class="guide-grid">
+                <!-- Card 1: 駕照文件 -->
+                <div class="guide-card">
+                    <div class="guide-card-icon"><i class="ri-file-text-line"></i></div>
+                    <h3>必備證件與文件</h3>
+                    <ul>
+                        <li><i class="ri-checkbox-circle-fill"></i> <strong>台灣駕照正本</strong> (正本必須在有效期內)</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> <strong>日文譯本</strong> (監理所申請，不可使用國際駕照)</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> <strong>護照正本</strong> (租車時登記使用)</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> <strong>預訂確認信 & 信用卡</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: ETC & 快速道路 -->
+                <div class="guide-card">
+                    <div class="guide-card-icon"><i class="ri-rfid-line"></i></div>
+                    <h3>高速公路與 ETC</h3>
+                    <ul>
+                        <li><i class="ri-checkbox-circle-fill"></i> 建議在租車時<strong>預約租借 ETC 卡</strong>，省去排隊付現的麻煩</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 九州自駕可考慮購買 <strong>KEP (Kyushu Expressway Pass)</strong> 吃到飽票券</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 過收費站時請走藍色 <strong>ETC 專用車道</strong>，時速限制於 20km/h 以下</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: 加油指引 -->
+                <div class="guide-card">
+                    <div class="guide-card-icon"><i class="ri-gas-station-line"></i></div>
+                    <h3>日本加油站攻略</h3>
+                    <ul>
+                        <li><i class="ri-checkbox-circle-fill"></i> 日本一般轎車加的是<strong>無鉛汽油 (Regular / レギュラー)</strong>，油槍通常為紅色</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 自助加油步驟：選擇 Regular ➔ 選擇付款方式 (刷卡/現金) ➔ 觸碰靜電消除墊 ➔ 加油 ➔ 領取找零</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 還車時原則上需要<strong>加滿油</strong>並附上加油發票收據給租車行檢驗</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: 交通守則 -->
+                <div class="guide-card">
+                    <div class="guide-card-icon"><i class="ri-alert-line"></i></div>
+                    <h3>交通安全與規則</h3>
+                    <ul>
+                        <li><i class="ri-checkbox-circle-fill"></i> <strong>靠左行駛</strong>：右轉大彎、左轉小彎、雨刷與方向燈位置相反</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> <strong>行人優先</strong>：轉彎車務必禮讓斑馬線行人</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> <strong>「一時停止」</strong>標誌一定要將車完全煞停三秒</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> <strong>嚴禁酒駕</strong>：刑責極重，同車乘客也會受罰</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist Section -->
+    <section class="checklist-section section-padding" id="checklist">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Preparation Checklist</span>
+                <h2>行前準備檢查表</h2>
+                <p>透過互動式清單，隨時追蹤您的準備進度。進度會自動儲存在您的瀏覽器中。</p>
+            </div>
+
+            <div class="checklist-box">
+                <div class="checklist-progress">
+                    <div class="progress-info">
+                        <span>準備進度</span>
+                        <span class="progress-percentage" id="progressText">0%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="checklist-groups">
+                    <!-- Group 1: Necessary Documents -->
+                    <div class="checklist-group">
+                        <h3><i class="ri-folder-zip-line text-primary"></i> 必備重要證件</h3>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="doc-passport">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">護照正本 (確認有效期大於6個月)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="doc-driver-license">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">中華民國(台灣)駕照正本</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="doc-translation">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">日文譯本正本 (至監理所辦理)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="doc-credit-card">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">租車預訂者同名之信用卡 (過路費/租金擔保)</span>
+                        </label>
+                    </div>
+
+                    <!-- Group 2: Renting items -->
+                    <div class="checklist-group">
+                        <h3><i class="ri-car-line text-primary"></i> 租車與交通準備</h3>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="car-reserve">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">確認租車預約成功 (列印預約單或存在手機)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="car-etc">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">租車合約確認已預約租借 ETC 卡</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="car-insurance">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">確認加購 NOC 營業損失補償及免責險</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="car-phone-holder">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">攜帶手機車用支架與車充線</span>
+                        </label>
+                    </div>
+
+                    <!-- Group 3: Gadgets and others -->
+                    <div class="checklist-group">
+                        <h3><i class="ri-suitcase-line text-primary"></i> 個人隨身行李</h3>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="lug-internet">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">上網卡 (eSIM/實體卡) 或租借日商 WiFi 分享器</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="lug-yen">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">日圓現金 (有些鄉下停車場或拉麵店只收現金)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="lug-visitjapan">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">填寫 Visit Japan Web 取得入境與海關 QR Code</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="lug-map-app">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">手機下載離線 Google Maps 或預存行程地標</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="checklist-actions">
+                    <button class="btn btn-secondary btn-sm" id="resetChecklistBtn"><i class="ri-refresh-line"></i> 重設所有項目</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i class="ri-steering-fill logo-icon"></i>
+                    <span>Fukuoka<span class="highlight">Drive</span></span>
+                </a>
+                <p>福岡自駕遊行程規劃框架，供自由行愛好者參考與調整。預祝您有段美好又安全的公路旅行！</p>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-content">
+                <p>&copy; <span id="copyrightYear">2026</span> 九州自駕遊. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="app.js?v=5"></script>
+</body>
+</html>
