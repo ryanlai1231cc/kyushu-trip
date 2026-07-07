@@ -1,89 +1,89 @@
-﻿/**
- * Fukuoka-Kagoshima 8-Day Tour JS Logic
+/**
+ * Fukuoka Round Trip (TPE↔FUK) 8-Day Kyushu Tour JS Logic
  */
 
 // --- 1. Dynamic Itinerary Data ---
 const itineraryData = {
     1: {
-        title: "抵達鹿兒島 ‧ 櫻島渡輪巡禮",
-        route: "KOJ 機場巴士 ➔ 鹿兒島市區 ➔ 渡輪櫻島 ➔ 鹿兒島市區",
-        mileage: "無（公共交通）",
-        time: "機場巴士 40 min + 渡輪 15 min",
-        toll: "機場巴士 \u00a51,400 + 渡輪 \u00a5200/人",
+        title: "福岡抵達 ‧ 中洲屋台初體驗",
+        route: "TPE ✈️ FUK 福岡機場 ➤ 地下鐵至博多/天神 ➤ 飯店 Check-in",
+        mileage: "無（地下鐵）",
+        time: "地下鐵",
+        toll: "無",
         image: "images/day1.png",
-        imageAlt: "櫻島火山與鹿兒島灣景",
-        tip: "今天不需要租車！搭機場巴士進市區，放好行李後搭渡輪去櫻島。渡輪甲板「やぶ金」烏龍麵只有 15 分鐘可吃，動作要快！櫻島上可搭觀光巴士環島。",
+        imageAlt: "福岡中洲屋台夜景",
+        tip: "今天航班到達福岡已是傍晚，先有效率地辦好 Check-in，然後輕鬆在中洲屋台或博多拉麵街享受福岡的第一頓晚餐。明天一早會把大行李寄放在飯店再出發去鹿兒島！",
         meals: {
             breakfast: "飛機餐 / 桃園機場出發前自行解決",
-            lunch: "鹿兒島市區 ‧ 拉麵或定食 🍜",
-            dinner: "天文館通 ‧ <a href='https://www.google.com/maps/search/?api=1&query=黒かつ亭+天文館店' target='_blank'>黒かつ亭 / 黒べぇ 天文館店 📍</a> 🍖（薩摩黑豬炸排名店），飯後來一碗元祖<a href='https://www.google.com/maps/search/?api=1&query=天文館むじゃき+本店' target='_blank'>「白熊冰（むじゃき）」📍</a>"
+            lunch: "機上餐食 / 自備點心",
+            dinner: "中洲屋台 ‧ 博多拉麵 🍜"
         },
-        accommodation: "鹿兒島市區 ‧ <a href='https://www.agoda.com/zh-tw/fav-lux-kagoshima-tenmonkan/hotel/kagoshima-jp.html?countryId=3&finalPriceView=2&isShowMobileAppPrice=false&cid=1844104&adults=4&checkIn=2027-01-28&currencyCode=TWD&los=1' target='_blank'>FAV LUX 鹿兒島天文館 🔗</a>",
+        accommodation: "福岡博多市區 ‧ <a href='https://www.agoda.com/zh-tw/the-royal-park-hotel-fukuoka/hotel/fukuoka-jp.html?countryId=0&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&adults=4&checkIn=2027-01-28&currencyCode=TWD&los=1' target='_blank'>The Royal Park Hotel 福岡 🔗</a>（同 Day 6、7 飯店，明天出發前寄放大行李）",
         parkingSpots: [],
         timeline: [
-            { time: "11:20", title: "抵達鹿兒島國際機場 (KOJ) ✈️", desc: "飛機降落至<a href='https://www.google.com/maps/search/?api=1&query=鹿児島空港' target='_blank'>鹿兒島國際機場 📍</a>！依序辦理入境手續、衛生申報與行李提領。" },
-            { time: "12:00", title: "搭機場巴士前往市區 🚌", desc: "在機場外搭乘機場巴士（約 40 分鐘，\u00a51,400/人）前往鹿兒島中央站或天文館通。" },
-            { time: "12:40", title: "抵達市區 ‧ 午餐 🍜", desc: "在鹿兒島中央站或天文館通附近享用午餐，可選擇在地拉麵或定食。飯後步行至飯店 Check-in 放行李。" },
-            { time: "14:00", title: "搭渡輪前往櫻島 ⛴️", desc: "步行或搭市電前往<a href='https://www.google.com/maps/search/?api=1&query=桜島フェリーターミナル' target='_blank'>鹿兒島港渡輪碼頭 📍</a>，購買徒步旅客船票（\u00a5200/人）。上船後衝上甲板找「<a href='https://www.google.com/maps/search/?api=1&query=やぶ金+桜島フェリー' target='_blank'>やぶ金 📍</a>」吃烏龍麵——船程只有 15 分鐘，快吃！" },
-            { time: "14:20", title: "櫻島觀光巴士環島 🌋", desc: "抵達櫻島後搭乘觀光巴士「サクラジマアイランドビュー」（\u00a5500/人，約 60 分鐘一圈），停靠：❶ <a href='https://www.google.com/maps/search/?api=1&query=湯之平展望所' target='_blank'>湯之平展望所 📍</a>（一般遊客可達最高點）➔ ❷ <a href='https://www.google.com/maps/search/?api=1&query=溶岩なぎさ公園+足湯' target='_blank'>熔岩渚公園足湯 📍</a>（免費天然溫泉足湯 ♨️）" },
-            { time: "16:30", title: "搭渡輪返回鹿兒島市區", desc: "搭渡輪返回鹿兒島港（15 分鐘），再步行或搭市電回飯店休息換裝。" },
-            { time: "18:30", title: "天文館通晚餐 🍖", desc: "步行至天文館通，前往<a href='https://www.google.com/maps/search/?api=1&query=黒かつ亭+天文館店' target='_blank'>「黒かつ亭」或「黒べぇ 天文館店」📍</a>——鹿兒島著名薩摩黑豬炸排老店。飯後散步到<a href='https://www.google.com/maps/search/?api=1&query=天文館むじゃき+本店' target='_blank'>「むじゃき」📍</a>嚐元祖「白熊冰」！" }
+            { time: "14:45", title: "桃園機場出發 ✈️", desc: "搭乘 STARLUX 航班從桃園機場 (TPE) 直飛福岡，飛行時間約 2 小時 15 分鐘。" },
+            { time: "18:00", title: "抵達福岡機場 (FUK) ✈️", desc: "降落<a href='https://www.google.com/maps/search/?api=1&query=福岡空港+国際線ターミナル' target='_blank'>福岡機場 📍</a>！依序辦理入境手續、衛生申報與行李提領。" },
+            { time: "18:30", title: "搭地下鐵至市區 🚇", desc: "從福岡機場國內線搭地下鐵空港線至博多或天神（約 5~11 分鐘）。国際線到着者需先搭免費接駁巴士至國內線航廈再轉地下鐵。" },
+            { time: "19:00", title: "飯店 Check-in 🏨", desc: "抵達飯店辦理入住，放下行李稍作休息。這間飯店會住 Day 1、Day 6、Day 7，明天出發前請飯店協助保管大行李箱。" },
+            { time: "19:30", title: "中洲屋台 / 博多拉麵晚餐 🍜", desc: "前往<a href='https://www.google.com/maps/search/?api=1&query=中洲屋台' target='_blank'>中洲屋台 📍</a>——博多最經典的露天攤販街，在河畮燈光下坐上板凳，來碗豚骨拉麵、烤雞串、關東煮，配一杯生啤酒！或者去吃<a href='https://www.google.com/maps/search/?api=1&query=一蘭+本社総本店' target='_blank'>一蘭拉麵總本店 📍</a>。" }
         ]
     },
     2: {
-        title: "鹿兒島一日遊 ‧ 仙巖園世界遺產",
-        route: "鹿兒島市區 ➔ 仙巖園 ➔ 城山展望台 ➔ 天文館通",
-        mileage: "無（市電 / 巴士）",
-        time: "市電 ‧ 巴士",
-        toll: "市電一日券 \u00a5600",
+        title: "新幹線南下鹿兒島 ‧ 天文館通散策",
+        route: "博多駅 ➤ 新幹線 ➤ 鹿児島中央駅 ➤ 天文館通",
+        mileage: "無（新幹線）",
+        time: "新幹線 約 1h20m",
+        toll: "新幹線 約 \u00a510,450/人 + 鹿兒島交通2日券 \u00a51,200",
         image: "images/day2.png",
         imageAlt: "仙巌園日式庭園與櫻島借景",
-        tip: "今天不趕路！搭市電和巴士悠閒暢遊鹿兒島。建議購買市電一日券（\u00a5600），上午參觀世界遺產仙巖園，下午到城山展望台俯瞰櫻島全景。",
+        tip: "今天早上將大行李箱寄放在福岡飯店（請飯店協助保管），只帶軟袋搭新幹線南下鹿兒島。抵達鹿兒島後建議立即購買<a href='https://www.kagoshima-yokanavi.jp/zh-TW/feature/one-day-pass2' target='_blank'>鹿兒島交通2日券 🔗</a>（¥1,200，含市電、市巴士、櫻島渡輪），今明兩天的公共交通全部包辦！晚上品嚐薩摩黑豬與白熊冰！",
         meals: {
-            breakfast: "飯店附近早餐 或 便利商店",
-            lunch: "仙巖園內「<a href='https://www.google.com/maps/search/?api=1&query=桜華亭+仙巌園' target='_blank'>櫻華亭 📍</a>」‧ 薩摩鄉土料理定食 🍱",
-            dinner: "天文館通 ‧ 鹿兒島黑豬涮涮鍋 或 居酒屋 🍖"
+            breakfast: "福岡飯店早餐 / 博多車站商圈",
+            lunch: "新幹線車上便當 或 鹿兒島中央車站附近 🍱",
+            dinner: "天文館通 ‧ <a href='https://www.google.com/maps/search/?api=1&query=黒かつ亭+天文館店' target='_blank'>黒かつ亭 📍</a>（薩摩黑豬炒排）+ <a href='https://www.google.com/maps/search/?api=1&query=天文館むじゃき+本店' target='_blank'>白熊冰（むじゃき）📍</a> 🍧"
         },
         accommodation: "鹿兒島市區 ‧ <a href='https://www.agoda.com/zh-tw/fav-lux-kagoshima-tenmonkan/hotel/kagoshima-jp.html?countryId=3&finalPriceView=2&isShowMobileAppPrice=false&cid=1844104&adults=4&checkIn=2027-01-29&currencyCode=TWD&los=1' target='_blank'>FAV LUX 鹿兒島天文館 🔗</a>",
         parkingSpots: [],
         timeline: [
-            { time: "09:00", title: "搭巴士前往仙巖園 🚌", desc: "從市區搭乘城市觀光巴士或一般路線巴士前往「<a href='https://www.google.com/maps/search/?api=1&query=仙巌園' target='_blank'>仙巖園 📍</a>（磯庭園）」，約 20 分鐘。" },
-            { time: "09:30", title: "仙巖園參觀 ‧ 世界文化遺產 🏛️", desc: "<a href='https://www.google.com/maps/search/?api=1&query=仙巌園' target='_blank'>仙巖園 📍</a>——薩摩藩主島津家的別邸庭園，以櫻島為借景、錦江灣為池塘的壯闊設計堪稱日本庭園最高傑作。園內包含世界文化遺產「舊集成館」——日本近代工業化的起點。" },
-            { time: "11:30", title: "仙巖園午餐 ‧ 櫻華亭", desc: "在園內「<a href='https://www.google.com/maps/search/?api=1&query=桜華亭+仙巌園' target='_blank'>櫻華亭 📍</a>」享用薩摩鄉土料理定食，以櫻島為背景的絕景餐廳。" },
-            { time: "13:00", title: "城山展望台 🏔️", desc: "搭巴士前往<a href='https://www.google.com/maps/search/?api=1&query=城山展望台+鹿児島' target='_blank'>城山展望台 📍</a>——鹿兒島市區的制高點，180 度俯瞰鹿兒島市街、錦江灣與櫻島火山。" },
-            { time: "14:30", title: "鹿兒島水族館 🐠 (選配)", desc: "若帶小朋友可搭市電前往<a href='https://www.google.com/maps/search/?api=1&query=いおワールドかごしま水族館' target='_blank'>鹿兒島水族館 📍</a>，看鯨鯊和海豚表演！或在市區悠閒散步逛街。" },
-            { time: "16:00", title: "返回飯店休息", desc: "回飯店稍作休息，為明天的取車自駕養精蓄銳。" },
-            { time: "18:00", title: "天文館通散策 ‧ 晚餐 🍖", desc: "步行至天文館通商圈逛街購物，享用鹿兒島黑豬涮涮鍋或在地居酒屋，體驗鹿兒島的夜生活！" }
+            { time: "09:00", title: "福岡飯店寄放大行李 🧳", desc: "將硬殼大行李寄放在福岡飯店櫃台（請飯店協助保管至 Day 6 回來取），只帶軟袋出發。" },
+            { time: "09:30", title: "搭新幹線南下鹿兒島 🚅", desc: "從<a href='https://www.google.com/maps/search/?api=1&query=博多駅' target='_blank'>博多車站 📍</a>搭乘九州新幹線「さくら」或「みずほ」號列車，約 1 小時 20 分鐘直達鹿児島中央駅（\u00a510,450/人）。" },
+            { time: "10:50", title: "抵達鹿児島中央駅 🚉", desc: "抵達<a href='https://www.google.com/maps/search/?api=1&query=鹿児島中央駅' target='_blank'>鹿児島中央駅 📍</a>，搭市電或步行前往天文館通的飯店辦理 Check-in，放下行李。" },
+            { time: "12:00", title: "天文館通午餐 ‧ 散策 🍜", desc: "在天文館通商圈附近享用午餐，可選擇在地拉麵或定食。飯後悠閒散步天文館通商圈，逐隙感受鹿兒島的街道氛圍。" },
+            { time: "15:00", title: "天文館通逐街 ‧ 休息 🛍️", desc: "在天文館通商圈戴街購物、逃藥妝，或回飯店休息充電，為明天的仙巌園與櫻島之旅養精蓄銳。" },
+            { time: "18:00", title: "天文館通晚餐 🍖", desc: "前往<a href='https://www.google.com/maps/search/?api=1&query=黒かつ亭+天文館店' target='_blank'>「黒かつ亭」或「黒べぇ 天文館店」📍</a>——鹿兒島著名薩摩黑豬炒排老店。飯後散步到<a href='https://www.google.com/maps/search/?api=1&query=天文館むじゃき+本店' target='_blank'>「むじゃき」📍</a>嘗元祖「白熊冰」！" }
         ]
     },
     3: {
-        title: "AVIS 取車 ➔ 霧島神宮 ‧ 霧島溫泉鄉",
-        route: "鹿兒島市區 AVIS 取車 ➔ 霧島神宮 ➔ 丸尾瀑布 ➔ 霧島溫泉",
+        title: "仙巌園 ‧ 櫻島 ‧ AVIS 取車 ➤ 霧島溫泉",
+        route: "鹿兒島市區 ➤ 仙巌園 ➤ 櫻島渡輪 ➤ AVIS 取車 ➤ 霧島神宮 ➤ 霧島溫泉",
         mileage: "約 90 km",
         time: "約 1.5 hrs (自駕)",
-        toll: "約 800 円 (KEP 高速券適用)",
+        toll: "約 800 円",
         image: "images/day3.png",
         imageAlt: "霧島神宮朱紅色大社殿",
-        tip: "今天正式開始自駕！早上在市區 AVIS 取車，攜帶護照、台灣駕照正本與日文譯本。取車後北上霧島山區，參拜霧島神宮後入住溫泉旅館。",
+        tip: "上午不需要車！使用昨天購買的<a href='https://www.kagoshima-yokanavi.jp/zh-TW/feature/one-day-pass2' target='_blank'>鹿兒島交通2日券 🔗</a>搭巴士前往仙巌園參觀世界遺產，中午搭渡輪編遊櫻島（渡輪也包含在通券內）。回市區後去 AVIS 取車，正式開始自駕！取車後北上霧島山區，參拜霧島神宮後入住溫泉旅館。",
         meals: {
             breakfast: "飯店早餐 / 便利商店輕食",
-            lunch: "霧島 ‧ 當地蕎麥麵或定食 🍜",
+            lunch: "仙巌園內「<a href='https://www.google.com/maps/search/?api=1&query=桜華亭+仙巌園' target='_blank'>櫻華亭 📍</a>」‧ 薩摩鄉土料理定食 🍱",
             dinner: "霧島溫泉旅館 ‧ 隨附晚餐（會席料理）"
         },
-        accommodation: "霧島溫泉鄉 ‧ <a href='https://www.agoda.com/zh-tw/kirishima-onsen-ryokojin-sanso/hotel/kirishima-jp.html?countryId=3&finalPriceView=1&isShowMobileAppPrice=false&cid=1779080&numberOfBedrooms=&familyMode=false&adults=4&children=0&rooms=1&maxRooms=0&checkIn=2027-01-30&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=3&showReviewSubmissionEntry=false&currencyCode=TWD&isFreeOccSearch=false&los=1&searchrequestid=2f647880-493a-4fb9-8151-bd2bb724a617&ds=qgPLe6XWQl8X9rcw' target='_blank'>霧島溫泉 旅行人山莊 🔗</a>",
+        accommodation: "霧島溫泉鄉 ‧ <a href='https://www.agoda.com/zh-tw/kirishima-onsen-ryokojin-sanso/hotel/kirishima-jp.html?countryId=3&finalPriceView=1&isShowMobileAppPrice=false&cid=1779080&numberOfBedrooms=&familyMode=false&adults=4&children=0&rooms=1&maxRooms=0&checkIn=2027-01-30&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=3&showReviewSubmissionEntry=false&currencyCode=TWD&isFreeOccSearch=false&los=1&searchrequestid=2f647880-493a-4fb9-8151-bd2bb724a617&ds=qgPLe6XWQl8X9rcw' target='_blank'>霧島溫泉 旅行人山荘 🔗</a>",
         parkingSpots: [
             { name: "AVIS 鹿兒島", mapcode: "42 066 022*55" },
             { name: "霧島神宮", mapcode: "376 089 596*04" },
             { name: "丸尾滝", mapcode: "42 804 030*47" },
         ],
         timeline: [
-            { time: "08:30", title: "AVIS 取車 🚗", desc: "退房後步行或搭市電前往 <a href='https://www.google.com/maps/search/?api=1&query=AVIS+鹿児島県鹿児島市上之園町10-15' target='_blank'>AVIS 鹿兒島營業所 📍</a>（鹿児島市上之園町10-15）取車。攜帶護照、台灣駕照正本與日文譯本辦理手續，仔細確認車輛外觀（拍照存證），啟用 ETC 卡，同時詢問加購「KEP（九州高速公路周遊券）」。" },
-            { time: "09:30", title: "出發前往霧島 🚗", desc: "從鹿兒島市區出發，沿九州自動車道北上前往霧島山區（約 1 小時車程）。日本靠左行駛，慢慢適應！沿途風景從都市漸轉為山巒疊翠。" },
-            { time: "10:30", title: "霧島神宮參拜 ⛩️", desc: "<a href='https://www.google.com/maps/search/?api=1&query=霧島神宮' target='_blank'>霧島神宮 📍</a>——南九州規模最大的朱紅色神宮，祭祀天孫瓊瓊杵尊。也是坂本龍馬新婚旅行地。朱漆大社殿在蔥蘢杉木林間格外莊嚴，境內瀰漫著清淨神聖的氣息。" },
-            { time: "12:00", title: "霧島午餐 🍜", desc: "在霧島神宮附近享用當地蕎麥麵或鄉土料理定食。" },
-            { time: "13:30", title: "丸尾瀑布 (順路)", desc: "霧島溫泉區的<a href='https://www.google.com/maps/search/?api=1&query=丸尾滝' target='_blank'>丸尾瀑布 📍</a>是罕見的「溫泉瀑布」——冬季時水蒸氣繚繞如仙境，停車看幾分鐘即可。" },
-            { time: "14:00", title: "入住霧島溫泉鄉 ♨️", desc: "提早入住硫磺泉煙裊裊的霧島溫泉。換上浴衣悠閒散步，享受旅館設施。" },
-            { time: "18:00", title: "溫泉旅館晚餐 🍽️", desc: "享用旅館的精緻會席料理（薩摩地雞、黑豬涮涮鍋、溫泉豆腐），飯後泡露天溫泉洗去一日疲憊，仰望星空入眠。" }
+            { time: "08:30", title: "搭巴士前往仙巌園 🚌", desc: "從市區搭乘城市觀光巴士或一般路線巴士前往「<a href='https://www.google.com/maps/search/?api=1&query=仙巌園' target='_blank'>仙巌園 📍</a>（磯庭園）」，約 20 分鐘。" },
+            { time: "09:00", title: "仙巌園參觀 ‧ 世界文化遺產 🏛️", desc: "<a href='https://www.google.com/maps/search/?api=1&query=仙巌園' target='_blank'>仙巌園 📍</a>——薩摩藩主島津家的別邸庭園，以櫻島為借景、錦江灣為池塘的壯闊設計堂稱日本庭園最高傑作。園內包含世界文化遺產「舊集成館」。" },
+            { time: "11:00", title: "仙巌園午餐 ‧ 櫻華亭 🍱", desc: "在園內「<a href='https://www.google.com/maps/search/?api=1&query=桜華亭+仙巌園' target='_blank'>櫻華亭 📍</a>」享用薩摩鄉土料理定食，以櫻島為背景的絕景餐廳。" },
+            { time: "12:00", title: "搭渡輪前往櫻島 ⛴️", desc: "返回市區後搭渡輪前往<a href='https://www.google.com/maps/search/?api=1&query=桜島フェリーターミナル' target='_blank'>櫻島 📍</a>（\u00a5200/人，15 分鐘）。抖達櫻島後快速遊覽：<a href='https://www.google.com/maps/search/?api=1&query=湯之平展望所' target='_blank'>湯之平展望所 📍</a>、<a href='https://www.google.com/maps/search/?api=1&query=溶岩なぎさ公園+足湯' target='_blank'>熔岩渚公園足湯 📍</a> ♨️" },
+            { time: "14:00", title: "返回鹿兒島市區 ‧ 前往 AVIS 取車 🚗", desc: "搭渡輪返回鹿兒島港，前往 <a href='https://www.google.com/maps/search/?api=1&query=AVIS+鹿児島県鹿児島市上之園町10-15' target='_blank'>AVIS 鹿兒島營業所 📍</a>（鹿児島市上之園町10-15）取車。攜帶護照、台灣駕照正本與日文譯本辦理手續，仔細確認車輛外觀（拍照存證），啟用 ETC 卡。" },
+            { time: "15:00", title: "出發前往霧島 🚗", desc: "從鹿兒島市區出發，沿九州自動車道北上前往霧島山區（約 1 小時車程）。日本靠左行駛，慢慢適應！" },
+            { time: "16:00", title: "霧島神宮參拜 ⛩️", desc: "<a href='https://www.google.com/maps/search/?api=1&query=霧島神宮' target='_blank'>霧島神宮 📍</a>——南九州規模最大的朱紅色神宮，祭祀天孫瓊瓊杵尊。也是坂本龍馬新婚旅行地。" },
+            { time: "17:00", title: "丸尾瀑布 (順路) 🌊", desc: "霧島溫泉區的<a href='https://www.google.com/maps/search/?api=1&query=丸尾滝' target='_blank'>丸尾瀑布 📍</a>是罕見的「溫泉瀑布」——冬季時水蒸氣繚繞如仙境。" },
+            { time: "17:30", title: "入住霧島溫泉鄉 ♨️", desc: "提早入住硫磺泉煙裊裊的霧島溫泉。換上浴衣悠閒散步，享受旅館設施。" },
+            { time: "18:30", title: "溫泉旅館晚餐 🍽️", desc: "享用旅館的精緻會席料理（薩摩地雞、黑豬涮涮鍋、溫泉豆腐），飯後泡露天溫泉洗去一日疒憊，仰望星空入眠。" }
         ]
     },
     4: {
@@ -118,6 +118,10 @@ const itineraryData = {
         ]
     },
     5: {
+        title: "熊本城一日遊 ‧ 城下町漫步",
+        route: "熊本城 ➔ 城彩苑 ➔ 水前寺成趣園 ➔ 上下通商店街",
+        mileage: "無（市區步行 / 市電）",
+        time: "市電 ‧ 步行",
         toll: "無",
         image: "images/day5.png",
         imageAlt: "熊本城天守閣雄偉石垣",
@@ -173,61 +177,64 @@ const itineraryData = {
             { time: "15:50", title: "太宰府天滿宮參拜 ⛩️", desc: "祭祀學問之神菅原道真的千年神社<a href='https://www.google.com/maps/search/?api=1&query=太宰府天満宮' target='_blank'>太宰府天滿宮 📍</a>。在參道品嚐現烤「梅枝餅」、參觀隈研吾設計的前衛星巴克。殿前飛梅在每年 2 月盛開——正好趕上我們的旅行時間！" },
             { time: "17:00", title: "開車前往福岡市區還車 🚗", desc: "從太宰府開往福岡市區（約 25 分鐘）。途中在順路的「<a href='https://www.google.com/maps/search/?api=1&query=ENEOS+セルフ水城店+太宰府市水城' target='_blank'>ENEOS セルフ水城店 ⛽</a>」加滿油（24H營業），索取收據備查。" },
             { time: "17:30", title: "福岡市區還車 🏁", desc: "至<a href='https://maps.app.goo.gl/oeT2FtrDoc8CAyRK6' target='_blank'>租車公司還車地點 📍</a>還車。結清 ETC 過路費明細，出示加油站收據，確認車輛無新損傷後完成手續。自駕六天辛苦了！" },
-            { time: "18:00", title: "搭大眾交通至飯店 Check-in 🧳", desc: "還車後搭地鐵或巴士前往<a href='https://www.agoda.com/zh-tw/the-royal-park-hotel-fukuoka/hotel/fukuoka-jp.html?countryId=0&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&adults=4&checkIn=2027-02-2&currencyCode=TWD&los=2' target='_blank'>The Royal Park Hotel 福岡 🔗</a>辦理入住，放下行李稍作休息。" },
+            { time: "18:00", title: "搭大眾交通至飯店 Check-in 🧳", desc: "還車後搭地鐵或巴士前往<a href='https://www.agoda.com/zh-tw/the-royal-park-hotel-fukuoka/hotel/fukuoka-jp.html?countryId=0&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&adults=4&checkIn=2027-02-2&currencyCode=TWD&los=2' target='_blank'>The Royal Park Hotel 福岡 🔗</a>辦理入住，同時取回 Day 1 寄放的大行李箱，放下行李稍作休息。" },
             { time: "18:30", title: "福岡晚餐 🍜", desc: "推薦今晚去吃「<a href='https://www.google.com/maps/search/?api=1&query=一蘭+本社総本店' target='_blank'>一蘭拉麵總本店 📍</a>」（中洲川端）或「<a href='https://www.google.com/maps/search/?api=1&query=博多ShinShin+博多駅' target='_blank'>博多 ShinShin 拉麵 📍</a>」。結束自駕的夜晚，用一碗濃郁豚骨拉麵犒賞自己！" }
         ]
     },
     7: {
-        title: "大正浪漫門司港 ‧ 關門海峽 ‧ 小倉城",
-        route: "博多 ➔ 門司港 ➔ 關門海峽隧道 ➔ 小倉城 ➔ 博多",
+        title: "博多市區一日遊 ‧ 購物美食",
+        route: "櫛田神社 / 東長寺 ➤ 天神地下街 ➤ 博多運河城",
+        mileage: "無 (大眾運輸)",
+        time: "約 30 mins (地下鐵)",
+        toll: "地下鐵車資",
+        image: "images/day8.png",
+        imageAlt: "博多中洲屋台夜景",
+        tip: "今天整天留在福岡市區！不趕行程，慢慢逐。早上參拜博多總鎮守櫛田神社，午後在天神地下街和博多運河城採購伴手禮，晚上中洲屋台或拉麵街享受最後一晚福岡美食！",
+        meals: {
+            breakfast: "博多 ‧ 櫛田神社周邊老街咖啡廳 或 飯店早餐",
+            lunch: "博多 ‧ 一蘭拉麵 或 Shin-Shin 博多豚骨拉麵 🍜",
+            dinner: "中洲屋台 ‧ 博多最經典露天攤販街 🍢🍺"
+        },
+        accommodation: "福岡博多市區 ‧ <a href='https://www.agoda.com/zh-tw/the-royal-park-hotel-fukuoka/hotel/fukuoka-jp.html?countryId=0&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&adults=4&checkIn=2027-02-3&currencyCode=TWD&los=1' target='_blank'>The Royal Park Hotel 福岡 🔗</a>（第三晚，明天 Check-out）",
+        parkingSpots: [],
+        timeline: [
+            { time: "09:00", title: "博多老城區晨間散步 ⛩️", desc: "步行前往「<a href='https://www.google.com/maps/search/?api=1&query=櫛田神社' target='_blank'>櫛田神社 📍</a>」——博多的總鎮守，境內有巨大的博多祇園山笠常設展示。再步行 5 分鐘到「<a href='https://www.google.com/maps/search/?api=1&query=東長寺+福岡' target='_blank'>東長寺 📍</a>」，這裡有日本最大的木造坐佛像（福岡大佛），可以體驗「地獄‧極樂巡り」暗道。" },
+            { time: "10:30", title: "天神地下街 ‧ 博多運河城 🛍️", desc: "前往<a href='https://www.google.com/maps/search/?api=1&query=天神地下街' target='_blank'>天神地下街 📍</a>——九州最大的地下街，服飾、藥妝、美食應有盡有。再走到<a href='https://www.google.com/maps/search/?api=1&query=キャナルシティ博多' target='_blank'>博多運河城 Canal City 📍</a>——大型複合購物設施，有大地噴泉秀。" },
+            { time: "12:00", title: "午餐：博多拉麵 🍜", desc: "用一碗濃郁的博多豚骨拉麵填飽肚子——選<a href='https://www.google.com/maps/search/?api=1&query=一蘭+本社総本店' target='_blank'>一蘭 📍</a>的單人格位獨享，或 <a href='https://www.google.com/maps/search/?api=1&query=博多ShinShin+博多駅' target='_blank'>Shin-Shin 📍</a>的溫潤湯頭。替硬（バリカタ）加點！" },
+            { time: "14:00", title: "福岡市區最後採購 🛍️", desc: "回到博多車站做最後的伴手禮衝刺：❶ 明太子（推薦 FUKUYA 元祖）❷ 博多通りもん（連續多年日本最受歡迎伴手禮）❸ HIYOKO 小雞饉頭 ❹ 博多拉麵生麵禮盒。行李拉鏈要拉得起來！" },
+            { time: "16:30", title: "teamLab Forest 🎨 (選配)", desc: "若有時間可前往<a href='https://www.google.com/maps/search/?api=1&query=チームラボフォレスト+福岡' target='_blank'>teamLab Forest 📍</a>（位於 BOSS E·ZO FUKUOKA 內）。沉浸式光影藝術空間，互動感十足！單票約 \u00a52,400/人。👉 <a href='https://e-zofukuoka.com/teamlabforest/' target='_blank'>官網購票 🔗</a>" },
+            { time: "18:30", title: "中洲屋台最後一晚 🍢", desc: "前往<a href='https://www.google.com/maps/search/?api=1&query=中洲屋台' target='_blank'>中洲屋台 📍</a>——博多最經典的露天攤販街！在河畮燈光下坐上板凳，來碗豚骨拉麵、烤雞串、關東煮，配一杯生啤酒，用最道地的博多夜晚為旅程乾杯！🍺" }
+        ]
+    },
+    8: {
+        title: "門司港懷舊 ‧ 關門海峽 ➤ 滿載歸國",
+        route: "博多 JR ➤ 門司港 ➤ 關門海峽隧道 ➤ 博多 ➤ 福岡機場 (FUK)",
         mileage: "無 (大眾運輸)",
         time: "約 45 mins (JR 特急)",
         toll: "JR 九州鐵路周遊券 (北九州) 或 單買來回車票",
         image: "images/day7.png",
         imageAlt: "門司港懷舊洋式紅磚建築群",
-        tip: "門司港保留了許多明治大正時期的紅磚洋式建築，光線好時非常上相。關門海峽人行隧道免費通行，腳踩九州與本州的縣界線超有趣！傍晚早點回博多享受最後一晚。",
+        tip: "今天上午搭 JR 到門司港探索大正浪漫懷舊區，下午早點回博多。福岡機場離市區極近（地下鐵博多站出發 5 分鐘），但國際線需轉接駁車，建議提早 2.5 小時到達機場。出發前確認行李重量！",
         meals: {
-            breakfast: "福岡市區 ‧ 博多車站商圈早餐 或 飯店附近咖啡廳",
-            lunch: "門司港 ‧ 名物焗烤燒咖哩（焼きカレー）🍛 起司烤得金黃，咖哩濃郁",
-            dinner: "中洲屋台 ‧ 博多最經典露天攤販街 🍢🍺"
-        },
-        accommodation: "福岡博多市區 ‧ <a href='https://www.agoda.com/zh-tw/the-royal-park-hotel-fukuoka/hotel/fukuoka-jp.html?countryId=0&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&adults=4&checkIn=2027-02-2&currencyCode=TWD&los=2' target='_blank'>The Royal Park Hotel 福岡 🔗</a> / <a href='https://www.airbnb.com.tw/rooms/1661293365430301869?adults=7&check_in=2027-02-02&check_out=2027-02-04' target='_blank'>Airbnb 民宿 🔗</a>（第二晚，明天 Check-out）",
-        parkingSpots: [],
-        timeline: [
-            { time: "09:00", title: "搭乘 JR 特急前往門司港", desc: "在博多車站搭乘特急「音速號（ソニック）」至小倉（約 17 分鐘），再轉乘鹿兒島本線普通車至門司港（約 10 分鐘）。" },
-            { time: "10:30", title: "門司港懷舊區散步 🏛️", desc: "漫步在保存完好的明治大正洋式建築群：<a href='https://www.google.com/maps/search/?api=1&query=門司港駅' target='_blank'>門司港車站 📍</a>（日本最古老的重要文化財站房）、<a href='https://www.google.com/maps/search/?api=1&query=旧大阪商船' target='_blank'>舊大阪商船 📍</a>、<a href='https://www.google.com/maps/search/?api=1&query=旧門司三井倶楽部' target='_blank'>舊門司三井俱樂部 📍</a>、以及晴天下自動開合的<a href='https://www.google.com/maps/search/?api=1&query=ブルーウィングもじ' target='_blank'>藍翼吊橋（ブルーウィングもじ）📍</a>。紅磚洋樓在冬日陽光下特別上相。" },
-            { time: "12:00", title: "午餐：門司港名物燒咖哩 🍛", desc: "品嚐起司焗烤加上濃郁咖哩飯的在地名物「焼きカレー」，口味豐富香濃，是門司港最具代表性的必吃美食。推薦「<a href='https://www.google.com/maps/search/?api=1&query=BEAR+FRUITS+門司港' target='_blank'>BEAR FRUITS 📍</a>」或「<a href='https://www.google.com/maps/search/?api=1&query=伽哩本舗+門司港' target='_blank'>伽哩本舗 📍</a>」。" },
-            { time: "13:30", title: "關門海峽人行隧道 🚶", desc: "步行至<a href='https://www.google.com/maps/search/?api=1&query=関門トンネル人道入口' target='_blank'>關門海峽人行隧道 📍</a>入口（免費），徒步穿越海底隧道（約 780 公尺，15 分鐘），在腳下的「福岡縣/山口縣」縣界線拍照打卡，完成從九州走到本州的有趣體驗！走到對岸後再走回來即可。" },
-            { time: "15:00", title: "返回博多 ‧ 福岡塔 🗼", desc: "搭 JR 特急返回博多（約 20 分鐘），再轉巴士前往<a href='https://www.google.com/maps/search/?api=1&query=福岡タワー' target='_blank'>福岡塔 📍</a>——日本最高的海濱塔（234m）。搭乘透明電梯直達 123m 展望台，360° 眺望博多灣、市區夜景與能古島。冬季期間塔身常有燈飾點綴，入夜後超美！" },
-            { time: "16:30", title: "teamLab Forest 🎨", desc: "從福岡塔步行約 5 分鐘即達<a href='https://www.google.com/maps/search/?api=1&query=チームラボフォレスト+福岡' target='_blank'>teamLab Forest 📍</a>（位於 BOSS E·ZO FUKUOKA 內）。沉浸式光影藝術空間，穿梭在數位花海、光之森林中，互動感十足！營業至 20:00，門票約 ¥2,400/人。👉 <a href='https://e-zofukuoka.com/teamlabforest/' target='_blank'>官網購票 🔗</a>" },
-            { time: "18:00", title: "前往中洲屋台 🍢", desc: "從 teamLab 步行 15 分鐘至<a href='https://www.google.com/maps/search/?api=1&query=唐人町駅' target='_blank'>唐人町駅 📍</a>，搭地鐵至中洲川端駅（約 8 分鐘），或直接叫計程車（約 15 分鐘、¥1,000~1,500）。抵達<a href='https://www.google.com/maps/search/?api=1&query=中洲屋台' target='_blank'>中洲屋台 📍</a>——博多最經典的露天攤販街！在河畔燈光下坐上板凳，來碗豚骨拉麵、烤雞串、關東煮，配一杯生啤酒，用最道地的博多夜晚為旅程乾杯！🍺" }
-        ]
-    },
-    8: {
-        title: "博多老城散步 ➔ 滿載歸國",
-        route: "櫛田神社 / 東長寺 ➔ 最後採購 ➔ 福岡機場 (FUK) 離境",
-        mileage: "無 (大眾運輸)",
-        time: "約 30 mins (地鐵)",
-        toll: "地鐵車資",
-        image: "images/day8.png",
-        imageAlt: "博多中洲屋台夜景",
-        tip: "福岡機場離市區極近（地鐵博多站出發 5 分鐘），但國際線需轉接駁車，加上報到人潮，建議提早 2.5 小時到達機場。出發前確認行李重量，不要買到超重！",
-        meals: {
-            breakfast: "博多 ‧ 櫛田神社周邊老街咖啡廳 或 飯店早餐（最後一次日本早晨！）",
-            lunch: "博多 ‧ 一蘭拉麵 或 Shin-Shin 博多豚骨拉麵 🍜（旅程的完美句點）",
+            breakfast: "福岡市區 ‧ 飯店早餐（最後一次日本早晨！）",
+            lunch: "門司港 ‧ 名物焘烤燒咖哩（焼きカレー）🍛 起司烤得金黃，咖哩濃郁",
             dinner: "機上 ‧ 帶著滿滿的九州回憶飛回台灣 🛫✨"
         },
         accommodation: "無 ‧ 今日 Check-out 後前往機場離境",
         parkingSpots: [],
         timeline: [
-            { time: "09:00", title: "博多老城區晨間散步 ⛩️", desc: "退房寄放行李後，步行前往「<a href='https://www.google.com/maps/search/?api=1&query=櫛田神社' target='_blank'>櫛田神社 📍</a>」——博多的總鎮守，境內有巨大的博多祇園山笠常設展示。再步行 5 分鐘到「<a href='https://www.google.com/maps/search/?api=1&query=東長寺+福岡' target='_blank'>東長寺 📍</a>」，這裡有日本最大的木造坐佛像（福岡大佛），可以體驗「地獄‧極樂巡り」暗道。" },
-            { time: "10:30", title: "福岡市區最後採購 🛍️", desc: "回到博多車站做最後的伴手禮衝刺：❶ 明太子（推薦 FUKUYA 元祖 或「味の明太子 ふくや」）❷ 博多通りもん（連續多年日本最受歡迎伴手禮）❸ HIYOKO 小雞饅頭 ❹ 博多拉麵生麵禮盒（回家自己煮！）。行李拉鍊要拉得起來！" },
-            { time: "12:00", title: "午餐：博多拉麵 🍜", desc: "用一碗濃郁的博多豚骨拉麵為旅程畫下完美句點——選<a href='https://www.google.com/maps/search/?api=1&query=一蘭+本社総本店' target='_blank'>一蘭 📍</a>的單人格位獨享，或 <a href='https://www.google.com/maps/search/?api=1&query=博多ShinShin+博多駅' target='_blank'>Shin-Shin 📍</a>的溫潤湯頭。替硬（バリカタ）加點！" },
-            { time: "13:30", title: "拿取行李 ‧ 前往福岡機場", desc: "返回飯店取出寄存行李，搭乘機場地鐵線前往福岡機場（博多站出發約 5 分鐘），抵達後轉免費接駁巴士至國際線航廈（約 15 分鐘）。" },
-            { time: "14:30", title: "福岡機場 (FUK) 報到 ✈️", desc: "抵達<a href='https://www.google.com/maps/search/?api=1&query=福岡空港+国際線ターミナル' target='_blank'>福岡機場 📍</a>，辦理登機手續與行李托運。免稅店最後衝刺——特別推薦「博多拉麵生麵」禮盒和「通りもん」限定包裝。" },
-            { time: "17:00", title: "搭機返台 🏠", desc: "起飛！帶著滿滿的九州回憶——櫻島的壯闘、指宿的熱砂、高千穗的神話、阿蘇的壯闊、熊本城的雄偉、博多的美味——平安飛回台灣。八天七夜，完美落幕！✨" }
+            { time: "08:30", title: "退房 ‧ 寄放行李 🧳", desc: "飯店 Check-out，將行李寄放在飯店櫃台或博多車站寄物櫃，輕裝出發門司港。" },
+            { time: "09:00", title: "搭乘 JR 前往門司港 🚄", desc: "在博多車站搭乘特急「音速號（ソニック）」至小倉（約 17 分鐘），再轉乘鹿兒島本線普通車至門司港（約 10 分鐘）。" },
+            { time: "10:00", title: "門司港懷舊區散步 🏛️", desc: "漫步在保存完好的明治大正洋式建築群：<a href='https://www.google.com/maps/search/?api=1&query=門司港駅' target='_blank'>門司港車站 📍</a>（日本最古老的重要文化財站房）、<a href='https://www.google.com/maps/search/?api=1&query=旧大阪商船' target='_blank'>舊大阪商船 📍</a>、<a href='https://www.google.com/maps/search/?api=1&query=旧門司三井俱楽部' target='_blank'>舊門司三井俿樂部 📍</a>、<a href='https://www.google.com/maps/search/?api=1&query=ブルーウィングもじ' target='_blank'>藍翼弔橋 📍</a>。紅磚洋樓在冬日陽光下特別上相。" },
+            { time: "11:30", title: "午餐：門司港名物燒咖哩 🍛", desc: "品嚐起司焘烤加上濃郁咖哩飯的在地名物「焼きカレー」。推薦「<a href='https://www.google.com/maps/search/?api=1&query=BEAR+FRUITS+門司港' target='_blank'>BEAR FRUITS 📍</a>」或「<a href='https://www.google.com/maps/search/?api=1&query=伽哩本舗+門司港' target='_blank'>伽哩本舗 📍</a>」。" },
+            { time: "12:30", title: "關門海峽人行隧道 🚶", desc: "步行至<a href='https://www.google.com/maps/search/?api=1&query=関門トンネル人道入口' target='_blank'>關門海峽人行隧道 📍</a>入口（免費），徒步穿越海底隧道（約 780 公尺，15 分鐘），在腳下的「福岡縣/山口縣」縣界線拍照打卡！完成從九州走到本州的有趣體驗！" },
+            { time: "14:00", title: "返回博多 🚄", desc: "搭 JR 返回博多（約 20~30 分鐘），取回寄放行李。" },
+            { time: "15:30", title: "前往福岡機場 ✈️", desc: "搭乘地下鐵空港線前往福岡機場（博多站出發約 5 分鐘），抵達後轉免費接駁巴士至國際線航廈（約 15 分鐘）。" },
+            { time: "16:30", title: "福岡機場 (FUK) 報到 ✈️", desc: "抵達<a href='https://www.google.com/maps/search/?api=1&query=福岡空港+国際線ターミナル' target='_blank'>福岡機場 📍</a>，辦理登機手續與行李托運。免稅店最後衝刺！" },
+            { time: "19:10", title: "搭機返台 🏠", desc: "搭乘 STARLUX 航班起飛！帶著滿滿的九州回憶——櫻島的壯闊、霧島的溫泉、阿蘇的壮闊、熔本城的雄偉、博多的美味——平安飛回台灣。八天七夜，完美落幕！✨ 預計 20:50 抵達桃園機場。" }
         ]
     }
+
 };
 
 // --- 2. Initialize DOM Elements ---
@@ -368,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Use appropriate icon depending on transit type
-        const isSelfDrive = parseInt(dayNum) <= 5 || (parseInt(dayNum) === 6 && true);
+        const isSelfDrive = parseInt(dayNum) >= 3 && parseInt(dayNum) <= 6;
         const iconClass = isSelfDrive ? 'ri-roadster-line' : 'ri-train-line';
         const transitLabel = isSelfDrive ? '開車里程：' : '交通工具：';
         const durationLabel = isSelfDrive ? '車程時間：' : '預估車程：';
