@@ -241,7 +241,227 @@ const itineraryData = {
     }
 };
 
-// --- 2. Initialize DOM Elements ---
+// --- 2. Active 9-day master plan (the former rideshare plan is now canonical) ---
+const activeItineraryData = {
+    1: {
+        title: "兩組抵達福岡 ‧ 福岡住一晚",
+        route: "TPE ✈️ FUK ➤ 福岡市區 ➤ 飯店 Check-in",
+        mileage: "無（大眾運輸）", time: "依兩組航班抵達時間安排", toll: "待確認",
+        image: "images/day1.png", imageAlt: "福岡夜景",
+        tip: "第一組搭星宇 JX840、第二組搭華航 CI0110，兩組皆於 1/27 抵達福岡。接機、會合、晚餐與入住時間待依實際班表補齊。",
+        meals: { breakfast: "出發前／機上", lunch: "機上或機場", dinner: "福岡市區（待規劃）" },
+        accommodation: "福岡市區（1/27 入住、1/28 退房；飯店待確認）", parkingSpots: [],
+        timeline: [
+            { time: "待確認", title: "第一組・星宇 JX840 抵達福岡 ✈️", desc: "2027/1/27 TPE → FUK。" },
+            { time: "待確認", title: "第二組・華航 CI0110 抵達福岡 ✈️", desc: "2027/1/27 TPE → FUK。" },
+            { time: "晚上", title: "福岡會合與入住", desc: "機場至飯店交通、晚餐與集合點待重新規劃。" }
+        ]
+    },
+    2: {
+        title: "福岡 ➤ 鹿兒島 ‧ 鹿兒島第一晚", route: "福岡 ➤ 鹿兒島", mileage: "待規劃", time: "待規劃", toll: "待比較新幹線／租車方案",
+        image: "images/day2.png", imageAlt: "鹿兒島",
+        tip: "移動方式、出發時間與景點全部重新規劃；本日確定住宿鹿兒島。",
+        meals: { breakfast: "福岡", lunch: "待規劃", dinner: "鹿兒島" }, accommodation: "鹿兒島市區（第一晚；飯店待確認）", parkingSpots: [],
+        timeline: [{ time: "待規劃", title: "福岡前往鹿兒島", desc: "不沿用舊版時間表。" }]
+    },
+    3: {
+        title: "鹿兒島完整一日 ‧ 鹿兒島第二晚", route: "鹿兒島市區與周邊", mileage: "待規劃", time: "待規劃", toll: "待規劃",
+        image: "images/day3.png", imageAlt: "鹿兒島與櫻島",
+        tip: "可重新安排仙巖園、櫻島或其他鹿兒島景點，目前尚未鎖定時段。",
+        meals: { breakfast: "鹿兒島", lunch: "待規劃", dinner: "鹿兒島" }, accommodation: "鹿兒島市區（第二晚；飯店待確認）", parkingSpots: [],
+        timeline: [{ time: "全天", title: "鹿兒島行程待規劃", desc: "景點順序、交通方式與用餐尚待確認。" }]
+    },
+    4: {
+        title: "鹿兒島 ➤ 霧島溫泉 ‧ 溫泉住宿", route: "鹿兒島 ➤ 霧島溫泉", mileage: "待規劃", time: "待規劃", toll: "待規劃",
+        image: "images/day4.png", imageAlt: "霧島溫泉",
+        tip: "本日確定入住霧島溫泉一晚；取車時間與沿途景點待重新安排。",
+        meals: { breakfast: "鹿兒島", lunch: "待規劃", dinner: "霧島溫泉旅館（待確認）" }, accommodation: "霧島溫泉（一晚；旅館待確認）", parkingSpots: [],
+        timeline: [{ time: "待規劃", title: "前往霧島溫泉", desc: "租車、霧島神宮與入住時間尚待確認。" }]
+    },
+    5: {
+        title: "霧島 ➤ 熊本 ‧ 熊本第一晚", route: "霧島溫泉 ➤ 熊本", mileage: "待規劃", time: "待規劃", toll: "待規劃",
+        image: "images/day5.png", imageAlt: "熊本",
+        tip: "前往熊本的路線與中途停靠點重新規劃；本日為熊本第一晚。",
+        meals: { breakfast: "霧島溫泉", lunch: "待規劃", dinner: "熊本" }, accommodation: "熊本市區（第一晚；飯店待確認）", parkingSpots: [],
+        timeline: [{ time: "待規劃", title: "霧島前往熊本", desc: "是否納入阿蘇及實際駕駛路線待確認。" }]
+    },
+    6: {
+        title: "熊本完整一日 ‧ 熊本第二晚", route: "熊本市區與周邊", mileage: "待規劃", time: "待規劃", toll: "待規劃",
+        image: "images/day6.png", imageAlt: "熊本城",
+        tip: "熊本城、市區或近郊行程將重新排序。",
+        meals: { breakfast: "熊本", lunch: "待規劃", dinner: "熊本" }, accommodation: "熊本市區（第二晚；飯店待確認）", parkingSpots: [],
+        timeline: [{ time: "全天", title: "熊本行程待規劃", desc: "不沿用舊版時間表。" }]
+    },
+    7: {
+        title: "熊本 ➤ 福岡 ‧ 福岡第一晚", route: "熊本 ➤ 福岡", mileage: "待規劃", time: "待規劃", toll: "待規劃",
+        image: "images/day7.png", imageAlt: "福岡",
+        tip: "北上福岡、可能的沿途停靠與還車時間待重新安排。",
+        meals: { breakfast: "熊本", lunch: "待規劃", dinner: "福岡" }, accommodation: "福岡市區（第一晚；飯店待確認）", parkingSpots: [],
+        timeline: [{ time: "待規劃", title: "熊本前往福岡", desc: "交通、停靠點及還車安排尚待確認。" }]
+    },
+    8: {
+        title: "福岡完整一日 ‧ 福岡第二晚", route: "福岡市區與周邊", mileage: "無／待規劃", time: "待規劃", toll: "待規劃",
+        image: "images/day8.png", imageAlt: "福岡市區",
+        tip: "第一組返台前最後完整一天；第二組之後仍有兩天延伸行程。",
+        meals: { breakfast: "福岡", lunch: "待規劃", dinner: "福岡" }, accommodation: "福岡市區（第二晚；飯店待確認）", parkingSpots: [],
+        timeline: [{ time: "全天", title: "福岡行程待規劃", desc: "市區、近郊、購物與用餐尚待確認。" }]
+    },
+    9: {
+        title: "第一組返台 ‧ 第二組延伸行程開始", route: "福岡市區 ➤ FUK ✈️ TPE／第二組續住福岡", mileage: "無", time: "依航班", toll: "機場交通待確認",
+        image: "images/day8.png", imageAlt: "福岡機場",
+        tip: "第一組搭星宇 JX841 於 2/4 回台；第二組不回台，續留福岡並於 2/6 搭華航 CI0117 回台。",
+        meals: { breakfast: "福岡", lunch: "依航班與延伸行程", dinner: "第一組返台／第二組福岡" }, accommodation: "第一組：無；第二組：福岡續住 2/4、2/5 兩晚（待確認）", parkingSpots: [],
+        timeline: [
+            { time: "待確認", title: "第一組・星宇 JX841 返回桃園 ✈️", desc: "2027/2/4 FUK → TPE。" },
+            { time: "待規劃", title: "第二組・福岡延伸 Day 1", desc: "2/4 行程與住宿待安排；2/5 為延伸 Day 2。" },
+            { time: "2/6 待確認", title: "第二組・華航 CI0117 返回桃園 ✈️", desc: "2027/2/6 FUK → TPE。" }
+        ]
+    }
+};
+
+// Reworked timing: preserve the original highlights while removing backtracking and overloaded days.
+Object.assign(activeItineraryData, {
+    2: {
+        title: "九州新幹線南下鹿兒島 ‧ 天文館散策",
+        route: "福岡博多 ➤ 九州新幹線 ➤ 鹿兒島中央 ➤ 城山展望台 ➤ 天文館",
+        mileage: "無（新幹線／市區交通）", time: "新幹線約 1 小時 16～30 分", toll: "新幹線票價與套票待出發前確認",
+        image: "images/day2.png", imageAlt: "鹿兒島市區與櫻島",
+        tip: "移動日只排鹿兒島市區。不要抵達當天再趕仙巖園或櫻島，避免拖著行李追交通工具。建議搭 09:30 前後的新幹線並劃位。",
+        meals: { breakfast: "福岡飯店／博多站", lunch: "鹿兒島中央站或天文館", dinner: "天文館・薩摩黑豬＋白熊冰" },
+        accommodation: "鹿兒島市區（第一晚；建議鹿兒島中央站或天文館附近）", parkingSpots: [],
+        timeline: [
+            { time: "08:00", title: "福岡退房 ‧ 前往博多站", desc: "預留飯店退房、步行與大型行李移動時間。若 Day 7、8 住同一間福岡飯店，可先詢問是否接受跨夜寄放不需要的行李。" },
+            { time: "09:00", title: "抵達博多站 ‧ 購買早餐與便當", desc: "至少在發車前 25～30 分鐘到站，團體旅客建議事先劃位。" },
+            { time: "09:30", title: "九州新幹線前往鹿兒島中央 🚅", desc: "搭乘みずほ或さくら；實際班次以 2027 年時刻表為準。" },
+            { time: "11:00", title: "鹿兒島中央站 ‧ 寄放行李／入住手續", desc: "先處理行李，再開始市區行程。住宿若在天文館，可搭市電前往。" },
+            { time: "12:00", title: "午餐 ‧ 鹿兒島中央或天文館", desc: "安排薩摩料理、鹿兒島拉麵或黑豬料理，保留充足用餐時間。" },
+            { time: "14:00", title: "城山展望台與市區散步", desc: "天氣良好時從城山眺望櫻島；若旅途疲累，可縮短為天文館商圈散步。" },
+            { time: "17:00", title: "飯店休息", desc: "移動日保留一段休息時間。" },
+            { time: "18:30", title: "天文館晚餐", desc: "薩摩黑豬料理，飯後吃むじゃき白熊冰。" }
+        ]
+    },
+    3: {
+        title: "仙巖園 ‧ 櫻島一日遊 ‧ 鹿兒島第二晚",
+        route: "鹿兒島市區 ➤ 仙巖園 ➤ 鹿兒島港 ➤ 櫻島 ➤ 天文館",
+        mileage: "無（巴士／渡輪）", time: "市區至仙巖園約 20～30 分；渡輪約 15 分", toll: "巴士、渡輪或鹿兒島交通票券待確認",
+        image: "images/day3.png", imageAlt: "仙巖園與櫻島",
+        tip: "今天不租車，以巴士和渡輪完成仙巖園、櫻島。把櫻島安排在午後，行程集中在同一區域；湯之平展望所需配合島內觀光巴士班次。",
+        meals: { breakfast: "鹿兒島飯店", lunch: "仙巖園內薩摩料理", dinner: "鹿兒島市區" },
+        accommodation: "鹿兒島市區（第二晚）", parkingSpots: [],
+        timeline: [
+            { time: "08:15", title: "從飯店出發", desc: "搭巴士前往仙巖園，預留候車與步行時間。" },
+            { time: "09:00", title: "仙巖園 ‧ 舊集成館", desc: "安排約 2 小時，欣賞以櫻島為借景的庭園及世界文化遺產。" },
+            { time: "11:15", title: "仙巖園午餐", desc: "園內用餐可減少轉乘與折返。" },
+            { time: "12:30", title: "前往鹿兒島港", desc: "搭巴士返回港區，預留錯過一班車的緩衝。" },
+            { time: "13:30", title: "搭櫻島渡輪 ⛴️", desc: "船程約 15 分鐘；實際班次以鹿兒島市官方時刻表為準。" },
+            { time: "14:00", title: "櫻島散策", desc: "熔岩渚公園足湯＋島內觀光巴士；若要上湯之平展望所，務必先核對回程班次。" },
+            { time: "16:30", title: "渡輪返回鹿兒島市區", desc: "不把回程壓到晚餐前最後一刻。" },
+            { time: "18:30", title: "鹿兒島第二晚晚餐", desc: "自由選擇天文館或鹿兒島中央站周邊餐廳。" }
+        ]
+    },
+    4: {
+        title: "鹿兒島取車 ➤ 霧島神宮 ➤ 霧島溫泉",
+        route: "鹿兒島市區 AVIS ➤ 霧島神宮 ➤ 丸尾瀑布 ➤ 霧島溫泉",
+        mileage: "約 80～100 km", time: "純駕駛約 2 小時，含取車抓 3 小時", toll: "高速費、ETC 與甲租乙還費待報價",
+        image: "images/day4.png", imageAlt: "霧島神宮與霧島溫泉",
+        tip: "早上才取車，避免在鹿兒島市區多付一晚停車與租金。第一個自駕日只走霧島，不再塞其他遠距離景點。",
+        meals: { breakfast: "鹿兒島飯店", lunch: "霧島神宮周邊", dinner: "溫泉旅館會席料理" },
+        accommodation: "霧島溫泉（一晚；建議含早晚餐）",
+        parkingSpots: [{ name: "AVIS 鹿兒島", mapcode: "42 066 022*55" }, { name: "霧島神宮", mapcode: "376 089 596*04" }, { name: "丸尾瀑布", mapcode: "42 804 030*47" }],
+        timeline: [
+            { time: "08:30", title: "鹿兒島飯店退房", desc: "帶齊護照、台灣駕照、日文譯本與信用卡。" },
+            { time: "09:00", title: "AVIS 鹿兒島市區取車 🚗", desc: "團體取車、驗車、行李裝載及說明預留約 60 分鐘。" },
+            { time: "10:00", title: "出發前往霧島", desc: "首日靠左駕駛不趕路，中途可安排一次休息。" },
+            { time: "11:30", title: "霧島地區午餐", desc: "先用餐再參拜，避免下午抵達溫泉旅館太晚。" },
+            { time: "13:00", title: "霧島神宮", desc: "安排約 1.5 小時；冬季山區需注意低溫或路面結冰。" },
+            { time: "15:00", title: "丸尾瀑布／溫泉市場", desc: "視天候二選一，不強求全部完成。" },
+            { time: "16:00", title: "溫泉旅館 Check-in ♨️", desc: "保留泡湯、休息時間，不要晚於旅館晚餐報到期限。" },
+            { time: "18:00", title: "旅館晚餐", desc: "實際用餐時間依住宿方案確認。" }
+        ]
+    },
+    5: {
+        title: "霧島 ➤ 阿蘇火山 ➤ 熊本第一晚", route: "霧島溫泉 ➤ 阿蘇中岳／草千里 ➤ 熊本市區",
+        mileage: "約 230～270 km", time: "純駕駛約 4～5 小時", toll: "高速費與 ETC 待試算",
+        image: "images/day5.png", imageAlt: "阿蘇草千里",
+        tip: "這是全程最長駕駛日，只保留阿蘇中岳與草千里；大觀峰移除，否則冬季日照短、抵達熊本會太晚。火山管制或積雪時直接走備案前往熊本。",
+        meals: { breakfast: "霧島溫泉旅館", lunch: "阿蘇地區赤牛料理", dinner: "熊本市區" }, accommodation: "熊本市區（第一晚；連住兩晚）",
+        parkingSpots: [{ name: "阿蘇中岳火口", mapcode: "256 460 490*83" }, { name: "草千里", mapcode: "256 456 741*50" }],
+        timeline: [
+            { time: "08:00", title: "霧島溫泉退房出發", desc: "務必準時，並在前一晚確認阿蘇火口管制、積雪及道路狀況。" },
+            { time: "10:00", title: "途中休息", desc: "長途駕駛至少安排一次 15～20 分鐘休息。" },
+            { time: "11:15", title: "抵達阿蘇山區", desc: "若火口開放先看中岳；若管制則直接前往草千里及阿蘇火山博物館周邊。" },
+            { time: "12:30", title: "阿蘇午餐", desc: "預留排隊時間，熱門赤牛店可準備第二選擇。" },
+            { time: "14:00", title: "草千里散步", desc: "冬季視風勢與能見度縮短停留。" },
+            { time: "15:00", title: "出發前往熊本市區", desc: "不繞去大觀峰，目標在天黑前完成主要山路。" },
+            { time: "17:00", title: "熊本飯店 Check-in", desc: "停車後改以市電或步行活動。" },
+            { time: "18:30", title: "熊本晚餐", desc: "馬肉刺身、太平燕或熊本拉麵。" }
+        ]
+    },
+    6: {
+        title: "熊本城 ‧ 水前寺成趣園 ‧ 熊本第二晚", route: "熊本城 ➤ 城彩苑 ➤ 水前寺成趣園 ➤ 上下通",
+        mileage: "市區不開車", time: "市電＋步行", toll: "市區交通與門票",
+        image: "images/day6.png", imageAlt: "熊本城",
+        tip: "車留在飯店，避免市中心找停車位。熊本城 9:00 開放，先進城再用餐，午後搭市電去水前寺。",
+        meals: { breakfast: "熊本飯店", lunch: "城彩苑或市區", dinner: "上下通居酒屋／燒肉" }, accommodation: "熊本市區（第二晚）", parkingSpots: [],
+        timeline: [
+            { time: "08:30", title: "搭市電／步行前往熊本城", desc: "預留進場與購票時間。" },
+            { time: "09:00", title: "熊本城", desc: "安排約 2～2.5 小時；目前官方一般開放至 17:00、最後入園 16:00。" },
+            { time: "11:30", title: "城彩苑 ‧ 午餐", desc: "順著熊本城出口移動，不必來回折返。" },
+            { time: "13:30", title: "水前寺成趣園", desc: "搭市電前往，安排約 1.5 小時。" },
+            { time: "15:30", title: "上下通商店街", desc: "購物、咖啡與自由活動。" },
+            { time: "18:30", title: "熊本第二晚晚餐", desc: "隔天需要退房與北上，避免安排太晚。" }
+        ]
+    },
+    7: {
+        title: "熊本 ➤ 柳川 ➤ 太宰府 ➤ 福岡還車", route: "熊本 ➤ 柳川遊船 ➤ 太宰府天滿宮 ➤ 福岡市區",
+        mileage: "約 150～180 km", time: "純駕駛約 3 小時", toll: "高速、停車與遊船費待確認",
+        image: "images/day7.png", imageAlt: "柳川遊船與太宰府",
+        tip: "為了順暢，主方案取消吉次園採草莓。若一定要採草莓，就應刪除太宰府或柳川其中一站，不能三個都排。",
+        meals: { breakfast: "熊本飯店", lunch: "柳川蒸籠鰻魚飯", dinner: "福岡" }, accommodation: "福岡市區（第一晚；連住兩晚）",
+        parkingSpots: [{ name: "柳川乘船場", mapcode: "69 875 573*40" }, { name: "太宰府天滿宮", mapcode: "55 364 073*51" }],
+        timeline: [
+            { time: "08:30", title: "熊本退房出發", desc: "直接走高速公路北上柳川，不先繞採草莓。" },
+            { time: "10:00", title: "抵達柳川乘船場", desc: "停車、購票並確認下船後接駁方式。" },
+            { time: "10:30", title: "柳川搖櫓遊船", desc: "冬季可選暖桌船；依船公司當年班次與航程安排。" },
+            { time: "12:00", title: "柳川蒸籠鰻魚飯", desc: "熱門店建議預約或準備候補店家。" },
+            { time: "13:30", title: "開車前往太宰府", desc: "預估約 50～60 分鐘，另加停車緩衝。" },
+            { time: "14:45", title: "太宰府天滿宮與參道", desc: "安排約 1.5～2 小時，品嚐梅枝餅。" },
+            { time: "16:45", title: "加滿油 ‧ 前往福岡還車", desc: "保留市區塞車、加油、驗車及 ETC 結算時間。" },
+            { time: "18:30", title: "福岡飯店 Check-in", desc: "還車後改搭大眾運輸，連住兩晚。" }
+        ]
+    },
+    8: {
+        title: "福岡市區完整一日 ‧ 購物美食", route: "櫛田神社 ➤ 東長寺 ➤ 天神 ➤ 博多運河城／博多站",
+        mileage: "無（步行／地鐵）", time: "市區移動", toll: "地鐵或巴士車資",
+        image: "images/day8.png", imageAlt: "福岡市區",
+        tip: "第一組返台前最後完整一天，以市區活動為主，不再排門司港。門司港留給第二組 2/5 延伸日，避免第一組回程前過度奔波。",
+        meals: { breakfast: "福岡飯店", lunch: "博多拉麵／市區餐廳", dinner: "中洲屋台或預約餐廳" }, accommodation: "福岡市區（第二晚）", parkingSpots: [],
+        timeline: [
+            { time: "09:00", title: "博多老城散步", desc: "櫛田神社、東長寺與周邊街區。" },
+            { time: "11:30", title: "午餐", desc: "避開正午尖峰，可選博多拉麵或在地定食。" },
+            { time: "13:00", title: "天神地下街／博多運河城", desc: "依團員購物需求選擇重點，不必兩區來回多次。" },
+            { time: "16:30", title: "回飯店整理行李", desc: "第一組隔日返台，先完成行李重量與伴手禮整理。" },
+            { time: "18:30", title: "共同旅程最後一晚晚餐", desc: "建議預約可容納全團的餐廳；屋台可作為餐後散步或少人數續攤。" }
+        ]
+    },
+    9: {
+        title: "第一組 JX841 返台 ‧ 第二組福岡延伸", route: "福岡市區 ➤ FUK ✈️ TPE／第二組續住福岡",
+        mileage: "無", time: "依 JX841 報到時間倒推", toll: "機場交通",
+        image: "images/day8.png", imageAlt: "福岡機場",
+        tip: "第一組至少在起飛前 2.5～3 小時由飯店出發；國際線與地下鐵站不在同一航廈，需計入接駁或直達巴士時間。第二組 2/4 留市區、2/5 建議安排門司港，2/6 搭 CI0117 返台。",
+        meals: { breakfast: "福岡", lunch: "依航班／第二組市區", dinner: "第一組返台；第二組福岡" },
+        accommodation: "第一組：無；第二組：福岡續住 2/4、2/5 兩晚", parkingSpots: [],
+        timeline: [
+            { time: "依航班倒推", title: "第一組前往福岡機場", desc: "搭直達國際線巴士，或地下鐵到國內線站後轉接駁；確認 JX841 最終時刻後再鎖定。" },
+            { time: "待確認", title: "第一組・星宇 JX841 返回桃園", desc: "2027/2/4 FUK → TPE。" },
+            { time: "下午", title: "第二組福岡自由行", desc: "不安排遠程移動，換飯店或續住、購物與休息。" },
+            { time: "2/5", title: "第二組延伸：門司港／關門海峽", desc: "完整留一天處理 JR 往返、燒咖哩及關門海峽交通，比塞進共同主行程順暢。" },
+            { time: "2/6", title: "第二組・華航 CI0117 返回桃園", desc: "依最終班表預留國際線報到與機場移動時間。" }
+        ]
+    }
+});
+
+// --- 3. Initialize DOM Elements ---
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
     const header = document.querySelector('.main-header');
@@ -361,7 +581,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Render new content into itinerary area with transition
     function renderItineraryDay(dayNum) {
-        const data = itineraryData[dayNum];
+        const data = activeItineraryData[dayNum];
         if (!data) return;
 
         // Build Timeline Items HTML
@@ -379,7 +599,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Use appropriate icon depending on transit type
-        const isSelfDrive = parseInt(dayNum) <= 5 || (parseInt(dayNum) === 6 && true);
+        const isSelfDrive = parseInt(dayNum) >= 4 && parseInt(dayNum) <= 7;
         const iconClass = isSelfDrive ? 'ri-roadster-line' : 'ri-train-line';
         const transitLabel = isSelfDrive ? '開車里程：' : '交通工具：';
         const durationLabel = isSelfDrive ? '車程時間：' : '預估車程：';
@@ -443,7 +663,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ` : '';
 
         // Date labels for each day
-        const dayDates = { 1:'1/28', 2:'1/29', 3:'1/30', 4:'1/31', 5:'2/1', 6:'2/2', 7:'2/3', 8:'2/4' };
+        const dayDates = { 1:'1/27', 2:'1/28', 3:'1/29', 4:'1/30', 5:'1/31', 6:'2/1', 7:'2/2', 8:'2/3', 9:'2/4' };
         const dateLabel = dayDates[dayNum] || '';
 
         // Panel full template
