@@ -361,19 +361,20 @@ Object.assign(activeItineraryData, {
     },
     4: {
         title: "鹿兒島取車 ➤ 霧島神宮 ➤ 霧島溫泉",
-        route: "鹿兒島市區 AVIS ➤ 霧島神宮 ➤ 丸尾瀑布 ➤ 霧島溫泉",
+        route: "AVIS 鹿兒島中央站前店 ➤ 霧島神宮 ➤ 丸尾瀑布 ➤ 霧島溫泉",
         mileage: "約 80～100 km", time: "純駕駛約 2 小時，含取車抓 3 小時", toll: "高速費、ETC 與甲租乙還費待報價",
         image: "images/day4.png", imageAlt: "霧島神宮與霧島溫泉",
-        tip: "早上才取車，避免在鹿兒島市區多付一晚停車與租金。第一個自駕日只走霧島，不再塞其他遠距離景點。",
+        tip: "已預約 1/30 10:00 在 AVIS 鹿兒島中央站前店取車（鹿兒島市上之園町 10-15）。第一個自駕日只走霧島，不再塞其他遠距離景點。<a href='https://drive.google.com/file/d/15TGl0ievfav5M9ytYzMsatv2mj8eck4_/view?usp=drive_link' target='_blank' rel='noopener'>開啟租車預約文件 🔗</a>",
         meals: { breakfast: "鹿兒島飯店", lunch: "霧島神宮周邊", dinner: "溫泉旅館會席料理" },
         accommodation: "霧島溫泉（一晚；建議含早晚餐）",
-        parkingSpots: [{ name: "AVIS 鹿兒島", mapcode: "42 066 022*55" }, { name: "霧島神宮", mapcode: "376 089 596*04" }, { name: "丸尾瀑布", mapcode: "42 804 030*47" }],
+        parkingSpots: [{ name: "AVIS 鹿兒島中央站前店｜上之園町 10-15", mapcode: "42 066 022*55" }, { name: "霧島神宮", mapcode: "376 089 596*04" }, { name: "丸尾瀑布", mapcode: "42 804 030*47" }],
         timeline: [
             { time: "08:30", title: "鹿兒島飯店退房", desc: "帶齊護照、台灣駕照、日文譯本與信用卡。" },
-            { time: "09:00", title: "AVIS 鹿兒島市區取車 🚗", desc: "團體取車、驗車、行李裝載及說明預留約 60 分鐘。" },
-            { time: "10:00", title: "出發前往霧島", desc: "首日靠左駕駛不趕路，中途可安排一次休息。" },
-            { time: "11:30", title: "霧島地區午餐", desc: "先用餐再參拜，避免下午抵達溫泉旅館太晚。" },
-            { time: "13:00", title: "霧島神宮", desc: "安排約 1.5 小時；冬季山區需注意低溫或路面結冰。" },
+            { time: "09:30", title: "抵達 AVIS 鹿兒島中央站前店", desc: "地址：鹿兒島縣鹿兒島市上之園町 10-15。提早抵達，備妥護照、駕照及日文譯本。" },
+            { time: "10:00", title: "正式取車 🚗", desc: "辦理合約、驗車、行李裝載與 ETC 卡確認，預留約 45～60 分鐘。" },
+            { time: "11:00", title: "出發前往霧島", desc: "首日靠左駕駛不趕路，中途可安排一次休息。" },
+            { time: "12:30", title: "霧島地區午餐", desc: "先用餐再參拜，避免下午抵達溫泉旅館太晚。" },
+            { time: "14:00", title: "霧島神宮", desc: "安排約 1 小時；冬季山區需注意低溫或路面結冰。" },
             { time: "15:00", title: "丸尾瀑布／溫泉市場", desc: "視天候二選一，不強求全部完成。" },
             { time: "16:00", title: "溫泉旅館 Check-in ♨️", desc: "保留泡湯、休息時間，不要晚於旅館晚餐報到期限。" },
             { time: "18:00", title: "旅館晚餐", desc: "實際用餐時間依住宿方案確認。" }
@@ -460,6 +461,48 @@ Object.assign(activeItineraryData, {
         ]
     }
 });
+
+// The confirmed 10:00 return appointment changes Day 7: return the car first,
+// then use public transport. Yanagawa is removed from the shared itinerary.
+activeItineraryData[7] = {
+    title: "熊本 ➤ 福岡機場店還車 ➤ 福岡市區",
+    route: "熊本新町 ➤ AVIS 福岡機場出發航站樓店 ➤ 福岡飯店 ➤ 博多市區",
+    mileage: "約 115～130 km", time: "純駕駛約 1 小時 40 分～2 小時", toll: "高速費、ETC 與加油費依現場結算",
+    image: "images/day7.png", imageAlt: "福岡市區",
+    tip: "租車文件確認 2/2 10:00 必須在 AVIS 福岡機場出發航站樓店還車，因此不能再安排上午柳川遊船與下午太宰府。建議 07:00 前離開熊本，預留高速路況、加油、驗車與 ETC 結算時間。<a href='https://drive.google.com/file/d/15TGl0ievfav5M9ytYzMsatv2mj8eck4_/view?usp=drive_link' target='_blank' rel='noopener'>開啟租車預約文件 🔗</a>",
+    meals: { breakfast: "提早準備外帶早餐", lunch: "博多站／福岡市區", dinner: "福岡" },
+    accommodation: "福岡市區（第一晚；連住兩晚）",
+    parkingSpots: [{ name: "AVIS 福岡機場出發航站樓店｜榎田 2丁目7-3", mapcode: "待確認" }],
+    timeline: [
+        { time: "06:30", title: "Oneness House Kumamoto 退房", desc: "前一晚完成打包，早餐採外帶，確認油量與高速路況。" },
+        { time: "07:00", title: "從熊本新町出發 🚗", desc: "直接走高速公路前往福岡；不要再繞柳川或太宰府。" },
+        { time: "08:30", title: "途中／福岡近郊加滿油", desc: "依租車公司規定加滿油並保留收據；避免到還車時間前才找加油站。" },
+        { time: "09:30", title: "抵達 AVIS 福岡機場出發航站樓店", desc: "地址：福岡縣福岡市博多區榎田 2丁目7-3。卸行李、驗車並結算 ETC。" },
+        { time: "10:00", title: "完成還車 🏁", desc: "預約還車時間為 10:00；確認接送至機場或前往市區的交通方式。" },
+        { time: "11:00", title: "前往福岡飯店寄放行李", desc: "還車後全程改用大眾交通，先處理行李再開始活動。" },
+        { time: "12:00", title: "博多午餐", desc: "安排博多站周邊，避免還車後立刻再長距離移動。" },
+        { time: "14:00", title: "博多／天神自由活動", desc: "以市區散步、購物及休息為主。" },
+        { time: "18:30", title: "福岡晚餐", desc: "入住後在博多或中洲用餐。" }
+    ]
+};
+
+activeItineraryData[8] = {
+    title: "太宰府半日遊 ‧ 福岡購物美食",
+    route: "福岡 ➤ 太宰府天滿宮 ➤ 天神／博多 ➤ 福岡飯店",
+    mileage: "無（電車／地鐵）", time: "福岡市區至太宰府單程約 40～60 分", toll: "西鐵與市區交通車資",
+    image: "images/day8.png", imageAlt: "太宰府與福岡市區",
+    tip: "因 Day 7 必須上午 10:00 還車，太宰府改到今天搭西鐵前往；柳川不再硬塞進共同九日行程。門司港仍留給第二組 2/5 延伸日。",
+    meals: { breakfast: "福岡飯店", lunch: "太宰府參道／天神", dinner: "中洲屋台或預約餐廳" },
+    accommodation: "福岡市區（第二晚）", parkingSpots: [],
+    timeline: [
+        { time: "08:30", title: "從福岡出發前往太宰府", desc: "搭地鐵／西鐵轉乘，避開中午人潮。" },
+        { time: "09:45", title: "太宰府天滿宮與參道", desc: "安排約 2～2.5 小時，包含梅枝餅、參拜與商店散步。" },
+        { time: "12:15", title: "午餐", desc: "可在太宰府或返回天神後用餐。" },
+        { time: "14:00", title: "天神／博多購物", desc: "依團員需求選定一個主要購物區，減少往返。" },
+        { time: "16:30", title: "回飯店整理行李", desc: "第一組隔日返台，完成行李重量與伴手禮整理。" },
+        { time: "18:30", title: "共同旅程最後一晚晚餐", desc: "建議預約能容納全團的餐廳。" }
+    ]
+};
 
 // --- 3. Initialize DOM Elements ---
 document.addEventListener('DOMContentLoaded', () => {
