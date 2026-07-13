@@ -328,12 +328,12 @@ Object.assign(activeItineraryData, {
         image: "images/day2.png", imageAlt: "鹿兒島市區與櫻島",
         tip: "移動日只排鹿兒島市區。不要抵達當天再趕仙巖園或櫻島，避免拖著行李追交通工具。建議搭 09:30 前後的新幹線並劃位。",
         meals: { breakfast: "福岡飯店／博多站", lunch: "鹿兒島中央站或天文館", dinner: "天文館・薩摩黑豬＋白熊冰" },
-        accommodation: "鹿兒島市區（第一晚；建議鹿兒島中央站或天文館附近）", parkingSpots: [],
+        accommodation: "鹿兒島天文館 ‧ <a href='https://www.agoda.com/zh-tw/fav-lux-kagoshima-tenmonkan/hotel/kagoshima-jp.html' target='_blank'>FAV LUX KAGOSHIMA TENMONKAN 🔗</a>（第一晚，連住兩晚）", parkingSpots: [],
         timeline: [
             { time: "08:00", title: "福岡退房 ‧ 前往博多站", desc: "預留飯店退房、步行與大型行李移動時間。若 Day 7、8 住同一間福岡飯店，可先詢問是否接受跨夜寄放不需要的行李。" },
             { time: "09:00", title: "抵達博多站 ‧ 購買早餐與便當", desc: "至少在發車前 25～30 分鐘到站，團體旅客建議事先劃位。" },
             { time: "09:30", title: "九州新幹線前往鹿兒島中央 🚅", desc: "搭乘みずほ或さくら；實際班次以 2027 年時刻表為準。" },
-            { time: "11:00", title: "鹿兒島中央站 ‧ 寄放行李／入住手續", desc: "先處理行李，再開始市區行程。住宿若在天文館，可搭市電前往。" },
+            { time: "11:00", title: "前往 FAV LUX 鹿兒島天文館 ‧ 寄放行李", desc: "從鹿兒島中央站搭市電或計程車前往天文館，先寄放行李，再開始市區行程。" },
             { time: "12:00", title: "午餐 ‧ 鹿兒島中央或天文館", desc: "安排薩摩料理、鹿兒島拉麵或黑豬料理，保留充足用餐時間。" },
             { time: "14:00", title: "城山展望台與市區散步", desc: "天氣良好時從城山眺望櫻島；若旅途疲累，可縮短為天文館商圈散步。" },
             { time: "17:00", title: "飯店休息", desc: "移動日保留一段休息時間。" },
@@ -347,7 +347,7 @@ Object.assign(activeItineraryData, {
         image: "images/day3.png", imageAlt: "仙巖園與櫻島",
         tip: "今天不租車，以巴士和渡輪完成仙巖園、櫻島。把櫻島安排在午後，行程集中在同一區域；湯之平展望所需配合島內觀光巴士班次。",
         meals: { breakfast: "鹿兒島飯店", lunch: "仙巖園內薩摩料理", dinner: "鹿兒島市區" },
-        accommodation: "鹿兒島市區（第二晚）", parkingSpots: [],
+        accommodation: "鹿兒島天文館 ‧ <a href='https://www.agoda.com/zh-tw/fav-lux-kagoshima-tenmonkan/hotel/kagoshima-jp.html' target='_blank'>FAV LUX KAGOSHIMA TENMONKAN 🔗</a>（第二晚）", parkingSpots: [],
         timeline: [
             { time: "08:15", title: "從飯店出發", desc: "搭巴士前往仙巖園，預留候車與步行時間。" },
             { time: "09:00", title: "仙巖園 ‧ 舊集成館", desc: "安排約 2 小時，欣賞以櫻島為借景的庭園及世界文化遺產。" },
@@ -384,7 +384,7 @@ Object.assign(activeItineraryData, {
         mileage: "約 230～270 km", time: "純駕駛約 4～5 小時", toll: "高速費與 ETC 待試算",
         image: "images/day5.png", imageAlt: "阿蘇草千里",
         tip: "這是全程最長駕駛日，只保留阿蘇中岳與草千里；大觀峰移除，否則冬季日照短、抵達熊本會太晚。火山管制或積雪時直接走備案前往熊本。",
-        meals: { breakfast: "霧島溫泉旅館", lunch: "阿蘇地區赤牛料理", dinner: "熊本市區" }, accommodation: "熊本市區（第一晚；連住兩晚）",
+        meals: { breakfast: "霧島溫泉旅館", lunch: "阿蘇地區赤牛料理", dinner: "熊本市區" }, accommodation: "熊本新町 ‧ <a href='https://www.google.com/maps/search/?api=1&query=Oneness+House+Kumamoto+熊本新町' target='_blank'>Oneness House Kumamoto 熊本新町 🔗</a>（第一晚，連住兩晚）",
         parkingSpots: [{ name: "阿蘇中岳火口", mapcode: "256 460 490*83" }, { name: "草千里", mapcode: "256 456 741*50" }],
         timeline: [
             { time: "08:00", title: "霧島溫泉退房出發", desc: "務必準時，並在前一晚確認阿蘇火口管制、積雪及道路狀況。" },
@@ -393,7 +393,7 @@ Object.assign(activeItineraryData, {
             { time: "12:30", title: "阿蘇午餐", desc: "預留排隊時間，熱門赤牛店可準備第二選擇。" },
             { time: "14:00", title: "草千里散步", desc: "冬季視風勢與能見度縮短停留。" },
             { time: "15:00", title: "出發前往熊本市區", desc: "不繞去大觀峰，目標在天黑前完成主要山路。" },
-            { time: "17:00", title: "熊本飯店 Check-in", desc: "停車後改以市電或步行活動。" },
+            { time: "17:00", title: "Oneness House Kumamoto Check-in", desc: "抵達熊本新町住宿，處理行李與停車；晚間改以市電或步行活動。" },
             { time: "18:30", title: "熊本晚餐", desc: "馬肉刺身、太平燕或熊本拉麵。" }
         ]
     },
@@ -402,7 +402,7 @@ Object.assign(activeItineraryData, {
         mileage: "市區不開車", time: "市電＋步行", toll: "市區交通與門票",
         image: "images/day6.png", imageAlt: "熊本城",
         tip: "車留在飯店，避免市中心找停車位。熊本城 9:00 開放，先進城再用餐，午後搭市電去水前寺。",
-        meals: { breakfast: "熊本飯店", lunch: "城彩苑或市區", dinner: "上下通居酒屋／燒肉" }, accommodation: "熊本市區（第二晚）", parkingSpots: [],
+        meals: { breakfast: "Oneness House／新町周邊", lunch: "城彩苑或市區", dinner: "上下通居酒屋／燒肉" }, accommodation: "熊本新町 ‧ <a href='https://www.google.com/maps/search/?api=1&query=Oneness+House+Kumamoto+熊本新町' target='_blank'>Oneness House Kumamoto 熊本新町 🔗</a>（第二晚）", parkingSpots: [],
         timeline: [
             { time: "08:30", title: "搭市電／步行前往熊本城", desc: "預留進場與購票時間。" },
             { time: "09:00", title: "熊本城", desc: "安排約 2～2.5 小時；目前官方一般開放至 17:00、最後入園 16:00。" },
@@ -417,10 +417,10 @@ Object.assign(activeItineraryData, {
         mileage: "約 150～180 km", time: "純駕駛約 3 小時", toll: "高速、停車與遊船費待確認",
         image: "images/day7.png", imageAlt: "柳川遊船與太宰府",
         tip: "為了順暢，主方案取消吉次園採草莓。若一定要採草莓，就應刪除太宰府或柳川其中一站，不能三個都排。",
-        meals: { breakfast: "熊本飯店", lunch: "柳川蒸籠鰻魚飯", dinner: "福岡" }, accommodation: "福岡市區（第一晚；連住兩晚）",
+        meals: { breakfast: "Oneness House／新町周邊", lunch: "柳川蒸籠鰻魚飯", dinner: "福岡" }, accommodation: "福岡市區（第一晚；連住兩晚）",
         parkingSpots: [{ name: "柳川乘船場", mapcode: "69 875 573*40" }, { name: "太宰府天滿宮", mapcode: "55 364 073*51" }],
         timeline: [
-            { time: "08:30", title: "熊本退房出發", desc: "直接走高速公路北上柳川，不先繞採草莓。" },
+            { time: "08:30", title: "Oneness House Kumamoto 退房出發", desc: "從熊本新町直接北上柳川，不先繞採草莓。" },
             { time: "10:00", title: "抵達柳川乘船場", desc: "停車、購票並確認下船後接駁方式。" },
             { time: "10:30", title: "柳川搖櫓遊船", desc: "冬季可選暖桌船；依船公司當年班次與航程安排。" },
             { time: "12:00", title: "柳川蒸籠鰻魚飯", desc: "熱門店建議預約或準備候補店家。" },
