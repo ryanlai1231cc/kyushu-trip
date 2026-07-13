@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW" data-theme="light">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
     <!-- Background glowing spots for modern UI feel -->
@@ -307,8 +307,9 @@
                 </div>
 
                 <!-- Tabs Content Dynamic Area -->
-                <div class="itinerary-content" id="itineraryContent">
-                    <!-- Content will be injected dynamically via JS, but we put Day 1 statically for basic structure/SEO -->
+                <div class="itinerary-content" id="itineraryContent" aria-live="polite">
+                    <!-- Inert legacy reference. JavaScript renders the current Day 1 immediately. -->
+                    <template id="legacyItineraryFallback">
                     <div class="day-panel active" id="dayPanel1">
                         <div class="panel-header">
                             <div class="day-number-badge">Day 1</div>
@@ -377,6 +378,7 @@
                             </div>
                         </div>
                     </div>
+                    </template>
                 </div>
             </div>
         </div>
@@ -564,6 +566,6 @@
     </footer>
 
     <!-- Custom Script -->
-    <script src="app.js?v=5"></script>
+    <script src="app.js?v=6"></script>
 </body>
 </html>

@@ -1,9 +1,11 @@
 /**
- * Fukuoka-Kagoshima 8-Day Tour JS Logic
+ * 2027 Kyushu 9-Day Tour — itinerary rendering and page interactions
  */
 
 // --- 1. Dynamic Itinerary Data ---
-const itineraryData = {
+// Archived first-draft itinerary retained temporarily for content reference only.
+// The rendered itinerary is defined by activeItineraryData below.
+const legacyItineraryData = {
     1: {
         title: "抵達鹿兒島 ‧ 櫻島環島巡禮",
         route: "鹿兒島機場 (KOJ) 取車 ➔ 鹿兒島港渡輪 ➔ 櫻島環島 ➔ 鹿兒島市區",
@@ -511,7 +513,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.main-header');
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navMenu = document.getElementById('navMenu');
-    const themeToggleBtn = document.getElementById('themeToggle');
     const itineraryTabs = document.getElementById('itineraryTabs');
     const itineraryContent = document.getElementById('itineraryContent');
     const checklistProgress = document.getElementById('progressBar');
@@ -579,20 +580,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 5. Light/Dark Theme Switcher ---
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        });
-    }
-
-    // --- 6. Interactive Itinerary Day Switcher ---
+    // --- 5. Interactive Itinerary Day Switcher ---
     if (itineraryTabs && itineraryContent) {
         const tabBtns = itineraryTabs.querySelectorAll('.tab-btn');
 
