@@ -324,16 +324,17 @@ Object.assign(activeItineraryData, {
     2: {
         title: "九州新幹線南下鹿兒島 ‧ 天文館散策",
         route: "福岡博多 ➤ 九州新幹線 ➤ 鹿兒島中央 ➤ 城山展望台 ➤ 天文館",
-        mileage: "無（新幹線／市區交通）", time: "新幹線約 1 小時 16～30 分", toll: "新幹線票價與套票待出發前確認",
+        mileage: "無（新幹線／市區交通）", time: "新幹線約 1 小時 16～30 分", toll: "新幹線票價待確認＋CUTE 兩日券現行成人 ¥1,900／兒童 ¥950",
         image: "images/day2.png", imageAlt: "鹿兒島市區與櫻島",
-        tip: "移動日只排鹿兒島市區。不要抵達當天再趕仙巖園或櫻島，避免拖著行李追交通工具。若大型行李不帶往鹿兒島，可使用 JR 博多站 2 樓的 <a href='https://handsfree-japan.com/tc/hakata/' target='_blank' rel='noopener'>Crosta 博多寄物服務 🔗</a>；營業 09:00～20:00，寄存 ¥1,000／件／日。",
+        tip: "抵達鹿兒島後購買 <a href='https://www.kagoshima-yokanavi.jp/zh-TW/feature/one-day-pass2' target='_blank' rel='noopener'>CUTE 兩日乘車券 🔗</a>，供 Day 2、3 使用。現行票價成人 ¥1,900、兒童 ¥950，可無限搭乘鹿兒島 City View、市營巴士、市電、櫻島觀光巴士與櫻島渡輪，並附部分景點優惠；2027 年售價與適用範圍需出發前複核。若大型行李不帶往鹿兒島，可使用 JR 博多站 2 樓的 <a href='https://handsfree-japan.com/tc/hakata/' target='_blank' rel='noopener'>Crosta 博多寄物服務 🔗</a>。",
         meals: { breakfast: "福岡飯店／博多站", lunch: "鹿兒島中央站或天文館", dinner: "天文館・薩摩黑豬＋白熊冰" },
         accommodation: "鹿兒島天文館 ‧ <a href='https://www.agoda.com/zh-tw/fav-lux-kagoshima-tenmonkan/hotel/kagoshima-jp.html' target='_blank'>FAV LUX KAGOSHIMA TENMONKAN 🔗</a>（第一晚，連住兩晚）", parkingSpots: [],
         timeline: [
             { time: "08:00", title: "福岡退房 ‧ 前往博多站", desc: "預留飯店退房、步行與大型行李移動時間。先詢問飯店能否跨夜保管；不能的話改用 Crosta 博多。" },
             { time: "09:00", title: "Crosta 博多寄放大型行李（需要時）", desc: "位於 JR 博多站 2 樓新幹線光之廣場剪票口外，09:00 開門。寄好行李後再購買早餐並前往新幹線月台。" },
             { time: "09:30", title: "九州新幹線前往鹿兒島中央 🚅", desc: "搭乘みずほ或さくら；實際班次以 2027 年時刻表為準。" },
-            { time: "11:00", title: "前往 FAV LUX 鹿兒島天文館 ‧ 寄放行李", desc: "從鹿兒島中央站搭市電或計程車前往天文館，先寄放行李，再開始市區行程。" },
+            { time: "11:00", title: "鹿兒島中央站購買 CUTE 兩日券 🎫", desc: "可在鹿兒島中央車站旅客服務中心或東口站前廣場觀光服務處購買。刮開／啟用 Day 2、3 的使用日期；現行成人 ¥1,900、兒童 ¥950，2027 年資訊需再次確認。" },
+            { time: "11:20", title: "前往 FAV LUX 鹿兒島天文館 ‧ 寄放行李", desc: "使用 CUTE 搭市電前往天文館，先寄放行李，再開始市區行程。若行李較多也可改搭計程車，但不包含在 CUTE 內。" },
             { time: "12:00", title: "午餐 ‧ 鹿兒島中央或天文館", desc: "安排薩摩料理、鹿兒島拉麵或黑豬料理，保留充足用餐時間。" },
             { time: "14:00", title: "城山展望台與市區散步", desc: "天氣良好時從城山眺望櫻島；若旅途疲累，可縮短為天文館商圈散步。" },
             { time: "17:00", title: "飯店休息", desc: "移動日保留一段休息時間。" },
@@ -343,9 +344,9 @@ Object.assign(activeItineraryData, {
     3: {
         title: "仙巖園 ‧ 櫻島一日遊 ‧ 鹿兒島第二晚",
         route: "鹿兒島市區 ➤ 仙巖園 ➤ 鹿兒島港 ➤ 櫻島 ➤ 天文館",
-        mileage: "無（巴士／渡輪）", time: "市區至仙巖園約 20～30 分；渡輪約 15 分", toll: "巴士、渡輪或鹿兒島交通票券待確認",
+        mileage: "無（巴士／渡輪）", time: "市區至仙巖園約 20～30 分；渡輪約 15 分", toll: "使用 Day 2 購買的 CUTE 兩日乘車券",
         image: "images/day3.png", imageAlt: "仙巖園與櫻島",
-        tip: "今天不租車，以巴士和渡輪完成仙巖園、櫻島。把櫻島安排在午後，行程集中在同一區域；湯之平展望所需配合島內觀光巴士班次。",
+        tip: "今天不租車，使用 CUTE 兩日券搭市電、市營巴士、櫻島渡輪與櫻島觀光巴士。把櫻島安排在午後，行程集中在同一區域；湯之平展望所需配合島內觀光巴士班次。注意仙巖園門票本身不包含在乘車券內，僅可使用附帶優惠。",
         meals: { breakfast: "鹿兒島飯店", lunch: "仙巖園內薩摩料理", dinner: "鹿兒島市區" },
         accommodation: "鹿兒島天文館 ‧ <a href='https://www.agoda.com/zh-tw/fav-lux-kagoshima-tenmonkan/hotel/kagoshima-jp.html' target='_blank'>FAV LUX KAGOSHIMA TENMONKAN 🔗</a>（第二晚）", parkingSpots: [],
         timeline: [
