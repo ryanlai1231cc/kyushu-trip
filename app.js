@@ -244,12 +244,12 @@ const legacyItineraryData = {
 };
 
 // --- 2. Active 9-day master plan (the former rideshare plan is now canonical) ---
-const activeItineraryData = {
+const archivedItineraryData = {
     1: {
         title: "兩組抵達福岡 ‧ 福岡住一晚",
         route: "TPE ✈️ FUK ➤ 福岡市區 ➤ 飯店 Check-in",
         mileage: "無（大眾運輸）", time: "依兩組航班抵達時間安排", toll: "待確認",
-        image: "images/day1.png", imageAlt: "福岡夜景",
+        image: "images/day1-fukuoka-arrival.png", imageAlt: "冬夜抵達福岡博多站",
         tip: "第一組搭星宇 JX840、第二組搭華航 CI0110，兩組皆於 1/27 抵達福岡。接機、會合、晚餐與入住時間待依實際班表補齊。",
         meals: { breakfast: "出發前／機上", lunch: "機上或機場", dinner: "福岡市區（待規劃）" },
         accommodation: "福岡市區（1/27 入住、1/28 退房；飯店待確認）", parkingSpots: [],
@@ -322,12 +322,12 @@ const activeItineraryData = {
 };
 
 // Reworked timing: preserve the original highlights while removing backtracking and overloaded days.
-Object.assign(activeItineraryData, {
+Object.assign(archivedItineraryData, {
     2: {
         title: "九州新幹線南下鹿兒島 ‧ 天文館散策",
         route: "福岡博多 ➤ 九州新幹線 ➤ 鹿兒島中央 ➤ 城山展望台 ➤ 天文館",
         mileage: "無（新幹線／市區交通）", time: "新幹線約 1 小時 16～30 分", toll: "新幹線票價待確認＋CUTE 兩日券成人 ¥2,100／兒童 ¥1,050（2026/8/1 起）",
-        image: "images/day2.png", imageAlt: "鹿兒島市區與櫻島",
+        image: "images/day2-kagoshima-shinkansen.png", imageAlt: "九州新幹線抵達鹿兒島中央站",
         tip: "抵達鹿兒島後購買 <a href='https://www.kagoshima-yokanavi.jp/zh-TW/feature/one-day-pass2' target='_blank' rel='noopener'>CUTE 兩日乘車券介紹 🔗</a>，供 Day 2、3 使用。2026/8/1 起票價為成人 ¥2,100、兒童 ¥1,050，可無限搭乘鹿兒島 City View、市營巴士、市電、櫻島觀光巴士與櫻島渡輪。數位票券需使用 WAKUWAKU App、完成會員註冊並以信用卡付款，使用時手機必須連網；操作方式請看 <a href='https://www.kagoshima-yokanavi.jp/zh-TW/feature/mobileCUTE-usage2' target='_blank' rel='noopener'>CUTE 數位票券購買與使用指南 🔗</a>。若大型行李不帶往鹿兒島，可使用 JR 博多站 2 樓的 <a href='https://handsfree-japan.com/tc/hakata/' target='_blank' rel='noopener'>Crosta 博多寄物服務 🔗</a>。",
         meals: { breakfast: "福岡飯店／博多站", lunch: "鹿兒島中央站或天文館", dinner: "天文館・薩摩黑豬＋白熊冰" },
         accommodation: "鹿兒島天文館 ‧ <a href='https://www.agoda.com/zh-tw/fav-lux-kagoshima-tenmonkan/hotel/kagoshima-jp.html' target='_blank'>FAV LUX KAGOSHIMA TENMONKAN 🔗</a>（第一晚，連住兩晚）", parkingSpots: [],
@@ -347,7 +347,7 @@ Object.assign(activeItineraryData, {
         title: "仙巖園 ‧ 櫻島一日遊 ‧ 鹿兒島第二晚",
         route: "鹿兒島市區 ➤ 仙巖園 ➤ 鹿兒島港 ➤ 櫻島 ➤ 天文館",
         mileage: "無（巴士／渡輪）", time: "市區至仙巖園約 20～30 分；渡輪約 15 分", toll: "使用 Day 2 購買的 CUTE 兩日乘車券",
-        image: "images/day3.png", imageAlt: "仙巖園與櫻島",
+        image: "images/day2.png", imageAlt: "仙巖園與櫻島",
         tip: "今天不租車，使用 CUTE 兩日券搭市電、市營巴士、櫻島渡輪與櫻島觀光巴士。把櫻島安排在午後，行程集中在同一區域；湯之平展望所需配合島內觀光巴士班次。注意仙巖園門票本身不包含在乘車券內，僅可使用附帶優惠。",
         meals: { breakfast: "鹿兒島飯店", lunch: "仙巖園內薩摩料理", dinner: "鹿兒島市區" },
         accommodation: "鹿兒島天文館 ‧ <a href='https://www.agoda.com/zh-tw/fav-lux-kagoshima-tenmonkan/hotel/kagoshima-jp.html' target='_blank'>FAV LUX KAGOSHIMA TENMONKAN 🔗</a>（第二晚）", parkingSpots: [],
@@ -366,7 +366,7 @@ Object.assign(activeItineraryData, {
         title: "鹿兒島取車 ➤ 霧島神宮 ➤ 霧島溫泉",
         route: "AVIS 鹿兒島中央站前店 ➤ 霧島神宮 ➤ 丸尾瀑布 ➤ 霧島溫泉",
         mileage: "約 80～100 km", time: "純駕駛約 2 小時，含取車抓 3 小時", toll: "高速費、ETC 與甲租乙還費待報價",
-        image: "images/day4.png", imageAlt: "霧島神宮與霧島溫泉",
+        image: "images/day4-kirishima.png", imageAlt: "冬季霧島神宮與溫泉山林",
         tip: "已預約 Toyota Alphard 七人座，1/30 10:00 在 AVIS 鹿兒島中央站前店取車（鹿兒島市上之園町 10-15）。實際年份、車色與配備依現場交車為準。第一個自駕日只走霧島，不再塞其他遠距離景點。<a href='https://drive.google.com/file/d/15TGl0ievfav5M9ytYzMsatv2mj8eck4_/view?usp=drive_link' target='_blank' rel='noopener'>開啟租車預約文件 🔗</a>",
         meals: { breakfast: "鹿兒島飯店", lunch: "霧島神宮周邊", dinner: "溫泉旅館會席料理" },
         accommodation: "霧島溫泉（一晚；建議含早晚餐）",
@@ -386,7 +386,7 @@ Object.assign(activeItineraryData, {
     5: {
         title: "霧島 ➤ 阿蘇火山 ➤ 熊本第一晚", route: "霧島溫泉 ➤ 阿蘇中岳／草千里 ➤ 熊本市區",
         mileage: "約 230～270 km", time: "純駕駛約 4～5 小時", toll: "高速費與 ETC 待試算",
-        image: "images/day5.png", imageAlt: "阿蘇草千里",
+        image: "images/day4.png", imageAlt: "阿蘇中岳與草千里",
         tip: "這是全程最長駕駛日，只保留阿蘇中岳與草千里；大觀峰移除，否則冬季日照短、抵達熊本會太晚。火山管制或積雪時直接走備案前往熊本。",
         meals: { breakfast: "霧島溫泉旅館", lunch: "阿蘇地區赤牛料理", dinner: "熊本市區" }, accommodation: "熊本新町 ‧ <a href='https://www.google.com/maps/search/?api=1&query=Oneness+House+Kumamoto+熊本新町' target='_blank'>Oneness House Kumamoto 熊本新町 🔗</a>（第一晚，連住兩晚）",
         parkingSpots: [{ name: "阿蘇中岳火口", mapcode: "256 460 490*83" }, { name: "草千里", mapcode: "256 456 741*50" }],
@@ -404,7 +404,7 @@ Object.assign(activeItineraryData, {
     6: {
         title: "熊本城 ‧ 水前寺成趣園 ‧ 熊本第二晚", route: "熊本城 ➤ 城彩苑 ➤ 水前寺成趣園 ➤ 上下通",
         mileage: "市區不開車", time: "市電＋步行", toll: "市區交通與門票",
-        image: "images/day6.png", imageAlt: "熊本城",
+        image: "images/day5.png", imageAlt: "熊本城",
         tip: "車留在飯店，避免市中心找停車位。熊本城 9:00 開放，先進城再用餐，午後搭市電去水前寺。",
         meals: { breakfast: "Oneness House／新町周邊", lunch: "城彩苑或市區", dinner: "上下通居酒屋／燒肉" }, accommodation: "熊本新町 ‧ <a href='https://www.google.com/maps/search/?api=1&query=Oneness+House+Kumamoto+熊本新町' target='_blank'>Oneness House Kumamoto 熊本新町 🔗</a>（第二晚）", parkingSpots: [],
         timeline: [
@@ -451,7 +451,7 @@ Object.assign(activeItineraryData, {
     9: {
         title: "第一組 JX841 返台 ‧ 第二組福岡延伸", route: "福岡市區 ➤ FUK ✈️ TPE／第二組續住福岡",
         mileage: "無", time: "依 JX841 報到時間倒推", toll: "機場交通",
-        image: "images/day8.png", imageAlt: "福岡機場",
+        image: "images/day9-fukuoka-airport.png", imageAlt: "福岡機場返台與延伸旅程",
         tip: "第一組至少在起飛前 2.5～3 小時由飯店出發；國際線與地下鐵站不在同一航廈，需計入接駁或直達巴士時間。第二組 2/4 留市區、2/5 建議安排門司港，2/6 搭 CI0117 返台。",
         meals: { breakfast: "福岡", lunch: "依航班／第二組市區", dinner: "第一組返台；第二組福岡" },
         accommodation: "第一組：無；第二組：福岡續住 2/4、2/5 兩晚", parkingSpots: [],
@@ -467,11 +467,11 @@ Object.assign(activeItineraryData, {
 
 // The confirmed 10:00 return appointment changes Day 7: return the car first,
 // then use public transport. Yanagawa is removed from the shared itinerary.
-activeItineraryData[7] = {
+archivedItineraryData[7] = {
     title: "熊本 ➤ 福岡機場店還車 ➤ 福岡市區",
     route: "熊本新町 ➤ AVIS 福岡機場出發航站樓店 ➤ 福岡飯店 ➤ 博多市區",
     mileage: "約 115～130 km", time: "純駕駛約 1 小時 40 分～2 小時", toll: "高速費、ETC 與加油費依現場結算",
-    image: "images/day7.png", imageAlt: "福岡市區",
+    image: "images/day8.png", imageAlt: "福岡博多與中洲市區",
     tip: "租車文件確認 2/2 10:00 必須在 AVIS 福岡機場出發航站樓店還車，因此不能再安排上午柳川遊船與下午太宰府。建議 07:00 前離開熊本，預留高速路況、加油、驗車與 ETC 結算時間。<a href='https://drive.google.com/file/d/15TGl0ievfav5M9ytYzMsatv2mj8eck4_/view?usp=drive_link' target='_blank' rel='noopener'>開啟租車預約文件 🔗</a>",
     meals: { breakfast: "提早準備外帶早餐", lunch: "博多站／福岡市區", dinner: "福岡" },
     accommodation: "福岡市區（第一晚；連住兩晚）",
@@ -489,11 +489,11 @@ activeItineraryData[7] = {
     ]
 };
 
-activeItineraryData[8] = {
+archivedItineraryData[8] = {
     title: "太宰府半日遊 ‧ 福岡購物美食",
     route: "福岡 ➤ 太宰府天滿宮 ➤ 天神／博多 ➤ 福岡飯店",
     mileage: "無（電車／地鐵）", time: "福岡市區至太宰府單程約 40～60 分", toll: "西鐵與市區交通車資",
-    image: "images/day8.png", imageAlt: "太宰府與福岡市區",
+    image: "images/day8-dazaifu.png", imageAlt: "冬季太宰府天滿宮",
     tip: "因 Day 7 必須上午 10:00 還車，太宰府改到今天搭西鐵前往；柳川不再硬塞進共同九日行程。門司港仍留給第二組 2/5 延伸日。",
     meals: { breakfast: "福岡飯店", lunch: "太宰府參道／天神", dinner: "中洲屋台或預約餐廳" },
     accommodation: "福岡市區（第二晚）", parkingSpots: [],
@@ -507,7 +507,174 @@ activeItineraryData[8] = {
     ]
 };
 
-// --- 3. Initialize DOM Elements ---
+// --- 3. Current itinerary based on the shared Google Doc ---
+const activeItineraryData = {
+    1: {
+        mode: "public", title: "抵達福岡・博多晚餐", route: "福岡機場 ➤ 博多／天神 ➤ 飯店",
+        mileage: "免費接駁巴士＋地下鐵", time: "地下鐵福岡空港站至博多約 5～10 分鐘", toll: "免費接駁巴士＋地下鐵單程票價",
+        image: "images/day1-fukuoka-arrival.png", imageAlt: "冬夜抵達福岡博多站",
+        tip: "抵達日不排遠程景點；完成入境、領行李與入住後，在博多站周邊簡單用餐。兩組依各自航班時間會合。",
+        meals: { breakfast: "出發前／機上", lunch: "機上或機場", dinner: "博多站周邊拉麵或宵夜" },
+        accommodation: "福岡市區（一晚；飯店待確認）", parkingSpots: [],
+        timeline: [
+            { time: "抵達後", title: "福岡機場入境", desc: "完成入境與領取行李後，搭免費接駁巴士轉乘地下鐵前往博多。" },
+            {
+                time: "入境後", title: "免費接駁巴士 ➤ 地下鐵 ➤ 博多", type: "transport",
+                desc: "從國際線航廈依指標搭免費接駁巴士，在「國內線航廈／地下鐵福岡空港站」下車，再搭地下鐵空港線前往博多站。",
+                payments: [
+                    "實體感應卡：進出站使用同一張卡",
+                    "Apple Pay：進出站使用同一裝置",
+                    "Google Wallet：進出站使用同一裝置",
+                    "現金：在售票機購買單程票"
+                ],
+                note: "信用卡、手機與發卡銀行仍可能有限制；若感應失敗，直接改用現金購票。"
+            },
+            { time: "晚上", title: "飯店 Check-in", desc: "先安頓行李，不另外安排遠距離移動。" },
+            { time: "晚餐", title: "博多站周邊用餐", desc: "依抵達時間安排拉麵、居酒屋或便利商店補給。" }
+        ]
+    },
+    2: {
+        mode: "public", title: "福岡 ➤ 熊本・熊本城", route: "博多 ➤ 熊本 ➤ 熊本城 ➤ 城彩苑",
+        mileage: "九州新幹線＋市電／步行", time: "博多至熊本約 35～40 分鐘", toll: "新幹線、市電與景點門票",
+        image: "images/day5.png", imageAlt: "熊本城與城彩苑",
+        tip: "抵達熊本後先寄放行李，再集中走熊本城與城彩苑，避免跨區折返。",
+        meals: { breakfast: "福岡飯店／博多站", lunch: "城彩苑或熊本城周邊", dinner: "勝烈亭黑豬排或馬肉料理" },
+        accommodation: "熊本市區（第一晚；連住兩晚，飯店待確認）", parkingSpots: [],
+        timeline: [
+            {
+                time: "上午", title: "九州新幹線前往熊本", type: "transport",
+                desc: "從博多站搭乘九州新幹線前往熊本站，車程約 35～40 分鐘；抵達後先到飯店寄放行李。",
+                detailTitle: "新幹線購票方式",
+                payments: [
+                    "JR 九州網路訂票：事先預訂指定席，依訂票條件取票或使用指定乘車方式",
+                    "車站售票機：可使用現金或售票機支援的信用卡購買",
+                    "JR 綠色窗口：可請站務人員協助購買指定席或自由席",
+                    "實體車票：進出新幹線閘門時，依票券種類投入或感應指定票券"
+                ],
+                note: "一般交通 IC 卡、感應信用卡、Apple Pay 或 Google Wallet，不能像搭福岡地下鐵一樣直接感應搭乘九州新幹線；請先購買有效的新幹線車票。多人同行建議事先預訂指定席。"
+            },
+            {
+                time: "抵達後", title: "啟用熊本市電 24 小時乘車券", type: "transport",
+                desc: "在熊本站準備搭乘市電前，以手機購買並啟用；從啟用時間起連續 24 小時內可無限搭乘熊本市電全線，可跨 Day 2、Day 3 使用。",
+                detailTitle: "票券資訊與購買方式",
+                payments: [
+                    "票價：成人（國中生以上）¥600；兒童（小學生）¥300",
+                    "QUICK TRIP：直接使用手機瀏覽器購買，不必安裝 App",
+                    "乗換案内（Jorudan）：先安裝 App，再於 App 內購買",
+                    "My Route：先安裝 App，再於 App 內購買",
+                    "官方說明：<a href='https://www.kotsu-kumamoto.jp/kihon/pub/detail.aspx?c_id=66&id=1434&pg=1' target='_blank' rel='noopener'>熊本市交通局｜市電 24 小時乘車券 🔗</a>"
+                ],
+                note: "下車時向司機出示手機上的有效票券畫面，不要觸碰 IC 讀卡機。手機沒電或無法顯示票面時，需另付車資；有效時間內另附熊本城、水前寺成趣園等設施優惠。"
+            },
+            { time: "中午", title: "熊本城", desc: "安排城內參觀並視當日開放範圍調整停留時間。" },
+            { time: "下午", title: "櫻之馬場 城彩苑", desc: "逛熊本特色商店與小吃，之後回飯店休息。" },
+            { time: "晚上", title: "熊本特色晚餐", desc: "勝烈亭黑豬排或馬肉料理，熱門店建議預約。" }
+        ]
+    },
+    3: {
+        mode: "public", title: "熊本深度一日遊", route: "熊本市區 ➤ 熊本熊廣場 ➤ 水前寺成趣園 ➤ 上下通",
+        mileage: "熊本市電＋步行", time: "市區一日", toll: "市電車資與景點門票",
+        image: "images/day3-kumamoto.png", imageAlt: "熊本市區與水前寺成趣園",
+        tip: "熊本熊廣場表演需依官方公布時段安排；若沒有演出，仍可參觀展示並順遊市區。",
+        meals: { breakfast: "熊本飯店", lunch: "水前寺／市區餐廳", dinner: "上下通商店街周邊" },
+        accommodation: "熊本市區（第二晚）", parkingSpots: [],
+        timeline: [
+            { time: "上午", title: "熊本熊廣場", desc: "先確認熊本熊當日活動時刻，預留排隊時間。" },
+            { time: "中午", title: "水前寺成趣園", desc: "搭市電前往，安排庭園散步與午餐。" },
+            { time: "下午", title: "上通・下通商店街", desc: "購物、咖啡與自由活動。" },
+            { time: "晚上", title: "熊本第二晚", desc: "回市中心用餐，並為隔日包車行程整理行李。" }
+        ]
+    },
+    4: {
+        mode: "charter", title: "阿蘇・大觀峰 ➤ 黑川溫泉", route: "熊本飯店 ➤ 阿蘇／草千里 ➤ 大觀峰 ➤ 黑川溫泉",
+        mileage: "6 小時包車（建議）／4 小時精簡版", time: "純移動約 2 小時 45 分；完整行程約 6 小時", toll: "包車費、高速／停車費依報價",
+        image: "images/day4.png", imageAlt: "阿蘇草千里與火山景觀",
+        tip: "建議選 6 小時方案：熊本飯店至草千里約 1 小時 20 分、草千里至大觀峰約 45～55 分、大觀峰至黑川約 35～45 分，純車程約 2 小時 45 分。4 小時方案只能保留草千里與黑川，需取消大觀峰並壓縮午餐。冬季再預留 20～30 分鐘路況緩衝。",
+        meals: { breakfast: "熊本飯店", lunch: "阿蘇赤牛料理", dinner: "黑川溫泉旅館會席料理" },
+        accommodation: "黑川溫泉旅館（一晚，建議含早晚餐）", parkingSpots: [],
+        timeline: [
+            { time: "09:00～10:20", title: "熊本飯店 ➤ 阿蘇・草千里", desc: "預估車程約 1 小時 20 分；冬季依道路狀況增加緩衝。" },
+            { time: "10:20～12:10", title: "草千里／中岳與午餐", desc: "停留約 1 小時 50 分；中岳火口是否前往依當日管制決定，午餐採快速用餐。" },
+            { time: "12:10～13:00", title: "草千里 ➤ 大觀峰", desc: "預估車程約 45～55 分。" },
+            { time: "13:00～14:10", title: "大觀峰停留", desc: "停留約 1 小時；若能見度不佳可縮短，將時間留給山路。" },
+            { time: "14:10～14:55", title: "大觀峰 ➤ 黑川溫泉", desc: "預估車程約 35～45 分，約 15:00 抵達，合計約 6 小時。" }
+        ]
+    },
+    5: {
+        mode: "charter", title: "九重・別府 ➤ 由布院", route: "黑川溫泉 ➤ 九重夢大吊橋 ➤ 別府地獄 ➤ 由布院",
+        mileage: "6 小時包車（建議）／4 小時精簡版", time: "純移動約 2 小時 20 分；完整行程約 6 小時", toll: "包車費、停車費與景點門票",
+        image: "images/day5-kokonoe-beppu-yufuin.png", imageAlt: "九重夢大吊橋、別府溫泉與由布院冬景",
+        tip: "建議選 6 小時方案：黑川至九重夢大吊橋約 35～45 分、九重至別府約 60～70 分、別府至由布院約 40～50 分，純車程約 2 小時 20 分。4 小時無法同時充分停留九重與別府，建議取消九重、改走黑川→別府→由布院。吊橋若因強風或結冰關閉，也直接使用此備案。",
+        meals: { breakfast: "黑川溫泉旅館", lunch: "別府地獄蒸料理", dinner: "由布院旅館會席料理" },
+        accommodation: "由布院溫泉旅館（一晚，建議含早晚餐）", parkingSpots: [],
+        timeline: [
+            { time: "09:00～09:45", title: "黑川溫泉 ➤ 九重夢大吊橋", desc: "預估車程約 35～45 分。" },
+            { time: "09:45～10:45", title: "九重夢大吊橋", desc: "停留約 1 小時；現場依風勢、積雪與路面狀況決定是否入場。" },
+            { time: "10:45～11:55", title: "九重 ➤ 別府", desc: "預估車程約 60～70 分。" },
+            { time: "11:55～14:10", title: "別府地獄與午餐", desc: "停留約 2 小時 15 分，以海地獄、灶地獄及快速午餐為主。" },
+            { time: "14:10～15:00", title: "別府 ➤ 由布院旅館", desc: "預估車程約 40～50 分，約 15:00 抵達，合計約 6 小時。" }
+        ]
+    },
+    6: {
+        mode: "public", title: "由布院散策 ➤ 福岡", route: "金鱗湖 ➤ 湯之坪街道 ➤ 由布院站 ➤ 博多",
+        mileage: "步行＋JR 特急由布院之森", time: "由布院至博多約 2.5 小時", toll: "JR 特急指定席與市區交通",
+        image: "images/day6-yufuin.png", imageAlt: "金鱗湖晨霧、由布岳與由布院之森",
+        tip: "由布院之森為全車指定席，開放訂位後優先購票；若售罄，改查其他特急或高速巴士。",
+        meals: { breakfast: "由布院旅館", lunch: "湯之坪街道／車站周邊", dinner: "天神或中洲屋台" },
+        accommodation: "福岡市區（第一晚；連住三晚，飯店待確認）", parkingSpots: [],
+        timeline: [
+            { time: "清晨", title: "金鱗湖晨霧", desc: "步行至湖畔，視天候在 Café La Ruche 休息。" },
+            { time: "上午", title: "湯之坪街道", desc: "散步購物並品嚐 B-Speak 蛋糕捲。" },
+            { time: "下午", title: "由布院之森前往博多", desc: "依實際訂到的指定席班次調整午餐與逛街時間。" },
+            { time: "晚上", title: "天神地下街・中洲", desc: "飯店入住後安排購物或屋台晚餐。" }
+        ]
+    },
+    7: {
+        mode: "public", title: "太宰府・LaLaport 鋼彈", route: "福岡 ➤ 太宰府天滿宮 ➤ LaLaport 福岡 ➤ 飯店",
+        mileage: "西鐵／地下鐵／巴士", time: "市郊一日", toll: "大眾運輸車資",
+        image: "images/day8-dazaifu.png", imageAlt: "冬季太宰府天滿宮",
+        tip: "上午先走太宰府，下午再回福岡市區前往 LaLaport；確認實物大鋼彈當日演出時間。",
+        meals: { breakfast: "福岡飯店", lunch: "太宰府參道", dinner: "LaLaport／博多市區" },
+        accommodation: "福岡市區（第二晚）", parkingSpots: [],
+        timeline: [
+            { time: "上午", title: "太宰府天滿宮", desc: "參拜、逛表參道，品嚐梅枝餅並造訪特色星巴克。" },
+            { time: "中午", title: "太宰府午餐", desc: "避開尖峰後返回福岡市區。" },
+            { time: "下午", title: "LaLaport 福岡", desc: "觀看實物大鋼彈並保留購物時間。" },
+            { time: "晚上", title: "返回飯店", desc: "晚餐後休息；大型採購與行李整理集中安排在 Day 8 晚上。" }
+        ]
+    },
+    8: {
+        mode: "public", title: "門司港復古・小倉城・晚間購物", route: "博多 ➤ 門司港 ➤ 小倉城 ➤ 福岡購物",
+        mileage: "JR 特急／在來線＋步行", time: "博多至小倉／門司港約 40～50 分鐘", toll: "JR 車資與景點門票",
+        image: "images/day7.png", imageAlt: "門司港復古街區與海港",
+        tip: "先到門司港、回程順路停小倉，並控制在傍晚前回到福岡；Day 8 晚上不排正式景點，完整保留購物與整理行李時間。",
+        meals: { breakfast: "福岡飯店", lunch: "門司港燒咖哩", dinner: "天神／博多購物區簡便用餐" },
+        accommodation: "福岡市區（第三晚）", parkingSpots: [],
+        timeline: [
+            { time: "08:00", title: "前往門司港", desc: "由博多搭 JR，提早出發以換取晚間購物時間。" },
+            { time: "09:30", title: "門司港復古街區", desc: "散步復古建築群與海港，冬季海邊風大，請準備防風外套。" },
+            { time: "11:30", title: "門司港燒咖哩", desc: "提早用餐避開人潮，熱門餐廳可先查候位方式。" },
+            { time: "13:00", title: "小倉城", desc: "回程在小倉停留，參觀城郭；最晚約 15:30 離開。" },
+            { time: "16:30", title: "返回福岡", desc: "回飯店短暫休息並放下日間隨身物品。" },
+            { time: "17:30 起", title: "天神／博多自由購物", desc: "晚間完整保留給藥妝、百貨與伴手禮採買，之後回飯店整理行李。" }
+        ]
+    },
+    9: {
+        mode: "flight", title: "福岡市區 ➤ 機場 ➤ 第一組返台", route: "大濠公園／櫛田神社 ➤ 福岡機場 ➤ 桃園",
+        mileage: "地下鐵＋國際線接駁／直達巴士", time: "博多至機場地下鐵約 6 分鐘，另計國際線轉乘", toll: "機場交通與航班費用",
+        image: "images/day9-fukuoka-airport.png", imageAlt: "福岡機場返台",
+        tip: "上午景點依航班報到時間二選一；國際線航廈與地下鐵站不在同一棟，務必預留轉乘及報到時間。第二組依原航班安排續留至 2/6。",
+        meals: { breakfast: "福岡飯店", lunch: "市區或福岡機場", dinner: "依航班／第二組福岡" },
+        accommodation: "第一組：返台；第二組：福岡續住至 2/6", parkingSpots: [],
+        timeline: [
+            { time: "上午", title: "大濠公園或櫛田神社", desc: "依退房與班機時間擇一，不安排需要預約的遠程景點。" },
+            { time: "報到前", title: "前往福岡機場", desc: "搭直達國際線巴士，或搭地下鐵至國內線後轉免費接駁。" },
+            { time: "機場", title: "免稅購物・搭機返台", desc: "第一組搭 JX841 返回桃園；第二組延伸住宿與返程依原航班規劃。" }
+        ]
+    }
+};
+
+// --- 4. Initialize DOM Elements ---
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
     const header = document.querySelector('.main-header');
@@ -619,24 +786,34 @@ document.addEventListener('DOMContentLoaded', () => {
         // Build Timeline Items HTML
         let timelineHtml = '';
         data.timeline.forEach(item => {
+            const transportDetails = item.type === 'transport' ? `
+                <div class="timeline-transport-card">
+                    <h5><i class="ri-bank-card-line"></i> ${item.detailTitle || '地下鐵付款方式'}</h5>
+                    <ul>
+                        ${item.payments.map(payment => `<li>${payment}</li>`).join('')}
+                    </ul>
+                    <small><i class="ri-information-line"></i> ${item.note}</small>
+                </div>
+            ` : '';
             timelineHtml += `
-                <li>
+                <li class="${item.type === 'transport' ? 'transport-timeline-item' : ''}">
                     <span class="time">${item.time}</span>
                     <div class="timeline-body">
                         <h4>${item.title}</h4>
                         <p>${item.desc}</p>
+                        ${transportDetails}
                     </div>
                 </li>
             `;
         });
 
-        // Use appropriate icon depending on transit type
-        const isSelfDrive = parseInt(dayNum) >= 4 && parseInt(dayNum) <= 7;
-        const iconClass = isSelfDrive ? 'ri-roadster-line' : 'ri-train-line';
-        const transitLabel = isSelfDrive ? '開車里程：' : '交通工具：';
-        const durationLabel = isSelfDrive ? '車程時間：' : '預估車程：';
-        const costLabel = isSelfDrive ? '過路費：' : '交通票券：';
-        const costIcon = isSelfDrive ? 'ri-copper-coin-line' : 'ri-ticket-2-line';
+        // Display transport details by the actual mode used that day.
+        const modeIcons = { public: 'ri-train-line', charter: 'ri-bus-line', flight: 'ri-plane-line' };
+        const iconClass = modeIcons[data.mode] || 'ri-route-line';
+        const transitLabel = '交通方式：';
+        const durationLabel = '移動時間：';
+        const costLabel = '費用／票券：';
+        const costIcon = 'ri-ticket-2-line';
 
         // Meals HTML
         const mealsHtml = data.meals ? `
@@ -705,7 +882,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="day-number-badge">Day ${dayNum} <span class="badge-date">(${dateLabel})</span></div>
                     <div class="panel-meta">
                         <h2>${data.title}</h2>
-                        <p class="route-line"><i class="${isSelfDrive ? 'ri-map-pin-line' : 'ri-subway-line'}"></i> 路線：${data.route}</p>
+                        <p class="route-line"><i class="ri-route-line"></i> 路線：${data.route}</p>
                     </div>
                 </div>
 
