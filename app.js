@@ -539,7 +539,7 @@ const activeItineraryData = {
         image: "images/day5.png", imageAlt: "熊本城與城彩苑",
         tip: "抵達熊本後先寄放行李，再集中走熊本城與城彩苑，避免跨區折返。",
         meals: { breakfast: "福岡飯店／博多站", lunch: "城彩苑或熊本城周邊", dinner: "勝烈亭黑豬排或馬肉料理" },
-        accommodation: "熊本市中央區 ‧ <a href='https://www.airbnb.com.tw/rooms/1146057287872830023?adults=7&check_in=2027-01-28&check_out=2027-01-30' target='_blank' rel='noopener'>市中心／繁華街步行 8 分鐘・170㎡ 獨棟 Airbnb 🔗</a>（第一晚，連住兩晚）", parkingSpots: [],
+        accommodation: "熊本市中央區 ‧ <a href='https://www.airbnb.com.tw/rooms/1146057287872830023?adults=7&check_in=2027-01-28&check_out=2027-01-30' target='_blank' rel='noopener'>市中心／繁華街步行 8 分鐘・170㎡ 獨棟 Airbnb 🔗</a>（第一晚，連住兩晚）・<a href='https://maps.app.goo.gl/kni5pubPVgkRRoLN7' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             {
                 time: "上午", title: "九州新幹線前往熊本", type: "transport",
@@ -577,7 +577,7 @@ const activeItineraryData = {
         image: "images/day3-kumamoto.png", imageAlt: "熊本市區與水前寺成趣園",
         tip: "熊本熊廣場表演需依官方公布時段安排；若沒有演出，仍可參觀展示並順遊市區。",
         meals: { breakfast: "熊本飯店", lunch: "水前寺／市區餐廳", dinner: "上下通商店街周邊" },
-        accommodation: "熊本市中央區 ‧ <a href='https://www.airbnb.com.tw/rooms/1146057287872830023?adults=7&check_in=2027-01-28&check_out=2027-01-30' target='_blank' rel='noopener'>市中心／繁華街步行 8 分鐘・170㎡ 獨棟 Airbnb 🔗</a>（第二晚）", parkingSpots: [],
+        accommodation: "熊本市中央區 ‧ <a href='https://www.airbnb.com.tw/rooms/1146057287872830023?adults=7&check_in=2027-01-28&check_out=2027-01-30' target='_blank' rel='noopener'>市中心／繁華街步行 8 分鐘・170㎡ 獨棟 Airbnb 🔗</a>（第二晚）・<a href='https://maps.app.goo.gl/kni5pubPVgkRRoLN7' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             { time: "上午", title: "熊本熊廣場", desc: "先確認熊本熊當日活動時刻，預留排隊時間。" },
             { time: "中午", title: "水前寺成趣園", desc: "搭市電前往，安排庭園散步與午餐。" },
