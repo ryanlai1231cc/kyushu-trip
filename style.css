@@ -1286,7 +1286,7 @@ a {
 
 .stay-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
 }
 
@@ -1295,8 +1295,8 @@ a {
     display: flex;
     align-items: center;
     gap: 14px;
-    min-height: 132px;
-    padding: 42px 18px 20px;
+    min-height: 108px;
+    padding: 34px 18px 14px;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
@@ -1312,7 +1312,7 @@ a {
 
 .stay-day {
     position: absolute;
-    top: 14px;
+    top: 9px;
     left: 18px;
     color: var(--color-primary);
     font-size: 0.75rem;
@@ -2274,7 +2274,9 @@ a {
     }
 
     .stay-card {
-        min-height: 112px;
+        min-height: 96px;
+        padding-top: 32px;
+        padding-bottom: 12px;
     }
 
     .early-return-summary,
