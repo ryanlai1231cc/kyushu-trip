@@ -591,7 +591,7 @@ const activeItineraryData = {
         image: "images/day4.png", imageAlt: "阿蘇草千里與火山景觀",
         tip: "建議選 6 小時方案：熊本飯店至草千里約 1 小時 20 分、草千里至大觀峰約 45～55 分、大觀峰至黑川約 35～45 分，純車程約 2 小時 45 分。4 小時方案只能保留草千里與黑川，需取消大觀峰並壓縮午餐。冬季再預留 20～30 分鐘路況緩衝。",
         meals: { breakfast: "熊本飯店", lunch: "阿蘇赤牛料理", dinner: "黑川溫泉旅館會席料理" },
-        accommodation: "黑川溫泉旅館（一晚，建議含早晚餐）", parkingSpots: [],
+        accommodation: "黑川溫泉 ‧ <strong>山河旅館</strong>（一晚）・<a href='https://maps.app.goo.gl/iUE2mKhCQZacV6ii8' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             { time: "09:00～10:20", title: "熊本飯店 ➤ 阿蘇・草千里", desc: "預估車程約 1 小時 20 分；冬季依道路狀況增加緩衝。" },
             { time: "10:20～12:10", title: "草千里／中岳與午餐", desc: "停留約 1 小時 50 分；中岳火口是否前往依當日管制決定，午餐採快速用餐。" },
