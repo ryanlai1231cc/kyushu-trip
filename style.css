@@ -2237,8 +2237,39 @@ a {
     .nav-menu {
         display: none;
     }
+    .nav-menu.active {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 16px;
+        right: 16px;
+        display: block;
+        padding: 10px;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+    }
+    .nav-menu.active ul {
+        flex-direction: column;
+        gap: 2px;
+    }
+    .nav-menu.active .nav-link {
+        width: 100%;
+        padding: 12px 14px;
+        border-bottom: none;
+        border-radius: var(--radius-sm);
+    }
+    .nav-menu.active .nav-link:hover,
+    .nav-menu.active .nav-link.active {
+        background: var(--color-bg-alt);
+    }
     .mobile-menu-btn {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: var(--radius-sm);
     }
     .logo {
         font-size: 1.2rem;

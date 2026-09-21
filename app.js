@@ -731,8 +731,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const icon = mobileMenuBtn.querySelector('i');
             if (navMenu.classList.contains('active')) {
                 icon.className = 'ri-close-line';
+                mobileMenuBtn.setAttribute('aria-expanded', 'true');
+                mobileMenuBtn.setAttribute('aria-label', '關閉選單');
             } else {
                 icon.className = 'ri-menu-4-line';
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.setAttribute('aria-label', '開啟選單');
             }
         });
 
@@ -743,6 +747,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 navMenu.classList.remove('active');
                 const icon = mobileMenuBtn.querySelector('i');
                 icon.className = 'ri-menu-4-line';
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.setAttribute('aria-label', '開啟選單');
             });
         });
     }
