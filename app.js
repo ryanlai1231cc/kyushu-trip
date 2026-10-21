@@ -539,7 +539,7 @@ const activeItineraryData = {
         image: "images/day5.png", imageAlt: "熊本城與城彩苑",
         tip: "抵達熊本後先寄放行李，再集中走熊本城與城彩苑，避免跨區折返。",
         meals: { breakfast: "福岡飯店／博多站", lunch: "城彩苑或熊本城周邊", dinner: "勝烈亭黑豬排或馬肉料理" },
-        accommodation: "熊本市中央區（第一晚，連住兩晚）<br><a href='https://www.airbnb.com.tw/rooms/1146057287872830023?adults=7&check_in=2027-01-28&check_out=2027-01-30' target='_blank' rel='noopener'>市中心／繁華街步行 8 分鐘・170㎡ 獨棟房屋（Airbnb）🔗</a>・<a href='https://maps.app.goo.gl/kni5pubPVgkRRoLN7' target='_blank' rel='noopener'>Google Maps 導航 📍</a><br><a href='https://www.agoda.com/zh-tw/sakuramachi-villa-h87745105/hotel/kumamoto-jp.html?cid=1844104&ds=ViVzIAqWP6s%2Br2MI' target='_blank' rel='noopener'><strong>SAKURAMACHI VILLA（Agoda）🔗</strong></a>・<a href='https://maps.app.goo.gl/WzcuMRTaFDZ6jciB7' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
+        accommodation: "熊本市中央區（第一晚，連住兩晚）<br><strong>Candeo Hotels Kumamoto Shinshigai（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=Candeo+Hotels+Kumamoto+Shinshigai' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             {
                 time: "上午", title: "九州新幹線前往熊本", type: "transport",
@@ -577,7 +577,7 @@ const activeItineraryData = {
         image: "images/day3-kumamoto.png", imageAlt: "熊本市區與水前寺成趣園",
         tip: "熊本熊廣場表演需依官方公布時段安排；若沒有演出，仍可參觀展示並順遊市區。",
         meals: { breakfast: "熊本飯店", lunch: "水前寺／市區餐廳", dinner: "上下通商店街周邊" },
-        accommodation: "熊本市中央區（第二晚）<br><a href='https://www.airbnb.com.tw/rooms/1146057287872830023?adults=7&check_in=2027-01-28&check_out=2027-01-30' target='_blank' rel='noopener'>市中心／繁華街步行 8 分鐘・170㎡ 獨棟房屋（Airbnb）🔗</a>・<a href='https://maps.app.goo.gl/kni5pubPVgkRRoLN7' target='_blank' rel='noopener'>Google Maps 導航 📍</a><br><a href='https://www.agoda.com/zh-tw/sakuramachi-villa-h87745105/hotel/kumamoto-jp.html?cid=1844104&ds=ViVzIAqWP6s%2Br2MI' target='_blank' rel='noopener'><strong>SAKURAMACHI VILLA（Agoda）🔗</strong></a>・<a href='https://maps.app.goo.gl/WzcuMRTaFDZ6jciB7' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
+        accommodation: "熊本市中央區（第二晚）<br><strong>Candeo Hotels Kumamoto Shinshigai（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=Candeo+Hotels+Kumamoto+Shinshigai' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             { time: "上午", title: "熊本熊廣場", desc: "先確認熊本熊當日活動時刻，預留排隊時間。" },
             { time: "中午", title: "水前寺成趣園", desc: "搭市電前往，安排庭園散步與午餐。" },
@@ -586,47 +586,52 @@ const activeItineraryData = {
         ]
     },
     4: {
-        mode: "charter", title: "阿蘇・大觀峰 ➤ 黑川溫泉", route: "熊本飯店 ➤ 阿蘇／草千里 ➤ 大觀峰 ➤ 黑川溫泉",
-        mileage: "6 小時包車（建議）／4 小時精簡版", time: "純移動約 2 小時 45 分；完整行程約 6 小時", toll: "包車費、高速／停車費依報價",
+        mode: "charter", title: "阿蘇・大觀峰・黑川竹燈 ➤ 由布院", route: "熊本飯店 ➤ 阿蘇／草千里 ➤ 大觀峰 ➤ 黑川溫泉 ➤ 由布院",
+        mileage: "約 12 小時包車", time: "純移動約 4 小時 15 分；完整行程約 12 小時", toll: "包車費、高速／停車費與夜間超時費依報價",
         image: "images/day4.png", imageAlt: "阿蘇草千里與火山景觀",
-        tip: "建議選 6 小時方案：熊本飯店至草千里約 1 小時 20 分、草千里至大觀峰約 45～55 分、大觀峰至黑川約 35～45 分，純車程約 2 小時 45 分。4 小時方案只能保留草千里與黑川，需取消大觀峰並壓縮午餐。冬季再預留 20～30 分鐘路況緩衝。",
-        meals: { breakfast: "熊本飯店", lunch: "阿蘇赤牛料理", dinner: "黑川溫泉旅館會席料理" },
-        accommodation: "黑川溫泉 ‧ <strong>山河旅館</strong>（一晚）・<a href='https://maps.app.goo.gl/iUE2mKhCQZacV6ii8' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
+        tip: "包車需事先確認約 12 小時服務、夜間山路與雪胎。17:00～18:00 欣賞黑川溫泉湯明竹燈，18:00 準時離開；冬季黑川至由布院以 75～90 分鐘估算。若積雪、結冰或道路管制，應取消看燈並趁天黑前前往由布院。",
+        meals: { breakfast: "熊本飯店", lunch: "阿蘇赤牛料理", dinner: "黑川簡便用餐／由布院晚餐需事先確認" },
+        accommodation: "由布院（一晚；晚間約 19:15～19:45 抵達）<br><strong>湯布院燈之宿 Yufuin Lamp no Yado（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=Yufuin+Lamp+no+Yado' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
-            { time: "09:00～10:20", title: "熊本飯店 ➤ 阿蘇・草千里", desc: "預估車程約 1 小時 20 分；冬季依道路狀況增加緩衝。" },
-            { time: "10:20～12:10", title: "草千里／中岳與午餐", desc: "停留約 1 小時 50 分；中岳火口是否前往依當日管制決定，午餐採快速用餐。" },
-            { time: "12:10～13:00", title: "草千里 ➤ 大觀峰", desc: "預估車程約 45～55 分。" },
-            { time: "13:00～14:10", title: "大觀峰停留", desc: "停留約 1 小時；若能見度不佳可縮短，將時間留給山路。" },
-            { time: "14:10～14:55", title: "大觀峰 ➤ 黑川溫泉", desc: "預估車程約 35～45 分，約 15:00 抵達，合計約 6 小時。" }
+            { time: "07:30～09:00", title: "熊本飯店 ➤ 阿蘇・草千里", desc: "預估車程約 1 小時 20～30 分；抵達後配合冬季中岳火口 09:00 開放時間。" },
+            { time: "09:00～10:30", title: "草千里／中岳火口", desc: "草千里散步並視當日火山管制、天候與道路狀況決定是否前往中岳火口。" },
+            { time: "10:30～11:20", title: "草千里 ➤ 大觀峰", desc: "預估車程約 45～55 分。" },
+            { time: "11:20～12:00", title: "大觀峰", desc: "觀景約 40 分鐘；若能見度不佳可縮短，保留冬季山路緩衝。" },
+            { time: "12:00～13:00", title: "阿蘇午餐", desc: "安排赤牛料理或沿途餐廳，避免延誤下午黑川行程。" },
+            { time: "13:00～14:00", title: "前往黑川溫泉", desc: "依午餐地點預估約 40～60 分鐘。" },
+            { time: "14:00～17:00", title: "黑川溫泉街散步", desc: "安排咖啡、商店與休息；本次不泡湯，保留體力等待傍晚點燈。" },
+            { time: "17:00～18:00", title: "黑川溫泉湯明竹燈", desc: "欣賞川端通、丸鈴橋一帶竹燈；2026～2027 年正式活動日期仍須以官方公告為準。" },
+            { time: "18:00～19:30", title: "黑川溫泉 ➤ 由布院飯店", desc: "夜間冬季山路預留 75～90 分鐘；住宿須事先確認晚間 Check-in 與晚餐安排。" }
         ]
     },
     5: {
-        mode: "charter", title: "九重・別府 ➤ 由布院", route: "黑川溫泉 ➤ 九重夢大吊橋 ➤ 別府地獄 ➤ 由布院",
-        mileage: "6 小時包車（建議）／4 小時精簡版", time: "純移動約 2 小時 20 分；完整行程約 6 小時", toll: "包車費、停車費與景點門票",
-        image: "images/day5-kokonoe-beppu-yufuin.png", imageAlt: "九重夢大吊橋、別府溫泉與由布院冬景",
-        tip: "建議選 6 小時方案：黑川至九重夢大吊橋約 35～45 分、九重至別府約 60～70 分、別府至由布院約 40～50 分，純車程約 2 小時 20 分。4 小時無法同時充分停留九重與別府，建議取消九重、改走黑川→別府→由布院。吊橋若因強風或結冰關閉，也直接使用此備案。",
-        meals: { breakfast: "黑川溫泉旅館", lunch: "別府地獄蒸料理", dinner: "由布院旅館會席料理" },
-        accommodation: "由布院溫泉旅館（一晚，建議含早晚餐）", parkingSpots: [],
+        mode: "charter", title: "別府地獄巡遊 ➤ 福岡", route: "由布院飯店 ➤ 血之池地獄／龍卷地獄 ➤ 鐵輪 ➤ 湯煙展望台 ➤ 海地獄 ➤ 福岡飯店",
+        mileage: "約 8～9 小時包車", time: "純移動約 3 小時 30 分；完整行程約 8～9 小時", toll: "包車費、高速／停車費與景點門票",
+        image: "images/day5-beppu-hells.png", imageAlt: "血之池地獄與別府湯煙景觀",
+        tip: "血之池地獄、龍卷地獄與海地獄皆以 17:00 前入場完成為原則。午餐安排鐵輪地獄蒸，湯煙展望台作短暫停靠；建議 15:00 前離開別府，為前往福岡的高速路段預留冬季與週末車流緩衝。",
+        meals: { breakfast: "由布院飯店", lunch: "鐵輪地獄蒸料理", dinner: "福岡市區" },
+        accommodation: "福岡博多（第一晚，連住四晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=HOTEL+FORZA+HAKATAEKI+CHIKUSHI-GUCHI' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
-            { time: "09:00～09:45", title: "黑川溫泉 ➤ 九重夢大吊橋", desc: "預估車程約 35～45 分。" },
-            { time: "09:45～10:45", title: "九重夢大吊橋", desc: "停留約 1 小時；現場依風勢、積雪與路面狀況決定是否入場。" },
-            { time: "10:45～11:55", title: "九重 ➤ 別府", desc: "預估車程約 60～70 分。" },
-            { time: "11:55～14:10", title: "別府地獄與午餐", desc: "停留約 2 小時 15 分，以海地獄、灶地獄及快速午餐為主。" },
-            { time: "14:10～15:00", title: "別府 ➤ 由布院旅館", desc: "預估車程約 40～50 分，約 15:00 抵達，合計約 6 小時。" }
+            { time: "09:00～10:00", title: "由布院飯店 ➤ 血之池地獄", desc: "預估車程約 45～60 分鐘，冬季依道路狀況增加緩衝。" },
+            { time: "10:00～11:15", title: "血之池地獄／龍卷地獄", desc: "兩處相鄰，合計停留約 75 分鐘。" },
+            { time: "11:15～11:35", title: "前往鐵輪", desc: "移動至鐵輪溫泉區，預留停車與步行時間。" },
+            { time: "11:35～13:00", title: "鐵輪地獄蒸午餐", desc: "以溫泉蒸氣料理肉類、海鮮與蔬菜；週末可能候位，應提早抵達。" },
+            { time: "13:00～13:30", title: "湯煙展望台", desc: "短暫俯瞰鐵輪溫泉區與湯煙景觀。" },
+            { time: "13:45～14:45", title: "海地獄", desc: "參觀代表性的鈷藍色地獄、足湯與商店，控制在一小時內。" },
+            { time: "15:00～17:30", title: "別府 ➤ 福岡飯店", desc: "搭乘包車經高速公路前往福岡，預估約 2～2.5 小時；週末與冬季路況需保留緩衝。" }
         ]
     },
     6: {
-        mode: "public", title: "由布院散策 ➤ 福岡", route: "金鱗湖 ➤ 湯之坪街道 ➤ 由布院站 ➤ 博多",
-        mileage: "步行＋JR 特急由布院之森", time: "由布院至博多約 2.5 小時", toll: "JR 特急指定席與市區交通",
-        image: "images/day6-yufuin.png", imageAlt: "金鱗湖晨霧、由布岳與由布院之森",
-        tip: "由布院之森為全車指定席，開放訂位後優先購票；若售罄，改查其他特急或高速巴士。",
-        meals: { breakfast: "由布院旅館", lunch: "湯之坪街道／車站周邊", dinner: "天神或中洲屋台" },
-        accommodation: "福岡市區（第一晚；連住三晚，飯店待確認）", parkingSpots: [],
+        mode: "public", title: "福岡市區自由活動（待規劃）", route: "福岡飯店 ➤ 市區景點 ➤ 福岡飯店",
+        mileage: "地下鐵／巴士＋步行", time: "市區一日", toll: "市區交通與景點費用",
+        image: "images/day1-fukuoka-arrival.png", imageAlt: "福岡市區街景",
+        tip: "Day 5 已抵達福岡，Day 6 不再安排由布院至博多的長途移動；詳細景點待後續確認。",
+        meals: { breakfast: "福岡飯店", lunch: "福岡市區", dinner: "天神或中洲屋台" },
+        accommodation: "福岡博多（第二晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=HOTEL+FORZA+HAKATAEKI+CHIKUSHI-GUCHI' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
-            { time: "清晨", title: "金鱗湖晨霧", desc: "步行至湖畔，視天候在 Café La Ruche 休息。" },
-            { time: "上午", title: "湯之坪街道", desc: "散步購物並品嚐 B-Speak 蛋糕捲。" },
-            { time: "下午", title: "由布院之森前往博多", desc: "依實際訂到的指定席班次調整午餐與逛街時間。" },
-            { time: "晚上", title: "天神地下街・中洲", desc: "飯店入住後安排購物或屋台晚餐。" }
+            { time: "上午", title: "福岡市區行程待確認", desc: "依團員需求安排景點、購物或休息。" },
+            { time: "下午", title: "福岡市區自由活動", desc: "以地下鐵、巴士與步行移動，避免安排重複景點。" },
+            { time: "晚上", title: "天神地下街・中洲", desc: "安排購物或屋台晚餐。" }
         ]
     },
     7: {
@@ -635,7 +640,7 @@ const activeItineraryData = {
         image: "images/day8-dazaifu.png", imageAlt: "冬季太宰府天滿宮",
         tip: "上午先走太宰府，下午再回福岡市區前往 LaLaport；確認實物大鋼彈當日演出時間。",
         meals: { breakfast: "福岡飯店", lunch: "太宰府參道", dinner: "LaLaport／博多市區" },
-        accommodation: "福岡市區（第二晚）", parkingSpots: [],
+        accommodation: "福岡博多（第三晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=HOTEL+FORZA+HAKATAEKI+CHIKUSHI-GUCHI' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             { time: "上午", title: "太宰府天滿宮", desc: "參拜、逛表參道，品嚐梅枝餅並造訪特色星巴克。" },
             { time: "中午", title: "太宰府午餐", desc: "避開尖峰後返回福岡市區。" },
@@ -649,7 +654,7 @@ const activeItineraryData = {
         image: "images/day7.png", imageAlt: "門司港復古街區與海港",
         tip: "先到門司港、回程順路停小倉，並控制在傍晚前回到福岡；Day 8 晚上不排正式景點，完整保留購物與整理行李時間。",
         meals: { breakfast: "福岡飯店", lunch: "門司港燒咖哩", dinner: "天神／博多購物區簡便用餐" },
-        accommodation: "福岡市區（第三晚）", parkingSpots: [],
+        accommodation: "福岡博多（第四晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=HOTEL+FORZA+HAKATAEKI+CHIKUSHI-GUCHI' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             { time: "08:00", title: "前往門司港", desc: "由博多搭 JR，提早出發以換取晚間購物時間。" },
             { time: "09:30", title: "門司港復古街區", desc: "散步復古建築群與海港，冬季海邊風大，請準備防風外套。" },
@@ -672,6 +677,63 @@ const activeItineraryData = {
             { time: "機場", title: "免稅購物・搭機返台", desc: "第一組搭 JX841 返回桃園；第二組延伸住宿與返程依原航班規劃。" }
         ]
     }
+};
+
+// Geographic stops for the map shown below each daily schedule.
+const dailyMapStops = {
+    1: [
+        { name: "福岡機場國際線", lat: 33.5859, lng: 130.4507 },
+        { name: "地下鐵福岡空港站", lat: 33.5971, lng: 130.4483 },
+        { name: "博多站／住宿", lat: 33.5902, lng: 130.4207 }
+    ],
+    2: [
+        { name: "博多站", lat: 33.5902, lng: 130.4207 },
+        { name: "熊本站", lat: 32.7903, lng: 130.6882 },
+        { name: "熊本城／城彩苑", lat: 32.8062, lng: 130.7058 },
+        { name: "熊本住宿", lat: 32.8008, lng: 130.7006 }
+    ],
+    3: [
+        { name: "熊本住宿", lat: 32.8008, lng: 130.7006 },
+        { name: "熊本熊廣場", lat: 32.8030, lng: 130.7108 },
+        { name: "水前寺成趣園", lat: 32.7946, lng: 130.7333 },
+        { name: "上通・下通", lat: 32.8012, lng: 130.7082 }
+    ],
+    4: [
+        { name: "熊本住宿", lat: 32.8008, lng: 130.7006 },
+        { name: "草千里／中岳", lat: 32.8844, lng: 131.0522 },
+        { name: "大觀峰", lat: 32.9966, lng: 131.0692 },
+        { name: "黑川溫泉", lat: 33.0781, lng: 131.1424 },
+        { name: "由布院住宿", lat: 33.2648, lng: 131.3595 }
+    ],
+    5: [
+        { name: "由布院住宿", lat: 33.2648, lng: 131.3595 },
+        { name: "血之池／龍卷地獄", lat: 33.3167, lng: 131.4782 },
+        { name: "鐵輪地獄蒸", lat: 33.3150, lng: 131.4750 },
+        { name: "湯煙展望台", lat: 33.3268, lng: 131.4690 },
+        { name: "海地獄", lat: 33.3164, lng: 131.4578 },
+        { name: "福岡飯店", lat: 33.5902, lng: 130.4207 }
+    ],
+    6: [
+        { name: "福岡飯店", lat: 33.5902, lng: 130.4207 },
+        { name: "福岡市區（待規劃）", lat: 33.5904, lng: 130.4017 }
+    ],
+    7: [
+        { name: "福岡飯店", lat: 33.5902, lng: 130.4207 },
+        { name: "太宰府天滿宮", lat: 33.5215, lng: 130.5348 },
+        { name: "LaLaport 福岡", lat: 33.5661, lng: 130.4393 },
+        { name: "福岡飯店", lat: 33.5902, lng: 130.4207 }
+    ],
+    8: [
+        { name: "博多", lat: 33.5902, lng: 130.4207 },
+        { name: "門司港", lat: 33.9444, lng: 130.9610 },
+        { name: "小倉城", lat: 33.8844, lng: 130.8742 },
+        { name: "福岡購物區", lat: 33.5904, lng: 130.4017 }
+    ],
+    9: [
+        { name: "福岡飯店", lat: 33.5902, lng: 130.4207 },
+        { name: "大濠公園／櫛田神社", lat: 33.5903, lng: 130.3927 },
+        { name: "福岡機場國際線", lat: 33.5859, lng: 130.4507 }
+    ]
 };
 
 // --- 4. Initialize DOM Elements ---
@@ -877,6 +939,21 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         ` : '';
 
+        // Geographic map displayed after the daily timeline.
+        const isRoadRoute = data.mode === 'charter';
+        const routeMapHtml = `
+            <div class="daily-route-map-card">
+                <div class="daily-route-map-heading">
+                    <i class="ri-map-2-line"></i>
+                    <div>
+                        <h4>${isRoadRoute ? '實際道路路線圖' : '行程位置圖'}</h4>
+                        <p>${isRoadRoute ? '粗紅線依道路導航服務繪製' : '紅線呈現當日主要移動方向'}</p>
+                    </div>
+                </div>
+                <div id="dailyRouteMap" class="daily-route-map-canvas" role="img" aria-label="Day ${dayNum} 地理路線圖"></div>
+            </div>
+        `;
+
         // Date labels for each day
         const dayDates = { 1:'1/27', 2:'1/28', 3:'1/29', 4:'1/30', 5:'1/31', 6:'2/1', 7:'2/2', 8:'2/3', 9:'2/4' };
         const dateLabel = dayDates[dayNum] || '';
@@ -904,6 +981,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <ul class="timeline-list">
                             ${timelineHtml}
                         </ul>
+                        ${routeMapHtml}
                     </div>
 
                     <div class="panel-visual">
@@ -924,6 +1002,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Apply HTML and trigger fade in animation
         itineraryContent.innerHTML = panelHtml;
+        renderDailyRouteMap(dayNum);
+    }
+
+    async function renderDailyRouteMap(dayNum) {
+        const stops = dailyMapStops[dayNum] || [];
+        const data = activeItineraryData[dayNum];
+        const mapElement = document.getElementById('dailyRouteMap');
+        if (!mapElement || stops.length === 0 || typeof L === 'undefined') return;
+
+        const map = L.map(mapElement, {
+            scrollWheelZoom: false,
+            zoomControl: true
+        });
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            maxZoom: 18,
+            subdomains: 'abcd',
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>'
+        }).addTo(map);
+
+        const coordinates = stops.map(stop => [stop.lat, stop.lng]);
+        let routeCoordinates = coordinates;
+
+        if (data && data.mode === 'charter' && stops.length > 1) {
+            const coordinateQuery = stops.map(stop => `${stop.lng},${stop.lat}`).join(';');
+            const routeUrl = `https://router.project-osrm.org/route/v1/driving/${coordinateQuery}?overview=full&geometries=geojson&steps=false`;
+
+            try {
+                const response = await fetch(routeUrl);
+                if (response.ok) {
+                    const routeData = await response.json();
+                    const roadCoordinates = routeData.routes?.[0]?.geometry?.coordinates;
+                    if (roadCoordinates && roadCoordinates.length > 1) {
+                        routeCoordinates = roadCoordinates.map(([lng, lat]) => [lat, lng]);
+                    }
+                }
+            } catch (error) {
+                console.warn('道路路線載入失敗，改用地理直線示意。', error);
+            }
+        }
+
+        const routeOutline = L.polyline(routeCoordinates, {
+            color: '#ffffff',
+            weight: 9,
+            opacity: 0.95,
+            lineJoin: 'round',
+            lineCap: 'round'
+        }).addTo(map);
+
+        const routeLine = L.polyline(routeCoordinates, {
+            color: '#e91e63',
+            weight: 5,
+            opacity: 0.95,
+            lineJoin: 'round',
+            lineCap: 'round'
+        }).addTo(map);
+
+        stops.forEach((stop, index) => {
+            const markerIcon = L.divIcon({
+                className: 'daily-route-marker-wrap',
+                html: `<span class="daily-route-marker">${index + 1}</span>`,
+                iconSize: [32, 32],
+                iconAnchor: [16, 16]
+            });
+            L.marker([stop.lat, stop.lng], { icon: markerIcon })
+                .addTo(map)
+                .bindPopup(`<strong>${index + 1}. ${stop.name}</strong>`);
+        });
+
+        if (routeCoordinates.length === 1) {
+            map.setView(routeCoordinates[0], 12);
+        } else {
+            map.fitBounds(routeLine.getBounds(), { padding: [30, 30] });
+        }
+
+        window.setTimeout(() => map.invalidateSize(), 0);
     }
 
     // --- 7. Interactive Checklist Progress ---

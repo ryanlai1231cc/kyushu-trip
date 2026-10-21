@@ -22,9 +22,12 @@
     
     <!-- Remix Icon (Modern Premium Icons) -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Leaflet map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=18">
+    <link rel="stylesheet" href="style.css?v=22">
 </head>
 <body>
     <!-- Background glowing spots for modern UI feel -->
@@ -47,7 +50,6 @@
                     <li><a href="#itinerary" class="nav-link"><i class="ri-calendar-todo-line"></i> 九日行程</a></li>
                     <li><a href="#accommodations" class="nav-link"><i class="ri-hotel-bed-line"></i> 住宿地點</a></li>
                     <li><a href="#guide" class="nav-link"><i class="ri-road-map-line"></i> 交通指南</a></li>
-                    <li><a href="#early-return" class="nav-link"><i class="ri-logout-box-r-line"></i> 提前返程</a></li>
                     <li><a href="#checklist" class="nav-link"><i class="ri-checkbox-multiple-line"></i> 行前準備</a></li>
                 </ul>
             </nav>
@@ -88,7 +90,7 @@
             <div class="section-header text-center">
                 <span class="section-tag">Trip Statistics</span>
                 <h2>行程亮點與規劃概要</h2>
-                <p>九天八夜九州主行程：福岡進出，熊本連住兩晚，包車走阿蘇、黑川、九重、別府與由布院，最後回福岡連住三晚。</p>
+                <p>九天八夜九州主行程：福岡進出，熊本連住兩晚，包車走阿蘇、黑川、由布院與別府，最後回福岡連住四晚。</p>
             </div>
 
             <!-- Stats Grid -->
@@ -110,7 +112,7 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon"><i class="ri-heart-pulse-line"></i></div>
-                    <div class="stat-value">3 Nights</div>
+                    <div class="stat-value">4 Nights</div>
                     <div class="stat-label">旅程後段福岡連住</div>
                 </div>
             </div>
@@ -263,18 +265,17 @@
                     <ul class="route-list">
                         <li><span class="route-num">1</span> <strong>1/27 福岡</strong> <span class="route-tag">兩組抵達</span></li>
                         <li><span class="route-num">2</span> <strong>1/28～1/29 熊本</strong> <span class="route-tag">兩晚</span></li>
-                        <li><span class="route-num">3</span> <strong>1/30 黑川溫泉</strong> <span class="route-tag">一晚</span></li>
-                        <li><span class="route-num">4</span> <strong>1/31 由布院</strong> <span class="route-tag">一晚</span></li>
-                        <li><span class="route-num">5</span> <strong>2/1～2/3 福岡</strong> <span class="route-tag">三晚</span></li>
-                        <li><span class="route-num">6</span> <strong>2/4 第一組 JX841 返台</strong></li>
-                        <li><span class="route-num">7</span> <strong>2/4～2/5 第二組福岡延伸</strong></li>
-                        <li><span class="route-num">8</span> <strong>2/6 第二組 CI0117 返台</strong></li>
+                        <li><span class="route-num">3</span> <strong>1/30 由布院</strong> <span class="route-tag">一晚</span></li>
+                        <li><span class="route-num">4</span> <strong>1/31～2/3 福岡</strong> <span class="route-tag">四晚</span></li>
+                        <li><span class="route-num">5</span> <strong>2/4 第一組 JX841 返台</strong></li>
+                        <li><span class="route-num">6</span> <strong>2/4～2/5 第二組福岡延伸</strong></li>
+                        <li><span class="route-num">7</span> <strong>2/6 第二組 CI0117 返台</strong></li>
                     </ul>
                 </div>
                 <div class="map-visualization" style="padding: 16px; display: flex; align-items: center; justify-content: center;">
                     <div class="tip-box" style="width:100%; max-width:500px; text-align:left;">
                         <h4><i class="ri-route-line"></i> 新版移動主線</h4>
-                        <p>福岡 → 熊本 → 阿蘇／大觀峰 → 黑川溫泉 → 九重／別府 → 由布院 → 福岡</p>
+                        <p>福岡 → 熊本 → 阿蘇／大觀峰 → 黑川竹燈 → 由布院 → 別府地獄 → 福岡</p>
                         <p>Day 4～5 採包車，其餘以新幹線、JR、市電、巴士與步行為主。</p>
                     </div>
                 </div>
@@ -307,15 +308,15 @@
                     </button>
                     <button class="tab-btn" data-day="4">
                         <span class="tab-day">DAY 4 <span class="tab-date">(1/30)</span></span>
-                        <span class="tab-title">阿蘇 ➔ 黑川</span>
+                        <span class="tab-title">阿蘇・黑川 ➔ 由布院</span>
                     </button>
                     <button class="tab-btn" data-day="5">
                         <span class="tab-day">DAY 5 <span class="tab-date">(1/31)</span></span>
-                        <span class="tab-title">黑川 ➔ 由布院</span>
+                        <span class="tab-title">由布院・別府 ➔ 福岡</span>
                     </button>
                     <button class="tab-btn" data-day="6">
                         <span class="tab-day">DAY 6 <span class="tab-date">(2/1)</span></span>
-                        <span class="tab-title">由布院 ➔ 福岡</span>
+                        <span class="tab-title">福岡市區</span>
                     </button>
                     <button class="tab-btn" data-day="7">
                         <span class="tab-day">DAY 7 <span class="tab-date">(2/2)</span></span>
@@ -415,7 +416,7 @@
             <div class="section-header text-center">
                 <span class="section-tag">Accommodation</span>
                 <h2>Day 1～Day 8 住宿地點</h2>
-                <p>住宿城市依目前行程排列；飯店名稱確認後再補上。</p>
+                <p>住宿依目前行程排列，點擊即可開啟 Google Maps 導航。</p>
             </div>
 
             <div class="stay-grid">
@@ -427,32 +428,32 @@
                 <article class="stay-card">
                     <div class="stay-day">DAY 2～DAY 3 <span>1/28 (四)～1/30 (六)・連住兩晚</span></div>
                     <i class="ri-map-pin-2-fill"></i>
-                    <div><h3>熊本市中央區</h3><p><a href="https://www.airbnb.com.tw/rooms/1146057287872830023?adults=7&amp;check_in=2027-01-28&amp;check_out=2027-01-30" target="_blank" rel="noopener"><strong>170㎡ 獨棟房屋（Airbnb）</strong></a><br><a href="https://maps.app.goo.gl/kni5pubPVgkRRoLN7" target="_blank" rel="noopener"><strong>Google Maps 導航 📍</strong></a><br><a href="https://www.agoda.com/zh-tw/sakuramachi-villa-h87745105/hotel/kumamoto-jp.html?cid=1844104&amp;ds=ViVzIAqWP6s%2Br2MI" target="_blank" rel="noopener"><strong>SAKURAMACHI VILLA（Agoda）🔗</strong></a><br><a href="https://maps.app.goo.gl/WzcuMRTaFDZ6jciB7" target="_blank" rel="noopener"><strong>Google Maps 導航 📍</strong></a></p></div>
+                    <div><h3>熊本市中央區</h3><p><strong>Candeo Hotels Kumamoto Shinshigai（Agoda）</strong><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Candeo+Hotels+Kumamoto+Shinshigai" target="_blank" rel="noopener"><strong>Google Maps 導航 📍</strong></a></p></div>
                 </article>
                 <article class="stay-card">
                     <div class="stay-day">DAY 4 <span>1/30 (六)</span></div>
                     <i class="ri-map-pin-2-fill"></i>
-                    <div><h3>黑川溫泉</h3><p><strong>山河旅館</strong><br><a href="https://maps.app.goo.gl/iUE2mKhCQZacV6ii8" target="_blank" rel="noopener"><strong>Google Maps 導航 📍</strong></a></p></div>
+                    <div><h3>由布院</h3><p><strong>湯布院燈之宿 Yufuin Lamp no Yado（Agoda）</strong><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Yufuin+Lamp+no+Yado" target="_blank" rel="noopener"><strong>Google Maps 導航 📍</strong></a></p></div>
                 </article>
                 <article class="stay-card">
                     <div class="stay-day">DAY 5 <span>1/31 (日)</span></div>
                     <i class="ri-map-pin-2-fill"></i>
-                    <div><h3>由布院</h3><p>飯店名稱：<strong>待定</strong></p></div>
+                    <div><h3>福岡博多</h3><p><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong><br><a href="https://www.google.com/maps/search/?api=1&amp;query=HOTEL+FORZA+HAKATAEKI+CHIKUSHI-GUCHI" target="_blank" rel="noopener"><strong>Google Maps 導航 📍</strong></a></p></div>
                 </article>
                 <article class="stay-card">
                     <div class="stay-day">DAY 6 <span>2/1 (一)</span></div>
                     <i class="ri-map-pin-2-fill"></i>
-                    <div><h3>福岡</h3><p>飯店名稱：<strong>待定</strong></p></div>
+                    <div><h3>福岡博多</h3><p><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong><br><a href="https://www.google.com/maps/search/?api=1&amp;query=HOTEL+FORZA+HAKATAEKI+CHIKUSHI-GUCHI" target="_blank" rel="noopener"><strong>Google Maps 導航 📍</strong></a></p></div>
                 </article>
                 <article class="stay-card">
                     <div class="stay-day">DAY 7 <span>2/2 (二)</span></div>
                     <i class="ri-map-pin-2-fill"></i>
-                    <div><h3>福岡</h3><p>飯店名稱：<strong>待定</strong></p></div>
+                    <div><h3>福岡博多</h3><p><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong><br><a href="https://www.google.com/maps/search/?api=1&amp;query=HOTEL+FORZA+HAKATAEKI+CHIKUSHI-GUCHI" target="_blank" rel="noopener"><strong>Google Maps 導航 📍</strong></a></p></div>
                 </article>
                 <article class="stay-card">
                     <div class="stay-day">DAY 8 <span>2/3 (三)</span></div>
                     <i class="ri-map-pin-2-fill"></i>
-                    <div><h3>福岡</h3><p>飯店名稱：<strong>待定</strong></p></div>
+                    <div><h3>福岡博多</h3><p><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong><br><a href="https://www.google.com/maps/search/?api=1&amp;query=HOTEL+FORZA+HAKATAEKI+CHIKUSHI-GUCHI" target="_blank" rel="noopener"><strong>Google Maps 導航 📍</strong></a></p></div>
                 </article>
             </div>
         </div>
@@ -500,30 +501,30 @@
 
                 <div class="guide-card">
                     <div class="guide-card-icon"><i class="ri-bus-2-line"></i></div>
-                    <h3>Day 4｜熊本 ➤ 黑川溫泉</h3>
+                    <h3>Day 4｜熊本 ➤ 黑川 ➤ 由布院</h3>
                     <ul>
-                        <li><i class="ri-checkbox-circle-fill"></i> 6 小時包車</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 約 12 小時包車</li>
                         <li><i class="ri-checkbox-circle-fill"></i> 阿蘇、草千里與大觀峰</li>
-                        <li><i class="ri-checkbox-circle-fill"></i> 冬季道路預留緩衝時間</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 黑川竹燈後夜間送抵由布院</li>
                     </ul>
                 </div>
 
                 <div class="guide-card">
                     <div class="guide-card-icon"><i class="ri-bus-2-line"></i></div>
-                    <h3>Day 5｜黑川 ➤ 由布院</h3>
+                    <h3>Day 5｜由布院 ➤ 別府 ➤ 福岡</h3>
                     <ul>
-                        <li><i class="ri-checkbox-circle-fill"></i> 6 小時包車</li>
-                        <li><i class="ri-checkbox-circle-fill"></i> 九重夢大吊橋與別府地獄</li>
-                        <li><i class="ri-checkbox-circle-fill"></i> 最後送抵由布院旅館</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 約 8～9 小時包車</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 血之池、龍卷、鐵輪與海地獄</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 最後送抵福岡飯店</li>
                     </ul>
                 </div>
 
                 <div class="guide-card">
                     <div class="guide-card-icon"><i class="ri-train-line"></i></div>
-                    <h3>Day 6｜由布院 ➤ 福岡</h3>
+                    <h3>Day 6｜福岡市區</h3>
                     <ul>
-                        <li><i class="ri-checkbox-circle-fill"></i> 由布院市區步行散策</li>
-                        <li><i class="ri-checkbox-circle-fill"></i> JR 特急由布院之森指定席</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 市區行程待規劃</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 地下鐵與巴士彈性移動</li>
                         <li><i class="ri-checkbox-circle-fill"></i> 福岡市區地下鐵＋步行</li>
                     </ul>
                 </div>
@@ -547,63 +548,6 @@
                         <li><i class="ri-checkbox-circle-fill"></i> 回福岡後地下鐵＋購物步行</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Early Return Section -->
-    <section class="early-return-section section-padding" id="early-return">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tag">Early Return</span>
-                <h2>提前返程</h2>
-                <p>其中一位成員將於 Day 5 抵達由布院後先返回福岡，以下兩種交通方式可擇一。</p>
-            </div>
-
-            <div class="early-return-summary">
-                <div class="return-route-icon"><i class="ri-user-shared-line"></i></div>
-                <div>
-                    <span>DAY 5｜1/31</span>
-                    <h3>由布院 ➤ 福岡</h3>
-                    <p>請包車司機先在由布院站或由布院站前巴士中心讓提前返程成員下車，並至少預留 30～45 分鐘轉乘及處理行李。</p>
-                </div>
-            </div>
-
-            <div class="early-return-grid">
-                <article class="return-option-card recommended">
-                    <div class="return-option-label">優先方案</div>
-                    <div class="return-option-heading">
-                        <i class="ri-train-line"></i>
-                        <div><h3>JR 特急返回博多</h3><p>由布院站 → 博多站</p></div>
-                    </div>
-                    <ul>
-                        <li><i class="ri-check-line"></i> 搭乘「由布院之森」或「由布」特急，車程約 2 小時 15～30 分鐘。</li>
-                        <li><i class="ri-check-line"></i> 「由布院之森」全車指定席，建議開放訂位後優先預約。</li>
-                        <li><i class="ri-check-line"></i> 可透過 JR 九州網路訂票，或在 JR 綠色窗口／指定席售票機購票。</li>
-                        <li><i class="ri-check-line"></i> 抵達博多站後，再搭地下鐵或計程車前往福岡住宿地點。</li>
-                    </ul>
-                    <a class="return-link" href="https://www.jrkyushu.co.jp/chinese/train/yufuin_no_mori.html" target="_blank" rel="noopener">JR 九州「由布院之森」官方資訊 <i class="ri-external-link-line"></i></a>
-                </article>
-
-                <article class="return-option-card">
-                    <div class="return-option-label">替代方案</div>
-                    <div class="return-option-heading">
-                        <i class="ri-bus-line"></i>
-                        <div><h3>高速巴士「由布院號」</h3><p>由布院站前巴士中心 → 福岡</p></div>
-                    </div>
-                    <ul>
-                        <li><i class="ri-check-line"></i> 可選博多巴士總站、福岡機場國際線或西鐵天神高速巴士總站下車。</li>
-                        <li><i class="ri-check-line"></i> 至福岡天神標準車程約 2 小時 25 分鐘，實際時間受道路狀況影響。</li>
-                        <li><i class="ri-check-line"></i> 採指定座位並需預約；目前可自搭乘日前一個月同日上午 8:00 起網路訂位。</li>
-                        <li><i class="ri-check-line"></i> 若攜帶大型行李或目的地接近機場／天神，可優先比較此方案。</li>
-                    </ul>
-                    <a class="return-link" href="https://nishitetsu.jp/bus/highwaybus/rosen/yufuin/" target="_blank" rel="noopener">西鐵高速巴士官方資訊與預約 <i class="ri-external-link-line"></i></a>
-                </article>
-            </div>
-
-            <div class="return-caution">
-                <i class="ri-alarm-warning-line"></i>
-                <p><strong>班次提醒：</strong>2027/1/31 的正式時刻尚未公布。訂票前請重新確認 JR 運行日、巴士班次及座位；若包車行程延誤，應以較晚班次或高速巴士作為備案。</p>
             </div>
         </div>
     </section>
@@ -645,7 +589,7 @@
                         <label class="checklist-item">
                             <input type="checkbox" class="todo-check" data-id="doc-translation">
                             <span class="checkbox-custom"></span>
-                            <span class="item-text">九州新幹線與由布院之森車票</span>
+                            <span class="item-text">九州新幹線車票與 Day 4～5 包車確認單</span>
                         </label>
                         <label class="checklist-item">
                             <input type="checkbox" class="todo-check" data-id="doc-credit-card">
@@ -731,6 +675,7 @@
     </footer>
 
     <!-- Custom Script -->
-    <script src="app.js?v=21"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js?v=27"></script>
 </body>
 </html>
