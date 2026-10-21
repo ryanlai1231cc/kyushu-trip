@@ -87,7 +87,7 @@ const legacyItineraryData = {
         ],
         timeline: [
             { time: "08:30", title: "北上驅車前往宮崎高千穗", desc: "離開霧島溫泉，經由九州自動車道與國道 218 號前往宮崎縣高千穗，沿途風景漸漸轉為深山峽谷地形。山路彎道多，慢慢開，約 2.5 小時車程。" },
-            { time: "11:00", title: "高千穗峽谷划船 🚣", desc: "在<span class='tip-hover tip-wrap' data-tip='📋 乘船日2週前(14天前) 09:00(日本時間)開放預約 ｜ 每艘限3名成人 ｜ 每艘總重上限240kg'><a href='https://www.google.com/maps/search/?api=1&query=高千穂峡' target='_blank'>高千穗峽谷 📍</a></span>幾乎垂直的玄武岩絕壁間划槳，從小舟仰望 17 公尺高的「真名井之瀑」飛瀉而下，霧氣瀰漫如夢似幻。划船約 30 分鐘，記得提早網路預約！👉 <a href='https://zh-tw-62123.site-translation.com/boat/detail.php' target='_blank'>資訊 🔗</a> ｜ <a href='https://eipro.jp/takachiho1/terms/view/toppage?_gl=1*servvs*_ga*MjA0NTY0NjI1MS4xNzgwMjg0MTI2*_ga_15MWGPBF8P*czE3ODAyODQxMjYkbzEkZzEkdDE3ODAyODQyODEkajU1JGwwJGgw#' target='_blank'>預約 🔗</a>" },
+            { time: "11:00", title: "高千穗峽谷划船 🚣", desc: "在<span class='tip-hover tip-wrap' data-tip='📋 乘船日2週前(14天前) 09:00(日本時間)開放預約 ｜ 每艘限3名成人 ｜ 每艘總重上限240kg'><a href='https://www.google.com/maps/search/?api=1&query=高千穂峡' target='_blank'>高千穗峽谷 📍</a></span>幾乎垂直的玄武岩絕壁間划槳，從小舟仰望 17 公尺高的「真名井之瀑」飛瀉而下，霧氣瀰漫如夢似幻。划船約 30 分鐘，記得提早網路預約！👉 <a href='https://zh-tw-62123.site-translation.com/boat/detail.php' target='_blank'>資訊 🔗</a> ｜ <a href='https://eipro.jp/takachiho1/eventCalendars/index?_gl=1*servvs*_ga*MjA0NTY0NjI1MS4xNzgwMjg0MTI2*_ga_15MWGPBF8P*czE3ODAyODQxMjYkbzEkZzEkdDE3ODAyODQyODEkajU1JGwwJGgw#' target='_blank'>預約 🔗</a>" },
             { time: "12:30", title: "高千穗當地午餐 🍜", desc: "前往<a href='https://www.google.com/maps/search/?api=1&query=天庵+高千穂+そば' target='_blank'>天庵 📍</a>——高千穗當地人氣蕞麥麵店，手打蕞麥麵搭配當季天婦羅，清爽爽口！" },
             { time: "14:00", title: "天岩戶神社與天安河原", desc: "參拜神話中天照大神藏身的「<a href='https://www.google.com/maps/search/?api=1&query=天岩戸神社' target='_blank'>天岩戶神社 📍</a>」洞穴神社，再步行約 10 分鐘至河床邊的<a href='https://www.google.com/maps/search/?api=1&query=天安河原' target='_blank'>天安河原 📍</a>，感受數千個石塔堆砌出的神秘莊嚴氣氛。" },
             { time: "16:00", title: "高千穗あまてらす鐵道 🚂 (選配)", desc: "若時間允許，體驗<span class='tip-hover' data-tip='需事前網路預約'><a href='https://www.google.com/maps/search/?api=1&query=高千穂あまてらす鉄道' target='_blank'>高千穗あまてらす鐵道 📍</a></span>——舊鐵道改造的觀光小火車，跨越高架橋俯瞰峽谷全景（約 30 分鐘來回）。" },
@@ -586,22 +586,34 @@ const activeItineraryData = {
         ]
     },
     4: {
-        mode: "charter", title: "阿蘇・大觀峰・黑川竹燈 ➤ 由布院", route: "熊本飯店 ➤ 阿蘇／草千里 ➤ 大觀峰 ➤ 黑川溫泉 ➤ 由布院",
-        mileage: "約 12 小時包車", time: "純移動約 4 小時 15 分；完整行程約 12 小時", toll: "包車費、高速／停車費與夜間超時費依報價",
+        mode: "charter", title: "高千穗峽划船・阿蘇・大觀峰 ➤ 由布院", route: "熊本飯店 ➤ 高千穗峽 ➤ 阿蘇／草千里 ➤ 大觀峰 ➤ 由布院",
+        mileage: "約 9～10 小時包車", time: "純移動約 5 小時；完整行程約 9～10 小時", toll: "包車費、高速／停車費與划船費依報價",
         image: "images/day4.png", imageAlt: "阿蘇草千里與火山景觀",
-        tip: "包車需事先確認約 12 小時服務、夜間山路與雪胎。17:00～18:00 欣賞黑川溫泉湯明竹燈，18:00 準時離開；冬季黑川至由布院以 75～90 分鐘估算。若積雪、結冰或道路管制，應取消看燈並趁天黑前前往由布院。",
-        meals: { breakfast: "熊本飯店", lunch: "阿蘇赤牛料理", dinner: "黑川簡便用餐／由布院晚餐需事先確認" },
-        accommodation: "由布院（一晚；晚間約 19:15～19:45 抵達）<br><strong>湯布院燈之宿 Yufuin Lamp no Yado（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=Yufuin+Lamp+no+Yado' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
+        tip: "高千穗峽划船需在 <strong>2027/1/16（六）09:00 日本時間（台灣 08:00）</strong>準時上網搶訂：<a href='https://eipro.jp/takachiho1/eventCalendars/index' target='_blank' rel='noopener'>高千穗峽划船預約網站 🔗</a>。包車需事先確認約 9～10 小時服務、清晨山路及雪胎；06:30 出發時天色未亮。大觀峰之後直接經やまなみハイウェイ前往由布院，傍晚前即可入住；若積雪、結冰或道路管制，可縮短大觀峰停留。",
+        meals: { breakfast: "熊本飯店提早用餐或便利商店外帶", lunch: "阿蘇赤牛料理", dinner: "由布院旅館或湯之坪街道周邊" },
+        accommodation: "由布院（一晚；約 15:45 抵達）<br><strong>湯布院燈之宿 Yufuin Lamp no Yado（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=Yufuin+Lamp+no+Yado' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
-            { time: "07:30～09:00", title: "熊本飯店 ➤ 阿蘇・草千里", desc: "預估車程約 1 小時 20～30 分；抵達後配合冬季中岳火口 09:00 開放時間。" },
-            { time: "09:00～10:30", title: "草千里／中岳火口", desc: "草千里散步並視當日火山管制、天候與道路狀況決定是否前往中岳火口。" },
-            { time: "10:30～11:20", title: "草千里 ➤ 大觀峰", desc: "預估車程約 45～55 分。" },
-            { time: "11:20～12:00", title: "大觀峰", desc: "觀景約 40 分鐘；若能見度不佳可縮短，保留冬季山路緩衝。" },
-            { time: "12:00～13:00", title: "阿蘇午餐", desc: "安排赤牛料理或沿途餐廳，避免延誤下午黑川行程。" },
-            { time: "13:00～14:00", title: "前往黑川溫泉", desc: "依午餐地點預估約 40～60 分鐘。" },
-            { time: "14:00～17:00", title: "黑川溫泉街散步", desc: "安排咖啡、商店與休息；本次不泡湯，保留體力等待傍晚點燈。" },
-            { time: "17:00～18:00", title: "黑川溫泉湯明竹燈", desc: "欣賞川端通、丸鈴橋一帶竹燈；2026～2027 年正式活動日期仍須以官方公告為準。" },
-            { time: "18:00～19:30", title: "黑川溫泉 ➤ 由布院飯店", desc: "夜間冬季山路預留 75～90 分鐘；住宿須事先確認晚間 Check-in 與晚餐安排。" }
+            { time: "06:30～08:30", title: "熊本飯店 ➤ 高千穗峽", desc: "預估車程約 2 小時；冬季清晨山路天色暗且可能結冰，請包車司機預留緩衝。" },
+            {
+                time: "08:30～09:45", title: "高千穗峽划船 🚣", type: "transport",
+                desc: "在<a href='https://www.google.com/maps/search/?api=1&query=高千穂峡+貸しボート' target='_blank' rel='noopener'>高千穗峽 📍</a>柱狀節理峭壁間划船 30 分鐘，近距離仰望真名井瀑布。受理處在第 1 御塩井停車場內，請提早 15 分鐘報到。",
+                detailTitle: "划船預約資訊（需搶票）", detailIcon: "ri-calendar-check-line",
+                payments: [
+                    "搶票時間：<strong>2027/1/16（六）09:00 日本時間＝台灣 08:00</strong> 開放（乘船日 2 週前），至 1/28 09:00 截止",
+                    "預約網址：<a href='https://eipro.jp/takachiho1/eventCalendars/index' target='_blank' rel='noopener'>高千穗峽貸しボート預約網站 🔗</a>（僅限網路預約、信用卡預付，不接受電話預約，也沒有候補）；請切換到「週」或「日」檢視，砂時計＝尚未開放、×＝已截止或售完",
+                    "營業時間 08:30～17:00（最後受理 16:30）；每艘 30 分鐘，超時每 10 分鐘 ¥1,000",
+                    "每艘限 3 名（含學齡前兒童時最多 4 名），需依人數預訂多艘；<strong>訂 2 艘以上時，每艘要填不同的代表人姓名</strong>，同一人名下無法重複預約；1/30 官方行事曆價格 ¥5,100／艘",
+                    "官方說明：<a href='https://takachiho-kanko.info/boat/' target='_blank' rel='noopener'>高千穗町觀光協會｜貸しボート 🔗</a>"
+                ],
+                note: "建議搶 08:30～09:00 的時段。預約後未搭乘或遲到不退款，也不能更改時段；河川暴漲或震度 3 以上地震會停航。當日券於當天早上現場販售、售完為止且不能指定時間。1 月為定期安全檢查月，出發前請再確認 1/30 有營業。"
+            },
+            { time: "09:45～11:00", title: "高千穗峽 ➤ 阿蘇・草千里", desc: "預估車程約 1 小時 10～20 分。" },
+            { time: "11:00～12:00", title: "草千里／中岳火口", desc: "草千里散步並視當日火山管制、天候與道路狀況決定是否前往中岳火口。" },
+            { time: "12:00～13:00", title: "阿蘇午餐", desc: "安排赤牛料理或沿途餐廳，避免延誤下午行程。" },
+            { time: "13:00～13:50", title: "草千里 ➤ 大觀峰", desc: "預估車程約 45～55 分。" },
+            { time: "13:50～14:30", title: "大觀峰", desc: "觀景約 40 分鐘；若能見度不佳可縮短，保留冬季山路緩衝。" },
+            { time: "14:30～15:45", title: "大觀峰 ➤ 由布院飯店", desc: "經やまなみハイウェイ前往由布院，預估車程約 1 小時～1 小時 15 分；冬季依路況預留緩衝。" },
+            { time: "16:00～18:00", title: "由布院入住・湯之坪街道散步", desc: "Check-in 後可步行逛湯之坪街道或金鱗湖周邊；店家多在 17:00～17:30 打烊，想逛街可先放行李就出門。" }
         ]
     },
     5: {
@@ -690,7 +702,7 @@ const dailyMapStops = {
     ],
     2: [
         { name: "博多站", lat: 33.5900, lng: 130.4199 },
-        { name: "熊本站", lat: 32.7903, lng: 130.6890 },
+        { name: "熊本站", lat: 32.7903, lng: 130.6890, via: "hakata_kumamoto" },
         { name: "熊本城", lat: 32.8069, lng: 130.7049 },
         { name: "Candeo Hotels 熊本新市街", lat: 32.8027, lng: 130.7068 }
     ],
@@ -702,9 +714,9 @@ const dailyMapStops = {
     ],
     4: [
         { name: "Candeo Hotels 熊本新市街", lat: 32.8027, lng: 130.7068 },
+        { name: "高千穗峽", lat: 32.7016, lng: 131.3006 },
         { name: "草千里ヶ濱", lat: 32.8815, lng: 131.0535 },
         { name: "大觀峰", lat: 32.9957, lng: 131.0671 },
-        { name: "黑川溫泉", lat: 33.0777, lng: 131.1419 },
         { name: "湯布院燈之宿（由布院）", lat: 33.2661, lng: 131.3632 }
     ],
     5: [
@@ -727,8 +739,9 @@ const dailyMapStops = {
     ],
     8: [
         { name: "博多站", lat: 33.5900, lng: 130.4199 },
-        { name: "門司港", lat: 33.9451, lng: 130.9615 },
-        { name: "小倉城", lat: 33.8844, lng: 130.8743 },
+        { name: "門司港", lat: 33.9451, lng: 130.9615, via: "hakata_mojiko" },
+        { name: "小倉城", lat: 33.8844, lng: 130.8743, via: "mojiko_kokura" },
+        { name: "博多站", lat: 33.5900, lng: 130.4199, via: "kokura_hakata" },
         { name: "天神／博多購物區", lat: 33.5914, lng: 130.3988 }
     ],
     9: [
@@ -736,6 +749,14 @@ const dailyMapStops = {
         { name: "櫛田神社（或大濠公園）", lat: 33.5931, lng: 130.4107 },
         { name: "福岡機場國際線航廈", lat: 33.5848, lng: 130.4443 }
     ]
+};
+
+// Rail track geometry (from OpenStreetMap) for legs taken by train; other legs follow roads.
+const railPaths = {
+    hakata_mojiko: [[33.5898,130.4201],[33.6012,130.4215],[33.6211,130.4276],[33.6368,130.4266],[33.6414,130.4297],[33.6444,130.4357],[33.6461,130.4377],[33.6507,130.4413],[33.6571,130.4437],[33.6653,130.4443],[33.6716,130.4425],[33.6829,130.4355],[33.6902,130.4346],[33.692,130.4351],[33.7009,130.4425],[33.7172,130.4526],[33.7248,130.462],[33.7349,130.4682],[33.7428,130.4712],[33.7479,130.4757],[33.7609,130.4826],[33.7689,130.4955],[33.7699,130.4989],[33.7703,130.5045],[33.7765,130.5153],[33.7767,130.5207],[33.7775,130.523],[33.78,130.5246],[33.7896,130.5246],[33.7926,130.5265],[33.7952,130.53],[33.8084,130.5611],[33.8077,130.5816],[33.8086,130.5933],[33.8082,130.5971],[33.8087,130.5988],[33.8102,130.6015],[33.8123,130.6032],[33.816,130.6049],[33.8202,130.6047],[33.8269,130.6081],[33.835,130.6155],[33.8398,130.6222],[33.8411,130.6345],[33.845,130.6385],[33.8471,130.6436],[33.8471,130.6478],[33.8431,130.6552],[33.843,130.6588],[33.8533,130.6987],[33.8595,130.7075],[33.8637,130.7118],[33.8642,130.7141],[33.8638,130.7251],[33.8678,130.7312],[33.8689,130.7346],[33.869,130.7375],[33.8662,130.7564],[33.8672,130.7716],[33.8686,130.7801],[33.8694,130.8025],[33.8719,130.807],[33.8781,130.8125],[33.8858,130.8147],[33.8912,130.8154],[33.895,130.8172],[33.8967,130.8194],[33.9013,130.8296],[33.9015,130.8326],[33.8988,130.8518],[33.8897,130.8699],[33.8869,130.8831],[33.8847,130.8897],[33.8851,130.8946],[33.8885,130.899],[33.8915,130.9053],[33.8926,130.9105],[33.8928,130.9176],[33.8993,130.9249],[33.9034,130.9314],[33.9059,130.9336],[33.9107,130.9365],[33.9187,130.9396],[33.9247,130.9432],[33.93,130.9435],[33.9371,130.9475],[33.9425,130.959],[33.9448,130.9613]],
+    mojiko_kokura: [[33.9448,130.9613],[33.9419,130.9578],[33.937,130.9475],[33.9302,130.9436],[33.9252,130.9434],[33.9187,130.9397],[33.9081,130.9356],[33.901,130.9301],[33.8932,130.9203],[33.8921,130.9175],[33.8922,130.9107],[33.8914,130.9055],[33.8897,130.9023],[33.8867,130.899],[33.8843,130.8931],[33.8845,130.8894],[33.8869,130.8823]],
+    kokura_hakata: [[33.8869,130.8823],[33.8897,130.8699],[33.8988,130.8518],[33.9015,130.8326],[33.9013,130.8296],[33.8967,130.8194],[33.895,130.8172],[33.8912,130.8154],[33.8858,130.8147],[33.8781,130.8125],[33.8719,130.807],[33.8694,130.8025],[33.8686,130.7801],[33.8672,130.7716],[33.8662,130.7564],[33.869,130.7375],[33.8689,130.7346],[33.8678,130.7312],[33.8638,130.7251],[33.8642,130.7141],[33.8637,130.7118],[33.8595,130.7075],[33.8533,130.6987],[33.843,130.6588],[33.8431,130.6552],[33.8471,130.6478],[33.8471,130.6436],[33.845,130.6385],[33.8411,130.6345],[33.8398,130.6222],[33.835,130.6155],[33.8269,130.6081],[33.8202,130.6047],[33.816,130.6049],[33.8123,130.6032],[33.8102,130.6015],[33.8087,130.5988],[33.8082,130.5971],[33.8086,130.5933],[33.8077,130.5816],[33.8084,130.5611],[33.7952,130.53],[33.7926,130.5265],[33.7896,130.5246],[33.78,130.5246],[33.7775,130.523],[33.7767,130.5207],[33.7765,130.5153],[33.7703,130.5045],[33.7699,130.4989],[33.7689,130.4955],[33.7609,130.4826],[33.7479,130.4757],[33.7428,130.4712],[33.7349,130.4682],[33.7248,130.462],[33.7172,130.4526],[33.7009,130.4425],[33.692,130.4351],[33.6902,130.4346],[33.6829,130.4355],[33.6716,130.4425],[33.6653,130.4443],[33.6571,130.4437],[33.6507,130.4413],[33.6461,130.4377],[33.6444,130.4357],[33.6414,130.4297],[33.6368,130.4266],[33.6211,130.4276],[33.6012,130.4215],[33.5898,130.4201]],
+    hakata_kumamoto: [[33.5898,130.4208],[33.5835,130.4206],[33.5802,130.4215],[33.5672,130.4331],[33.5588,130.4366],[33.5544,130.4366],[33.5424,130.4336],[33.5332,130.4325],[33.529,130.4332],[33.5043,130.4405],[33.4918,130.446],[33.4858,130.4477],[33.4775,130.4478],[33.4648,130.4452],[33.4582,130.4445],[33.4445,130.4444],[33.4344,130.446],[33.4262,130.4491],[33.4198,130.4528],[33.3858,130.4816],[33.3635,130.4951],[33.3577,130.4965],[33.346,130.4962],[33.3313,130.4969],[33.3238,130.5004],[33.3102,130.5032],[33.2865,130.5036],[33.2629,130.5029],[33.2509,130.5014],[33.2278,130.5006],[33.1752,130.4922],[33.144,130.494],[33.1124,130.4899],[33.0975,130.4866],[33.0916,130.4859],[33.0806,130.4867],[33.0504,130.4937],[33.0389,130.4991],[32.9827,130.5374],[32.9465,130.5693],[32.939,130.5785],[32.9227,130.6065],[32.8705,130.6691],[32.8654,130.6741],[32.8599,130.6778],[32.8215,130.6994],[32.8186,130.6993],[32.8062,130.6946],[32.796,130.6932],[32.7906,130.6889]]
 };
 
 // --- 4. Initialize DOM Elements ---
@@ -858,7 +879,7 @@ document.addEventListener('DOMContentLoaded', () => {
         data.timeline.forEach(item => {
             const transportDetails = item.type === 'transport' ? `
                 <div class="timeline-transport-card">
-                    <h5><i class="ri-bank-card-line"></i> ${item.detailTitle || '地下鐵付款方式'}</h5>
+                    <h5><i class="${item.detailIcon || 'ri-bank-card-line'}"></i> ${item.detailTitle || '地下鐵付款方式'}</h5>
                     <ul>
                         ${item.payments.map(payment => `<li>${payment}</li>`).join('')}
                     </ul>
@@ -942,14 +963,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ` : '';
 
         // Geographic map displayed after the daily timeline.
-        const isRoadRoute = data.mode === 'charter';
         const routeMapHtml = `
             <div class="daily-route-map-card">
                 <div class="daily-route-map-heading">
                     <i class="ri-map-2-line"></i>
                     <div>
-                        <h4>${isRoadRoute ? '實際道路路線圖' : '行程位置圖'}</h4>
-                        <p>${isRoadRoute ? '粗紅線依道路導航服務繪製' : '紅線呈現當日主要移動方向'}</p>
+                        <h4>實際路線圖</h4>
+                        <p>道路依導航服務繪製；新幹線／JR 依實際軌道繪製</p>
                     </div>
                 </div>
                 <div id="dailyRouteMap" class="daily-route-map-canvas" role="img" aria-label="Day ${dayNum} 地理路線圖"></div>
@@ -1007,9 +1027,30 @@ document.addEventListener('DOMContentLoaded', () => {
         renderDailyRouteMap(dayNum);
     }
 
+    // Rail legs use stored track geometry; other legs follow roads, falling back to a straight line.
+    async function getLegPath(from, to) {
+        const start = [from.lat, from.lng];
+        const end = [to.lat, to.lng];
+        if (to.via && railPaths[to.via]) return [start, ...railPaths[to.via], end];
+
+        const routeUrl = `https://router.project-osrm.org/route/v1/driving/${from.lng},${from.lat};${to.lng},${to.lat}?overview=full&geometries=geojson&steps=false`;
+        try {
+            const response = await fetch(routeUrl);
+            if (response.ok) {
+                const routeData = await response.json();
+                const roadCoordinates = routeData.routes?.[0]?.geometry?.coordinates;
+                if (roadCoordinates && roadCoordinates.length > 1) {
+                    return roadCoordinates.map(([lng, lat]) => [lat, lng]);
+                }
+            }
+        } catch (error) {
+            console.warn('道路路線載入失敗，改用直線示意。', error);
+        }
+        return [start, end];
+    }
+
     async function renderDailyRouteMap(dayNum) {
         const stops = dailyMapStops[dayNum] || [];
-        const data = activeItineraryData[dayNum];
         const mapElement = document.getElementById('dailyRouteMap');
         if (!mapElement || stops.length === 0 || typeof L === 'undefined') return;
 
@@ -1024,25 +1065,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }).addTo(map);
 
         const coordinates = stops.map(stop => [stop.lat, stop.lng]);
-        let routeCoordinates = coordinates;
-
-        if (data && data.mode === 'charter' && stops.length > 1) {
-            const coordinateQuery = stops.map(stop => `${stop.lng},${stop.lat}`).join(';');
-            const routeUrl = `https://router.project-osrm.org/route/v1/driving/${coordinateQuery}?overview=full&geometries=geojson&steps=false`;
-
-            try {
-                const response = await fetch(routeUrl);
-                if (response.ok) {
-                    const routeData = await response.json();
-                    const roadCoordinates = routeData.routes?.[0]?.geometry?.coordinates;
-                    if (roadCoordinates && roadCoordinates.length > 1) {
-                        routeCoordinates = roadCoordinates.map(([lng, lat]) => [lat, lng]);
-                    }
-                }
-            } catch (error) {
-                console.warn('道路路線載入失敗，改用地理直線示意。', error);
-            }
-        }
+        const legs = await Promise.all(stops.slice(1).map((stop, index) => getLegPath(stops[index], stop)));
+        const routeCoordinates = legs.length ? legs.flat() : coordinates;
 
         const routeOutline = L.polyline(routeCoordinates, {
             color: '#ffffff',
