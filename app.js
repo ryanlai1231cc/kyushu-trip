@@ -682,57 +682,59 @@ const activeItineraryData = {
 // Geographic stops for the map shown below each daily schedule.
 const dailyMapStops = {
     1: [
-        { name: "福岡機場國際線", lat: 33.5859, lng: 130.4507 },
-        { name: "地下鐵福岡空港站", lat: 33.5971, lng: 130.4483 },
-        { name: "博多站／住宿", lat: 33.5902, lng: 130.4207 }
+        { name: "福岡機場國際線航廈", lat: 33.5848, lng: 130.4443 },
+        { name: "地下鐵福岡空港站", lat: 33.5973, lng: 130.4482 },
+        { name: "博多站", lat: 33.5900, lng: 130.4199 },
+        { name: "JR九州飯店 Blossom博多中央", lat: 33.5900, lng: 130.4180 },
+        { name: "福岡皇家花園飯店", lat: 33.5907, lng: 130.4154 }
     ],
     2: [
-        { name: "博多站", lat: 33.5902, lng: 130.4207 },
-        { name: "熊本站", lat: 32.7903, lng: 130.6882 },
-        { name: "熊本城／城彩苑", lat: 32.8062, lng: 130.7058 },
-        { name: "熊本住宿", lat: 32.8008, lng: 130.7006 }
+        { name: "博多站", lat: 33.5900, lng: 130.4199 },
+        { name: "熊本站", lat: 32.7903, lng: 130.6890 },
+        { name: "熊本城", lat: 32.8069, lng: 130.7049 },
+        { name: "Candeo Hotels 熊本新市街", lat: 32.8027, lng: 130.7068 }
     ],
     3: [
-        { name: "熊本住宿", lat: 32.8008, lng: 130.7006 },
-        { name: "熊本熊廣場", lat: 32.8030, lng: 130.7108 },
-        { name: "水前寺成趣園", lat: 32.7946, lng: 130.7333 },
-        { name: "上通・下通", lat: 32.8012, lng: 130.7082 }
+        { name: "Candeo Hotels 熊本新市街", lat: 32.8027, lng: 130.7068 },
+        { name: "熊本熊廣場", lat: 32.8019, lng: 130.7124 },
+        { name: "水前寺成趣園", lat: 32.7907, lng: 130.7349 },
+        { name: "上通・下通", lat: 32.8040, lng: 130.7100 }
     ],
     4: [
-        { name: "熊本住宿", lat: 32.8008, lng: 130.7006 },
-        { name: "草千里／中岳", lat: 32.8844, lng: 131.0522 },
-        { name: "大觀峰", lat: 32.9966, lng: 131.0692 },
-        { name: "黑川溫泉", lat: 33.0781, lng: 131.1424 },
-        { name: "由布院住宿", lat: 33.2648, lng: 131.3595 }
+        { name: "Candeo Hotels 熊本新市街", lat: 32.8027, lng: 130.7068 },
+        { name: "草千里ヶ濱", lat: 32.8815, lng: 131.0535 },
+        { name: "大觀峰", lat: 32.9957, lng: 131.0671 },
+        { name: "黑川溫泉", lat: 33.0777, lng: 131.1419 },
+        { name: "湯布院燈之宿（由布院）", lat: 33.2661, lng: 131.3632 }
     ],
     5: [
-        { name: "由布院住宿", lat: 33.2648, lng: 131.3595 },
-        { name: "血之池／龍卷地獄", lat: 33.3167, lng: 131.4782 },
-        { name: "鐵輪地獄蒸", lat: 33.3150, lng: 131.4750 },
-        { name: "湯煙展望台", lat: 33.3268, lng: 131.4690 },
-        { name: "海地獄", lat: 33.3164, lng: 131.4578 },
-        { name: "福岡飯店", lat: 33.5902, lng: 130.4207 }
+        { name: "湯布院燈之宿（由布院）", lat: 33.2661, lng: 131.3632 },
+        { name: "血之池／龍卷地獄", lat: 33.3271, lng: 131.4787 },
+        { name: "鐵輪地獄蒸", lat: 33.3160, lng: 131.4768 },
+        { name: "湯煙展望台", lat: 33.3157, lng: 131.4853 },
+        { name: "海地獄", lat: 33.3168, lng: 131.4687 },
+        { name: "HOTEL FORZA 博多駅筑紫口", lat: 33.5911, lng: 130.4219 }
     ],
     6: [
-        { name: "福岡飯店", lat: 33.5902, lng: 130.4207 },
-        { name: "福岡市區（待規劃）", lat: 33.5904, lng: 130.4017 }
+        { name: "HOTEL FORZA 博多駅筑紫口", lat: 33.5911, lng: 130.4219 },
+        { name: "天神（市區行程待規劃）", lat: 33.5914, lng: 130.3988 }
     ],
     7: [
-        { name: "福岡飯店", lat: 33.5902, lng: 130.4207 },
-        { name: "太宰府天滿宮", lat: 33.5215, lng: 130.5348 },
-        { name: "LaLaport 福岡", lat: 33.5661, lng: 130.4393 },
-        { name: "福岡飯店", lat: 33.5902, lng: 130.4207 }
+        { name: "HOTEL FORZA 博多駅筑紫口", lat: 33.5911, lng: 130.4219 },
+        { name: "太宰府天滿宮", lat: 33.5213, lng: 130.5353 },
+        { name: "LaLaport 福岡", lat: 33.5648, lng: 130.4403 },
+        { name: "HOTEL FORZA 博多駅筑紫口", lat: 33.5911, lng: 130.4219 }
     ],
     8: [
-        { name: "博多", lat: 33.5902, lng: 130.4207 },
-        { name: "門司港", lat: 33.9444, lng: 130.9610 },
-        { name: "小倉城", lat: 33.8844, lng: 130.8742 },
-        { name: "福岡購物區", lat: 33.5904, lng: 130.4017 }
+        { name: "博多站", lat: 33.5900, lng: 130.4199 },
+        { name: "門司港", lat: 33.9451, lng: 130.9615 },
+        { name: "小倉城", lat: 33.8844, lng: 130.8743 },
+        { name: "天神／博多購物區", lat: 33.5914, lng: 130.3988 }
     ],
     9: [
-        { name: "福岡飯店", lat: 33.5902, lng: 130.4207 },
-        { name: "大濠公園／櫛田神社", lat: 33.5903, lng: 130.3927 },
-        { name: "福岡機場國際線", lat: 33.5859, lng: 130.4507 }
+        { name: "HOTEL FORZA 博多駅筑紫口", lat: 33.5911, lng: 130.4219 },
+        { name: "櫛田神社（或大濠公園）", lat: 33.5931, lng: 130.4107 },
+        { name: "福岡機場國際線航廈", lat: 33.5848, lng: 130.4443 }
     ]
 };
 
@@ -1016,10 +1018,9 @@ document.addEventListener('DOMContentLoaded', () => {
             zoomControl: true
         });
 
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            maxZoom: 18,
-            subdomains: 'abcd',
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>'
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
         }).addTo(map);
 
         const coordinates = stops.map(stop => [stop.lat, stop.lng]);
