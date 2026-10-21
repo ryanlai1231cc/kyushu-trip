@@ -610,7 +610,7 @@ const activeItineraryData = {
         image: "images/day5-beppu-hells.png", imageAlt: "血之池地獄與別府湯煙景觀",
         tip: "血之池地獄、龍卷地獄與海地獄皆以 17:00 前入場完成為原則。午餐安排鐵輪地獄蒸，湯煙展望台作短暫停靠；建議 15:00 前離開別府，為前往福岡的高速路段預留冬季與週末車流緩衝。",
         meals: { breakfast: "由布院飯店", lunch: "鐵輪地獄蒸料理", dinner: "福岡市區" },
-        accommodation: "福岡博多（第一晚，連住四晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=HOTEL+FORZA+HAKATAEKI+CHIKUSHI-GUCHI' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
+        accommodation: "福岡博多（第一晚，連住四晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://maps.app.goo.gl/rcsuietE8LzKCp8x9' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             { time: "09:00～10:00", title: "由布院飯店 ➤ 血之池地獄", desc: "預估車程約 45～60 分鐘，冬季依道路狀況增加緩衝。" },
             { time: "10:00～11:15", title: "血之池地獄／龍卷地獄", desc: "兩處相鄰，合計停留約 75 分鐘。" },
@@ -627,7 +627,7 @@ const activeItineraryData = {
         image: "images/day1-fukuoka-arrival.png", imageAlt: "福岡市區街景",
         tip: "Day 5 已抵達福岡，Day 6 不再安排由布院至博多的長途移動；詳細景點待後續確認。",
         meals: { breakfast: "福岡飯店", lunch: "福岡市區", dinner: "天神或中洲屋台" },
-        accommodation: "福岡博多（第二晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=HOTEL+FORZA+HAKATAEKI+CHIKUSHI-GUCHI' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
+        accommodation: "福岡博多（第二晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://maps.app.goo.gl/rcsuietE8LzKCp8x9' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             { time: "上午", title: "福岡市區行程待確認", desc: "依團員需求安排景點、購物或休息。" },
             { time: "下午", title: "福岡市區自由活動", desc: "以地下鐵、巴士與步行移動，避免安排重複景點。" },
@@ -640,7 +640,7 @@ const activeItineraryData = {
         image: "images/day8-dazaifu.png", imageAlt: "冬季太宰府天滿宮",
         tip: "上午先走太宰府，下午再回福岡市區前往 LaLaport；確認實物大鋼彈當日演出時間。",
         meals: { breakfast: "福岡飯店", lunch: "太宰府參道", dinner: "LaLaport／博多市區" },
-        accommodation: "福岡博多（第三晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=HOTEL+FORZA+HAKATAEKI+CHIKUSHI-GUCHI' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
+        accommodation: "福岡博多（第三晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://maps.app.goo.gl/rcsuietE8LzKCp8x9' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             { time: "上午", title: "太宰府天滿宮", desc: "參拜、逛表參道，品嚐梅枝餅並造訪特色星巴克。" },
             { time: "中午", title: "太宰府午餐", desc: "避開尖峰後返回福岡市區。" },
@@ -654,7 +654,7 @@ const activeItineraryData = {
         image: "images/day7.png", imageAlt: "門司港復古街區與海港",
         tip: "先到門司港、回程順路停小倉，並控制在傍晚前回到福岡；Day 8 晚上不排正式景點，完整保留購物與整理行李時間。",
         meals: { breakfast: "福岡飯店", lunch: "門司港燒咖哩", dinner: "天神／博多購物區簡便用餐" },
-        accommodation: "福岡博多（第四晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://www.google.com/maps/search/?api=1&query=HOTEL+FORZA+HAKATAEKI+CHIKUSHI-GUCHI' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
+        accommodation: "福岡博多（第四晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://maps.app.goo.gl/rcsuietE8LzKCp8x9' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             { time: "08:00", title: "前往門司港", desc: "由博多搭 JR，提早出發以換取晚間購物時間。" },
             { time: "09:30", title: "門司港復古街區", desc: "散步復古建築群與海港，冬季海邊風大，請準備防風外套。" },
