@@ -316,7 +316,7 @@
                     </button>
                     <button class="tab-btn" data-day="6">
                         <span class="tab-day">DAY 6 <span class="tab-date">(2/1)</span></span>
-                        <span class="tab-title">福岡市區</span>
+                        <span class="tab-title">福岡城・福岡塔</span>
                     </button>
                     <button class="tab-btn" data-day="7">
                         <span class="tab-day">DAY 7 <span class="tab-date">(2/2)</span></span>
@@ -506,11 +506,11 @@
 
                 <div class="guide-card">
                     <div class="guide-card-icon"><i class="ri-train-line"></i></div>
-                    <h3>Day 6｜福岡市區</h3>
+                    <h3>Day 6｜福岡城跡 ➤ 福岡塔</h3>
                     <ul>
-                        <li><i class="ri-checkbox-circle-fill"></i> 市區行程待規劃</li>
-                        <li><i class="ri-checkbox-circle-fill"></i> 地下鐵與巴士彈性移動</li>
-                        <li><i class="ri-checkbox-circle-fill"></i> 福岡市區地下鐵＋步行</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 地下鐵空港線：博多至赤坂</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> 舞鶴公園、大濠公園、唐人町至福岡塔步行</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> MARK IS 晚餐後由唐人町站搭地下鐵回博多</li>
                     </ul>
                 </div>
 
@@ -532,6 +532,39 @@
                         <li><i class="ri-checkbox-circle-fill"></i> 門司港與小倉景點步行</li>
                         <li><i class="ri-checkbox-circle-fill"></i> 回福岡後地下鐵＋購物步行</li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- Kyushu FunPASS attraction pass -->
+            <div class="accommodations-section" id="funpass" style="margin-top: 40px;">
+                <div class="flights-header">
+                    <h3><i class="ri-coupon-3-line"></i> 九州 FunPASS 7 合 1（建議購買）</h3>
+                    <p>啟用後 14 天內有效，可選精選景點 1 個、深度體驗 1 個、必遊景點 5 個；建議 Day 2 抵達熊本城時再啟用。</p>
+                </div>
+                <div class="flights-grid single-card">
+                    <div class="flight-card">
+                        <div class="flight-route-info" style="display:flex; flex-direction:column; gap:12px; padding:10px 0;">
+                            <figure style="width:100%; margin:0;">
+                                <a href="images/kyushu-funpass-map.webp" target="_blank" rel="noopener">
+                                    <img src="images/kyushu-funpass-map.webp" alt="九州 FunPASS 福岡、熊本、大分、佐賀可使用景點地圖" loading="lazy" style="width:100%; border-radius:12px; border:1px solid var(--border-color);">
+                                </a>
+                                <figcaption style="margin-top:6px; font-size:0.78rem; color:var(--color-text-muted); text-align:center;">九州 FunPASS 使用地圖（點圖放大）；可用景點以 App 最新公告為準。</figcaption>
+                            </figure>
+                            <div class="info-tag" style="display:block; line-height:1.7;">
+                                <strong>依行程建議選擇</strong><br>
+                                精選：teamLab 森林美術館（Day 6）或別府地獄七大溫泉巡禮（Day 5）擇一<br>
+                                深度：熊本城＋湧湧座（Day 2）<br>
+                                必遊：福岡塔（Day 6）、九州國立博物館（Day 7）、關門海峽博物館・門司港懷舊展望室・小倉城（Day 8）
+                            </div>
+                            <p style="font-size:0.9rem; color:var(--color-text-muted); line-height:1.6;">購買後在 App 輸入序號並出示 QR Code 入場，一支手機可綁多張；開卡後不可退款，部分設施需在 App 內提前預約。高千穗划船、太宰府天滿宮、LaLaport 鋼彈、新幹線與包車不包含在內。</p>
+                            <a href="https://www.klook.com/zh-TW/activity/118097-kyushu-funpass-7-in-1/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm btn-flight" style="width:100%;">
+                                Klook 購買九州 FunPASS 7 合 1 <i class="ri-external-link-line"></i>
+                            </a>
+                            <a href="https://kyushu.funpass.app/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm btn-flight" style="width:100%;">
+                                九州 FunPASS 官方網站 <i class="ri-external-link-line"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -636,6 +669,11 @@
                             <span class="checkbox-custom"></span>
                             <span class="item-text">手機下載離線 Google Maps 或預存行程地標</span>
                         </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" class="todo-check" data-id="lug-funpass">
+                            <span class="checkbox-custom"></span>
+                            <span class="item-text">購買九州 FunPASS 7 合 1（<a href="#funpass">使用說明</a>・<a href="https://www.klook.com/zh-TW/activity/118097-kyushu-funpass-7-in-1/" target="_blank" rel="noopener">Klook 購買</a>）並在 App 綁定序號</span>
+                        </label>
                     </div>
                 </div>
                 
@@ -666,6 +704,6 @@
 
     <!-- Custom Script -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="app.js?v=37"></script>
+    <script src="app.js?v=39"></script>
 </body>
 </html>

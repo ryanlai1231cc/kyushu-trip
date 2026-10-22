@@ -639,16 +639,24 @@ const activeItineraryData = {
         ]
     },
     6: {
-        mode: "public", title: "福岡市區自由活動（待規劃）", route: "福岡飯店 ➤ 市區景點 ➤ 福岡飯店",
-        mileage: "地下鐵／巴士＋步行", time: "市區一日", toll: "市區交通與景點費用",
+        mode: "public", title: "福岡城跡・大濠公園・teamLab・福岡塔夕陽", route: "博多 ➤ 赤坂 ➤ 舞鶴公園（福岡城跡）➤ 大濠公園 ➤ 唐人町 ➤ BOSS E・ZO ➤ 福岡塔 ➤ MARK IS 福岡ももち ➤ 唐人町站 ➤ 博多",
+        mileage: "地下鐵＋步行", time: "由東往西一路順走，不走回頭路", toll: "地下鐵車資、teamLab 與福岡塔門票（九州 FunPASS 可用）",
         image: "images/day1-fukuoka-arrival.png", imageAlt: "福岡市區街景",
-        tip: "Day 5 已抵達福岡，Day 6 不再安排由布院至博多的長途移動；詳細景點待後續確認。",
-        meals: { breakfast: "福岡飯店", lunch: "福岡市區", dinner: "天神或中洲屋台" },
+        tip: "2/1 是週一：舞鶴公園與大濠公園全天開放，但大濠公園日本庭園、福岡市美術館等設施週一多半休館，本日不排入。BOSS E・ZO FUKUOKA 官方標示全年無休，但個別設施偶有暫停，出發前請查<a href='https://e-zofukuoka.com/news/info/' target='_blank' rel='noopener'>官網公告 🔗</a>。teamLab（精選）與福岡塔（必遊）可用九州 FunPASS。",
+        meals: { breakfast: "福岡飯店", lunch: "唐人町商店街周邊", dinner: "MARK IS 福岡ももち 3F 美食廣場" },
         accommodation: "福岡博多（第二晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://maps.app.goo.gl/MjMntMRrrZUNfpyEA' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
-            { time: "上午", title: "福岡市區行程待確認", desc: "依團員需求安排景點、購物或休息。" },
-            { time: "下午", title: "福岡市區自由活動", desc: "以地下鐵、巴士與步行移動，避免安排重複景點。" },
-            { time: "晚上", title: "天神地下街・中洲", desc: "安排購物或屋台晚餐。" }
+            { time: "09:30～10:00", title: "博多站 ➤ 地下鐵赤坂站", desc: "飯店步行至博多站，搭地下鐵空港線往姪浜方向約 7 分鐘，在赤坂站下車步行至舞鶴公園。" },
+            { time: "10:00～11:15", title: "舞鶴公園・福岡城跡", desc: "免費參觀。爬上<strong>天守台</strong>展望台眺望市區與福岡塔，再看國家重要文化財「南丸多聞櫓」；有興趣可加鴻臚館跡展示館。城跡以石垣為主，沒有天守閣建築。" },
+            { time: "11:15～12:15", title: "大濠公園", desc: "從東側進入沿湖散步，冬季可看水鳥與湖景；湖畔星巴克可稍作休息。往北側出口方向走。" },
+            { time: "12:15～13:30", title: "唐人町商店街午餐", desc: "由大濠公園北側步行約 10 分鐘，商店街與周邊有定食、拉麵與咖啡店。" },
+            { time: "13:30～14:00", title: "唐人町 ➤ BOSS E・ZO FUKUOKA", desc: "步行約 15～20 分鐘（位於みずほ PayPay 巨蛋旁）；不想走可搭計程車約 5 分鐘。" },
+            { time: "14:00～16:30", title: "BOSS E・ZO FUKUOKA・teamLab Forest", desc: "5F <strong>teamLab Forest</strong> 互動數位藝術約 1 小時（九州 FunPASS 精選可用）；頂樓「絶景 3 兄弟」高空滑梯與攀爬設施另購票、自由選擇。營業時間與票價以官網為準。" },
+            { time: "16:30～16:45", title: "步行至福岡塔", desc: "沿海濱步行約 10～15 分鐘。" },
+            { time: "16:45～18:15", title: "福岡塔夕陽與夜景", desc: "上 123 m 展望台，一次看白天、夕陽（2 月初約 17:45 日落）與夜景（九州 FunPASS 必遊可用）。旁邊的百道濱海灘可順道拍照。" },
+            { time: "18:15～18:30", title: "福岡塔 ➤ MARK IS 福岡ももち", desc: "步行約 15 分鐘（位於 PayPay 巨蛋南側）。" },
+            { time: "18:30～20:00", title: "MARK IS 福岡ももち晚餐", desc: "3F 美食廣場「ももキチ」有博多拉麵（如博多屋台 一幸舍）、迴轉壽司、烏龍麵與定食，座位多、7 人好找位子，各自點餐也方便；餐廳約營業至 21:00，以官網為準。" },
+            { time: "20:00～20:30", title: "唐人町站 ➤ 博多回飯店", desc: "步行約 10 分鐘到地下鐵唐人町站，搭空港線往福岡空港方向直達博多站約 10 分鐘。" }
         ]
     },
     7: {
@@ -734,7 +742,12 @@ const dailyMapStops = {
     ],
     6: [
         { name: "HOTEL FORZA 博多駅筑紫口", lat: 33.5911, lng: 130.4219 },
-        { name: "天神（市區行程待規劃）", lat: 33.5914, lng: 130.3988 }
+        { name: "舞鶴公園・福岡城跡", lat: 33.5846, lng: 130.3827 },
+        { name: "大濠公園", lat: 33.5861, lng: 130.3764 },
+        { name: "唐人町商店街", lat: 33.5902, lng: 130.3702 },
+        { name: "BOSS E・ZO FUKUOKA", lat: 33.5950, lng: 130.3638 },
+        { name: "福岡塔", lat: 33.5933, lng: 130.3515 },
+        { name: "MARK IS 福岡ももち", lat: 33.5923, lng: 130.3639 }
     ],
     7: [
         { name: "HOTEL FORZA 博多駅筑紫口", lat: 33.5911, lng: 130.4219 },
