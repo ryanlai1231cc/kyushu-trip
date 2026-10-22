@@ -1117,6 +1117,24 @@ a {
     margin-bottom: 6px;
 }
 
+/* Small Kyushu FunPASS logo on timeline items the pass covers */
+.funpass-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+    padding: 2px 6px;
+    vertical-align: middle;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    line-height: 0;
+}
+
+.funpass-badge img {
+    height: 22px;
+    width: auto;
+}
+
 .timeline-body p {
     color: var(--color-text-muted);
     font-size: 0.9rem;

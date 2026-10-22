@@ -571,7 +571,7 @@ const activeItineraryData = {
                 ],
                 note: "下車時向司機出示手機上的有效票券畫面，不要觸碰 IC 讀卡機。手機沒電或無法顯示票面時，需另付車資；有效時間內另附熊本城、水前寺成趣園等設施優惠。"
             },
-            { time: "中午", title: "熊本城", desc: "安排城內參觀並視當日開放範圍調整停留時間。" },
+            { time: "中午", title: "熊本城", funpass: "深度體驗：熊本城＋湧湧座", desc: "安排城內參觀並視當日開放範圍調整停留時間。" },
             { time: "下午", title: "櫻之馬場 城彩苑", desc: "逛熊本特色商店與小吃，之後回飯店休息。" },
             { time: "晚上", title: "熊本特色晚餐", desc: "勝烈亭黑豬排或馬肉料理，熱門店建議預約。" }
         ]
@@ -630,11 +630,11 @@ const activeItineraryData = {
         accommodation: "福岡博多（第一晚，連住四晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://maps.app.goo.gl/MjMntMRrrZUNfpyEA' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             { time: "09:00～10:00", title: "由布院飯店 ➤ 血之池地獄", desc: "預估車程約 45～60 分鐘，冬季依道路狀況增加緩衝。" },
-            { time: "10:00～11:15", title: "血之池地獄／龍卷地獄", desc: "兩處相鄰，合計停留約 75 分鐘。" },
+            { time: "10:00～11:15", title: "血之池地獄／龍卷地獄", funpass: "精選：別府地獄七大溫泉巡禮（與 teamLab 二選一）", desc: "兩處相鄰，合計停留約 75 分鐘。" },
             { time: "11:15～11:35", title: "前往鐵輪", desc: "移動至鐵輪溫泉區，預留停車與步行時間。" },
             { time: "11:35～13:00", title: "鐵輪地獄蒸午餐", desc: "以溫泉蒸氣料理肉類、海鮮與蔬菜；週末可能候位，應提早抵達。" },
             { time: "13:00～13:30", title: "湯煙展望台", desc: "短暫俯瞰鐵輪溫泉區與湯煙景觀。" },
-            { time: "13:45～14:45", title: "海地獄", desc: "參觀代表性的鈷藍色地獄、足湯與商店，控制在一小時內。" },
+            { time: "13:45～14:45", title: "海地獄", funpass: "精選：別府地獄七大溫泉巡禮（與 teamLab 二選一）", desc: "參觀代表性的鈷藍色地獄、足湯與商店，控制在一小時內。" },
             { time: "15:00～17:30", title: "別府 ➤ 福岡飯店", desc: "搭乘包車經高速公路前往福岡，預估約 2～2.5 小時；週末與冬季路況需保留緩衝。" }
         ]
     },
@@ -651,26 +651,31 @@ const activeItineraryData = {
             { time: "11:15～12:15", title: "大濠公園", desc: "從東側進入沿湖散步，冬季可看水鳥與湖景；湖畔星巴克可稍作休息。往北側出口方向走。" },
             { time: "12:15～13:30", title: "唐人町商店街午餐", desc: "由大濠公園北側步行約 10 分鐘，商店街與周邊有定食、拉麵與咖啡店。" },
             { time: "13:30～14:00", title: "唐人町 ➤ BOSS E・ZO FUKUOKA", desc: "步行約 15～20 分鐘（位於みずほ PayPay 巨蛋旁）；不想走可搭計程車約 5 分鐘。" },
-            { time: "14:00～16:30", title: "BOSS E・ZO FUKUOKA・teamLab Forest", desc: "5F <strong>teamLab Forest</strong> 互動數位藝術約 1 小時（九州 FunPASS 精選可用）；頂樓「絶景 3 兄弟」高空滑梯與攀爬設施另購票、自由選擇。營業時間與票價以官網為準。" },
+            { time: "14:00～16:30", title: "BOSS E・ZO FUKUOKA・teamLab Forest", funpass: "精選：teamLab 森林美術館（與別府地獄巡禮二選一）", desc: "5F <strong>teamLab Forest</strong> 互動數位藝術約 1 小時（九州 FunPASS 精選可用）；頂樓「絶景 3 兄弟」高空滑梯與攀爬設施另購票、自由選擇。營業時間與票價以官網為準。" },
             { time: "16:30～16:45", title: "步行至福岡塔", desc: "沿海濱步行約 10～15 分鐘。" },
-            { time: "16:45～18:15", title: "福岡塔夕陽與夜景", desc: "上 123 m 展望台，一次看白天、夕陽（2 月初約 17:45 日落）與夜景（九州 FunPASS 必遊可用）。旁邊的百道濱海灘可順道拍照。" },
+            { time: "16:45～18:15", title: "福岡塔夕陽與夜景", funpass: "必遊：福岡塔", desc: "上 123 m 展望台，一次看白天、夕陽（2 月初約 17:45 日落）與夜景（九州 FunPASS 必遊可用）。旁邊的百道濱海灘可順道拍照。" },
             { time: "18:15～18:30", title: "福岡塔 ➤ MARK IS 福岡ももち", desc: "步行約 15 分鐘（位於 PayPay 巨蛋南側）。" },
             { time: "18:30～20:00", title: "MARK IS 福岡ももち晚餐", desc: "3F 美食廣場「ももキチ」有博多拉麵（如博多屋台 一幸舍）、迴轉壽司、烏龍麵與定食，座位多、7 人好找位子，各自點餐也方便；餐廳約營業至 21:00，以官網為準。" },
             { time: "20:00～20:30", title: "唐人町站 ➤ 博多回飯店", desc: "步行約 10 分鐘到地下鐵唐人町站，搭空港線往福岡空港方向直達博多站約 10 分鐘。" }
         ]
     },
     7: {
-        mode: "public", title: "太宰府・LaLaport 鋼彈", route: "福岡 ➤ 太宰府天滿宮 ➤ LaLaport 福岡 ➤ 飯店",
-        mileage: "西鐵／地下鐵／巴士", time: "市郊一日", toll: "大眾運輸車資",
+        mode: "public", title: "太宰府天滿宮・九州國立博物館・LaLaport 鋼彈夜景", route: "博多巴士總站 ➤ 太宰府天滿宮 ➤ 九州國立博物館 ➤ 西鐵大橋 ➤ LaLaport 福岡 ➤ 博多",
+        mileage: "太宰府巴士「旅人」＋西鐵電車＋巴士", time: "博多至太宰府約 45 分鐘；太宰府至 LaLaport 約 1 小時", toll: "巴士與西鐵車資、九州國立博物館門票（九州 FunPASS 可用）",
         image: "images/day8-dazaifu.png", imageAlt: "冬季太宰府天滿宮",
-        tip: "上午先走太宰府，下午再回福岡市區前往 LaLaport；確認實物大鋼彈當日演出時間。",
-        meals: { breakfast: "福岡飯店", lunch: "太宰府參道", dinner: "LaLaport／博多市區" },
+        tip: "上午走太宰府與九州國立博物館（週一休館，2/2 週二有開），下午到 LaLaport 逛街，晚上看實物大 ν 鋼彈夜間點燈與影像演出（19:00／19:30／20:00／20:30／21:00）。演出可能因維修或活動調整，出發前請查<a href='https://rx93ff-gundam-statue.jp/' target='_blank' rel='noopener'>鋼彈立像官網 🔗</a>與 <a href='https://mitsui-shopping-park.com/lalaport/fukuoka/' target='_blank' rel='noopener'>LaLaport 福岡官網 🔗</a>。",
+        meals: { breakfast: "福岡飯店", lunch: "一蘭拉麵 太宰府參道店（合格拉麵）／なみ満 親子丼・蕎麥麵", dinner: "LaLaport 福岡美食街" },
         accommodation: "福岡博多（第三晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://maps.app.goo.gl/MjMntMRrrZUNfpyEA' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
-            { time: "上午", title: "太宰府天滿宮", desc: "參拜、逛表參道，品嚐梅枝餅並造訪特色星巴克。" },
-            { time: "中午", title: "太宰府午餐", desc: "避開尖峰後返回福岡市區。" },
-            { time: "下午", title: "LaLaport 福岡", desc: "觀看實物大鋼彈並保留購物時間。" },
-            { time: "晚上", title: "返回飯店", desc: "晚餐後休息；大型採購與行李整理集中安排在 Day 8 晚上。" }
+            { time: "08:30～09:15", title: "博多巴士總站 ➤ 太宰府", desc: "在博多巴士總站搭西鐵太宰府直達巴士「旅人」，經福岡機場國際線，約 45 分鐘到太宰府。" },
+            { time: "09:15～11:15", title: "太宰府天滿宮", desc: "逛表參道、參拜本殿，2 月初梅花開始開放；吃現烤梅枝餅，看隈研吾設計的木條星巴克。" },
+            { time: "11:15～12:30", title: "九州國立博物館", funpass: "必遊：九州國立博物館", desc: "從天滿宮旁的「虹之隧道」電扶梯與動態步道直接進館，看亞洲交流史常設展（九州 FunPASS 必遊可用）；約 1 小時。" },
+            { time: "12:30～13:30", title: "午餐：一蘭拉麵 太宰府參道店 🍜", desc: "<a href='https://www.google.com/maps/search/?api=1&query=一蘭+太宰府参道店' target='_blank' rel='noopener'>一蘭 太宰府參道店 📍</a>是全日本唯一販售「合格拉麵」的分店：使用 59 公分長的「合格麵」，裝在五角形開運碗裡，充滿祝福學子考運的巧思。午餐時段可能排隊。<br>另一選擇：<a href='https://www.google.com/maps/search/?api=1&query=縁結び食堂+蕎麦処+なみ満+太宰府' target='_blank' rel='noopener'>縁結び食堂 蕎麦処 なみ満 📍</a>，隱身在百年古民家巷弄的蕎麥麵與親子丼名店，以滑嫩「ふわとろ親子丼」和手工蕎麥麵受歡迎。<br>飯後逛表參道：<a href='https://www.google.com/maps/search/?api=1&query=福太郎+太宰府店' target='_blank' rel='noopener'>福太郎 太宰府店 📍</a>以明太子仙貝聞名，適合買伴手禮；店外每日限量販售現烤明太子飯糰，醬油焦香四溢，想吃要早點去。" },
+            { time: "13:30～14:30", title: "太宰府 ➤ LaLaport 福岡", desc: "西鐵太宰府站搭電車，在二日市轉天神大牟田線到大橋站，再轉直達巴士約 10 分鐘到 LaLaport。" },
+            { time: "14:30～18:00", title: "LaLaport 福岡・GUNDAM SIDE-F", desc: "先拍白天的實物大 ν 鋼彈全身照，逛 GUNDAM SIDE-F 官方商店（福岡限定鋼彈模型與周邊）；之後自由購物，UNIQLO、松本清、JUMP SHOP 等約 220 間店。" },
+            { time: "18:00～19:00", title: "LaLaport 美食街晚餐", desc: "九州最大規模之一的美食街，座位多、7 人各自點餐方便。" },
+            { time: "19:00～21:00", title: "ν 鋼彈夜間點燈與影像演出", desc: "演出場次：<strong>19:00／19:30／20:00／20:30／21:00</strong>，每 30 分鐘一場。晚餐後先看 19:00 場，想再看可留到 20:00 或 20:30 場再回飯店。出發前請再到<a href='https://rx93ff-gundam-statue.jp/' target='_blank' rel='noopener'>實物大 ν 鋼彈立像官網 🔗</a>確認當天時刻。" },
+            { time: "看完演出後", title: "LaLaport ➤ 博多回飯店", desc: "搭西鐵巴士往博多站約 20 分鐘；或步行約 9 分鐘到 JR 竹下站，搭鹿兒島本線一站回博多。大型採購與行李整理留到 Day 8 晚上。" }
         ]
     },
     8: {
@@ -682,9 +687,9 @@ const activeItineraryData = {
         accommodation: "福岡博多（第四晚）<br><strong>HOTEL FORZA HAKATAEKI CHIKUSHI-GUCHI（Agoda）</strong>・<a href='https://maps.app.goo.gl/MjMntMRrrZUNfpyEA' target='_blank' rel='noopener'>Google Maps 導航 📍</a>", parkingSpots: [],
         timeline: [
             { time: "08:00", title: "前往門司港", desc: "由博多搭 JR，提早出發以換取晚間購物時間。" },
-            { time: "09:30", title: "門司港復古街區", desc: "散步復古建築群與海港，冬季海邊風大，請準備防風外套。" },
+            { time: "09:30", title: "門司港復古街區", funpass: "必遊：關門海峽博物館、門司港懷舊展望室等", desc: "散步復古建築群與海港，冬季海邊風大，請準備防風外套。" },
             { time: "11:30", title: "門司港燒咖哩", desc: "提早用餐避開人潮，熱門餐廳可先查候位方式。" },
-            { time: "13:00", title: "小倉城", desc: "回程在小倉停留，參觀城郭；最晚約 15:30 離開。" },
+            { time: "13:00", title: "小倉城", funpass: "必遊：小倉城", desc: "回程在小倉停留，參觀城郭；最晚約 15:30 離開。" },
             { time: "16:30", title: "返回福岡", desc: "回飯店短暫休息並放下日間隨身物品。" },
             { time: "17:30 起", title: "天神／博多自由購物", desc: "晚間完整保留給藥妝、百貨與伴手禮採買，之後回飯店整理行李。" }
         ]
@@ -750,8 +755,10 @@ const dailyMapStops = {
         { name: "MARK IS 福岡ももち", lat: 33.5923, lng: 130.3639 }
     ],
     7: [
-        { name: "HOTEL FORZA 博多駅筑紫口", lat: 33.5911, lng: 130.4219 },
+        { name: "博多巴士總站", lat: 33.5916, lng: 130.4199 },
         { name: "太宰府天滿宮", lat: 33.5213, lng: 130.5353 },
+        { name: "九州國立博物館", lat: 33.5182, lng: 130.5385 },
+        { name: "西鐵大橋站", lat: 33.5593, lng: 130.4270 },
         { name: "LaLaport 福岡", lat: 33.5648, lng: 130.4403 },
         { name: "HOTEL FORZA 博多駅筑紫口", lat: 33.5911, lng: 130.4219 }
     ],
@@ -908,7 +915,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li class="${item.type === 'transport' ? 'transport-timeline-item' : ''}">
                     <span class="time">${item.time}</span>
                     <div class="timeline-body">
-                        <h4>${item.title}</h4>
+                        <h4>${item.title}${item.funpass ? `<a href="#funpass" class="funpass-badge" title="可用九州 FunPASS｜${item.funpass}"><img src="images/funpass-logo.png" alt="可用九州 FunPASS"></a>` : ''}</h4>
                         <p>${item.desc}</p>
                         ${transportDetails}
                     </div>
