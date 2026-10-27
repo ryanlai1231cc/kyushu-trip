@@ -1382,7 +1382,8 @@ a {
 }
 
 /* Accommodation overview */
-.accommodations-page-section {
+.accommodations-page-section,
+.tickets-section {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(47, 112, 92, 0.045) 100%);
 }
 

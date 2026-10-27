@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=23">
+    <link rel="stylesheet" href="style.css?v=24">
 </head>
 <body>
     <!-- Background glowing spots for modern UI feel -->
@@ -50,6 +50,7 @@
                     <li><a href="#itinerary" class="nav-link"><i class="ri-calendar-todo-line"></i> 九日行程</a></li>
                     <li><a href="#accommodations" class="nav-link"><i class="ri-hotel-bed-line"></i> 住宿地點</a></li>
                     <li><a href="#guide" class="nav-link"><i class="ri-road-map-line"></i> 交通指南</a></li>
+                    <li><a href="#tickets" class="nav-link"><i class="ri-ticket-2-line"></i> 購票指南</a></li>
                     <li><a href="#checklist" class="nav-link"><i class="ri-checkbox-multiple-line"></i> 行前準備</a></li>
                 </ul>
             </nav>
@@ -534,11 +535,89 @@
                     </ul>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Ticket Booking Guide Section -->
+    <section class="tickets-section section-padding" id="tickets">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Booking Guide</span>
+                <h2>購票指南</h2>
+                <p>依開賣時間排序；以下時間皆為日本時間，台灣比日本慢 1 小時。</p>
+            </div>
+
+            <!-- Kyushu Shinkansen Hakata -> Kumamoto -->
+            <div class="accommodations-section" id="shinkansen-booking">
+                <div class="flights-header">
+                    <h3><i class="ri-train-line"></i> ① 九州新幹線 博多 ➤ 熊本（Day 2・1/28）</h3>
+                    <p><strong>2026/12/28（一）10:00 開賣（台灣 09:00）</strong>，乘車日 1 個月前同一天；建議全團一起訂 1/28 上午的みずほ或さくら指定席。</p>
+                </div>
+                <div class="flights-grid single-card">
+                    <div class="flight-card">
+                        <div class="flight-route-info" style="display:flex; flex-direction:column; gap:12px; padding:10px 0;">
+                            <div class="info-card-row">
+                                <div class="info-tag"><i class="ri-time-line"></i> 車程約 35 分鐘</div>
+                                <div class="info-tag"><i class="ri-money-cny-circle-line"></i> 指定席 ¥5,840／人</div>
+                                <div class="info-tag"><i class="ri-group-line"></i> 7 人合計 ¥40,880</div>
+                            </div>
+                            <div class="info-tag" style="display:block; line-height:1.7;">
+                                <strong>訂票步驟</strong><br>
+                                1. 在 JR-KYUSHU Train Reservation 選博多 ➤ 熊本、1/28、大人 7 名（一次最多可訂 7 名）。<br>
+                                2. 票種選「<strong>Express ticket + Regular fare ticket</strong>」（乘車券 ¥2,420＋特急券 ¥3,420）；只買特急券無法搭車。<br>
+                                3. 有三邊合計 160～250 cm 的大行李，要同時選「附帶特大行李放置處的座位」（N700 系 4、5、6、8 號車廂最後一排，不加價）；未預訂帶上車需付 ¥1,000。
+                            </div>
+                            <div class="info-tag" style="display:block; line-height:1.7;">
+                                <strong>取票</strong><br>
+                                只有付款信用卡的持卡人本人能取票，需帶該張信用卡、預約號碼（6 開頭 5 碼）與訂票電話末 4 碼，到博多站指定席售票機或綠色窗口取票。新幹線不能直接刷 IC 卡或信用卡進站。
+                            </div>
+                            <a href="https://train.yoyaku.jrkyushu.co.jp/inbound/pc/route/Top/back" target="_blank" rel="noopener" class="btn btn-secondary btn-sm btn-flight" style="width:100%;">
+                                JR-KYUSHU Train Reservation 訂票 <i class="ri-external-link-line"></i>
+                            </a>
+                            <a href="https://www.jrkyushu.co.jp/chinese/guide/oversized_baggage.html" target="_blank" rel="noopener" class="btn btn-secondary btn-sm btn-flight" style="width:100%;">
+                                JR 九州攜帶大件行李說明 <i class="ri-external-link-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Takachiho Gorge rowboat -->
+            <div class="accommodations-section" id="takachiho-boat" style="margin-top: 40px;">
+                <div class="flights-header">
+                    <h3><i class="ri-sailboat-line"></i> ② 高千穗峽划船（Day 4・1/30）</h3>
+                    <p><strong>2027/1/16（六）09:00 開搶（台灣 08:00）</strong>，乘船日 2 週前開放、1/28 09:00 截止；建議搶 08:30～09:00 時段。</p>
+                </div>
+                <div class="flights-grid single-card">
+                    <div class="flight-card">
+                        <div class="flight-route-info" style="display:flex; flex-direction:column; gap:12px; padding:10px 0;">
+                            <div class="info-card-row">
+                                <div class="info-tag"><i class="ri-time-line"></i> 每艘 30 分鐘</div>
+                                <div class="info-tag"><i class="ri-money-cny-circle-line"></i> ¥5,100／艘（1/30）</div>
+                                <div class="info-tag"><i class="ri-group-line"></i> 7 人需 3 艘（每艘限 3 名）</div>
+                            </div>
+                            <div class="info-tag" style="display:block; line-height:1.7;">
+                                <strong>搶票前準備</strong><br>
+                                1. 每艘要填<strong>不同的代表人姓名</strong>，同一人名下不能重複預約；先分好 3 位代表人與各自要訂的同一時段。<br>
+                                2. 僅限網路預約、信用卡預付；不接受電話預約，也沒有候補。<br>
+                                3. 預約日曆請切到「週」或「日」檢視：砂時計＝尚未開放、×＝已截止或售完。
+                            </div>
+                            <p style="font-size:0.9rem; color:var(--color-text-muted); line-height:1.6;">預約後未搭乘或遲到不退款、不能改時段；河川暴漲或震度 3 以上地震會停航。營業 08:30～17:00，超時每 10 分鐘 ¥1,000。1 月為定期安全檢查月，出發前請再確認 1/30 有營業。</p>
+                            <a href="https://eipro.jp/takachiho1/eventCalendars/index" target="_blank" rel="noopener" class="btn btn-secondary btn-sm btn-flight" style="width:100%;">
+                                高千穗峽划船預約網站 <i class="ri-external-link-line"></i>
+                            </a>
+                            <a href="https://takachiho-kanko.info/boat/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm btn-flight" style="width:100%;">
+                                高千穗町觀光協會｜划船說明 <i class="ri-external-link-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Kyushu FunPASS attraction pass -->
             <div class="accommodations-section" id="funpass" style="margin-top: 40px;">
                 <div class="flights-header">
-                    <h3><i class="ri-coupon-3-line"></i> 九州 FunPASS 7 合 1（建議購買）</h3>
+                    <h3><i class="ri-coupon-3-line"></i> ③ 九州 FunPASS 7 合 1（建議購買）</h3>
                     <p>啟用後 14 天內有效，可選精選景點 1 個、深度體驗 1 個、必遊景點 5 個；建議 Day 2 抵達熊本城時再啟用。</p>
                 </div>
                 <div class="flights-grid single-card">
